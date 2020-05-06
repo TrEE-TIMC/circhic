@@ -26,7 +26,7 @@ run_tests() {
 }
 
 compile_documentation() {
-    pushd docs/
+    pushd doc/
     make html SPHINXOPTS="-W"
     popd
 }

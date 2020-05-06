@@ -13,7 +13,7 @@ import importlib
 
 import circhic
 
-DISTNAME = 'circHiC'
+DISTNAME = 'circhic'
 DESCRIPTION = 'Visualizing HiC data of circular chromosomes'
 with open('README.md') as f:
     LONG_DESCRIPTION = f.read()
