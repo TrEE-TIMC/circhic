@@ -1,0 +1,22 @@
+language: python
+
+dist: xenial
+
+before_install.
+    - sudo apt-get -y install texlive-xetex dvipng
+
+env:
+    global:
+        - TEST_DIR=/tmp/circhic
+
+matrix:
+    include:
+        - name: "Python 3.8"
+          python: 3.8
+
+
+install:
+    - source .build_tools/travis/install.sh
+
+script:
+    - bash .build_tools/travis/test_script.sh
