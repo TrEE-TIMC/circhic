@@ -9,9 +9,11 @@ set -e
 
 pip install --upgrade pip pytest pytest-cov
 pip install --upgrade numpy scipy matplotlib
+pip install --upgrade pandas iced
 
 # For the documentation
 pip install --upgrade sphinx sphinx-gallery numpydoc
+pip install --upgrade pillow
 
 python setup.py develop
 
