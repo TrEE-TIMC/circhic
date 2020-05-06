@@ -7,8 +7,11 @@
 # License: 3-clause BSD
 set -e
 
-pip install --ugrade pip pytest pytest-cov
+pip install --upgrade pip pytest pytest-cov
 pip install --upgrade numpy scipy matplotlib
+
+# For the documentation
+pip install --upgrade sphinx sphinx-gallery numpydoc
 
 python setup.py develop
 
