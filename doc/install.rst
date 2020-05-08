@@ -6,11 +6,14 @@ Installing circHiC
 
 There are different ways to install scikit-learn:
 
-- Install the latest official release. This is the best approach for most
-  users and will provide a stable version.
-- Building the package from source. This is best for users who want the
-  latest-and-greatest features and aren't afraid of running brand-new code.
-  This is also needed for users who wish to contribute to the project.
+- :ref:`Install the latest official release. <install_official_release>` This
+  is the best approach for most users and will provide a stable version.
+- :ref:`Building the package from source. <install_from_source>` This is best
+  for users who want the latest-and-greatest features and aren't afraid of
+  running brand-new code. This is also needed for users who wish to contribute
+  to the project.
+
+.. _install_official_release:
 
 Install the latest release
 ==========================
@@ -30,6 +33,8 @@ In order to check your installation you can use::
 Note that in order to avoid potential conflicts with other packages it is
 strongly recommended to use a virtual environment, e.g. python3 `virtualenv`
 or conda environments.
+
+.. _install_from_source:
 
 Building the package from source
 ================================
