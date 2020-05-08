@@ -12,6 +12,10 @@ Datasets
 
 .. currentmodule:: circhic
 
+.. automodule:: circhic
+   :no-members:
+   :no-inherited-members:
+
 .. autosummary::
 
    :toctree: generated/

@@ -258,3 +258,26 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
+
+from sphinx_gallery.sorting import ExplicitOrder, NumberOfCodeLinesSortKey
+examples_dirs = ['../examples']
+gallery_dirs = ['gallery']
+
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/{.major}'.format(sys.version_info), None),
+    'numpy': ('https://docs.scipy.org/doc/numpy/', None),
+    'scipy': ('https://docs.scipy.org/doc/scipy/reference', None),
+    'matplotlib': ('https://matplotlib.org/', None),
+}
+
+
+sphinx_gallery_conf = {
+    'backreferences_dir': "generated/backreferences",
+    'doc_module': ("circhic", ),
+    "reference_url": {"circhic": None}
+}
+
+# Add the 'copybutton' javascript, to hide/show the prompt in code examples
+def setup(app):
+    app.add_javascript('copybutton.js')
+
