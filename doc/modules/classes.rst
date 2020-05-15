@@ -6,15 +6,29 @@
 API Reference
 =============
 
+.. automodule:: circhic
+  :no-members:
+  :no-inherited-members:
+
+
+.. currentmodule:: circhic
+
+.. autosummary::
+
+  :toctree: generated/
+  :template: class.rst
+
+  CircHiCFigure
 
 Datasets
 ========
 
-.. currentmodule:: circhic
 
-.. automodule:: circhic
+.. automodule:: circhic.datasets
    :no-members:
    :no-inherited-members:
+
+.. currentmodule:: circhic
 
 .. autosummary::
 

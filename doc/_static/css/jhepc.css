@@ -12,7 +12,7 @@ a {
 }
 
 a:hover{
-  color: #FF3D00;
+  color: #c7254e;
   text-decoration: none;
 }
 
@@ -233,3 +233,31 @@ p.admonition-title {
 .highlight a {
   text-decoration: underline;
 }
+
+
+.class > dt, .function > dt, .method > dt {
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+  font-weight: normal;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-left: 2px solid #08519C;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
+.class > dt::after, .function > dt::after, .method > dt::after {
+  overflow: auto;
+}
+
+.docutils {
+  text-align: left;
+  margin-bottom: 5rem;
+  padding-bottom: 1rem;
+}
+
+code {
+    color: #08519c;
+}
+
+a:hover > code {
+    color: #c7254e;

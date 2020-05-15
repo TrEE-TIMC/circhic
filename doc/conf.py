@@ -21,10 +21,14 @@ import sphinx_gallery
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.autosummary',
               'numpydoc', "sphinx.ext.imgmath",
+              "sphinx.ext.doctest",
               "sphinx_gallery.gen_gallery"]
 
 autosummary_generate = True
 autodoc_default_flags = ['members', 'inherited-members']
+# this is needed for some reason...
+# see https://github.com/numpy/numpydoc/issues/69
+numpydoc_class_members_toctree = False
 
 
 # -- General configuration ------------------------------------------------
