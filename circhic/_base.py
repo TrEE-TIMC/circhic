@@ -45,20 +45,54 @@ class CircHiCFigure:
         self._polar_axes = []
 
     def plot_hic(self, counts, inner_gdis=None, outer_gdis=None,
-                 inner_radius=0, outer_radius=1):
+                 inner_radius=0, outer_radius=1,
+                 cmap="viridis",
+                 ax=None):
         """
         Plot a heatmap of the HiC contact countt matrix on a circular strip.
 
         Parameters
         ----------
 
+        counts : ndarray (n, n)
+            The contact count matrix of shape (n, n) where
+            `n = lengths.sum() / resolution`
+
+        inner_gdis : integer, optional, default: None
+            Plot up to `inner_gdis` of the diagonal of the contact count
+            matrix (in genomic distance). Corresponds to the lower-diagonal on
+            a typical square HiC contact count matrix.
+
+        outer_gdis : integer, optional, default: None
+            Plot up to `outer_gdis` of the diagonal of the contact count matrix
+            (in genomic distance). Corresponds to the upper-diagonal part of
+            the contact count matrix on a typical square contact count map.
+
+        inner_radius : float, optional, default: 0
+            Radius of the inner strip, considering that the maximum outer
+            radius is 1. Should be smaller than `outer_radius`.
+            Note that `inner_radius` will be ignored if ax is provided.
+
+        outer_radius : float, optional, default: 1
+            Radius of the outer strip, considering that the maximum possible
+            outer radius is 1. Should be larger than `inner_radius`.
+
+        cmap : string, optional, default : "viridis"
+            A Matplotlib colormap.
+
+        ax : matplotlib.axes.Axes object, optional, default: None
+            Matplotlib Axes object. By default, will create one. Note that
+            outer_radius and inner_radius will be ignored if `ax` is provided.
+
         Returns
         -------
         (im, ax) type of artist and axes
+
         """
-        ax = self._create_subplot(
-            outer_radius, polar=False, zorder=-99,
-            label=("hic_%d" % (len(self._polar_axes)+1)))
+        if ax is None:
+            ax = self._create_subplot(
+                outer_radius, polar=False, zorder=-99,
+                label=("hic_%d" % (len(self._polar_axes)+1)))
 
         if outer_gdis is None:
             outer_gdis = int(np.round(counts.shape[0] / 2 * self.resolution))
@@ -70,8 +104,20 @@ class CircHiCFigure:
             counts, res=self.resolution,
             pos0=self.origin, r_in=inner_radius, s_in=inner_gdis,
             s_out=outer_gdis)
-        im = ax.imshow(circular_data, norm=colors.SymLogNorm(1), zorder=-99)
-        ax.set_axis_off()
+        im = ax.imshow(
+            circular_data, interpolation=None,
+            norm=colors.SymLogNorm(1, base=10), cmap=cmap)
+
+        # We don't want to remove entirely the axis, as it means setting
+        # xlabels and ylabels don't work anymore.
+        # Actually, is that an issue apart from the gallery?? I'm not so sure
+        # anymore…
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.spines["left"].set_linewidth(0)
+        ax.spines["top"].set_linewidth(0)
+        ax.spines["bottom"].set_linewidth(0)
+        ax.spines["right"].set_linewidth(0)
         return (im, ax)
 
     def _plot_marks(self, marks, s_out=1, s_in=1, r_in=0, outer_radius=1,
@@ -210,7 +256,8 @@ class CircHiCFigure:
         self._polar_axes += [ax]
         return (bars, ax)
 
-    def set_genomic_ticklabels(self, ticklabels=None, tickpositions=None):
+    def set_genomic_ticklabels(self, ticklabels=None, tickpositions=None,
+                               ax=None):
         """
         Set the circular tick labels
 
@@ -224,8 +271,18 @@ class CircHiCFigure:
         tickpositions : array of floas
             the positions of the ticks. Should be the same length as the tick
             labels.
+
+        ax : matplotlib.axes.Axes object, optional, default: None
+            Matplotlib Axes object. By default, will create one. Note that
+            outer_radius and inner_radius will be ignored if `ax` is provided.
+
         """
-        ax = self._create_subplot(label="thetaticks")
+        if ax is None:
+            ax = self._create_subplot(label="thetaticks")
+        else:
+            rect = ax.get_position().bounds
+            ax = self.figure.add_axes(rect, polar=True, facecolor="none")
+
         ax.set_rgrids([])
         if tickpositions is not None:
             tickpositions = (
