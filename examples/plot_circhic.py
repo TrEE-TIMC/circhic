@@ -4,24 +4,17 @@ a circHiC figure showing biases and mappability
 ===============================================
 
 """
-import numpy as np
 from iced.normalization import ICE_normalization
 
 from circhic import datasets
 from circhic._base import CircHiCFigure
 
 
+# Load the data, compute the cumulative raw counts.
 counts, lengths = datasets.load_ccrescentus()
-
 cumul_raw_counts = counts.sum(axis=0)
-
+# Normale the data using ICE, and keep the biases
 counts, bias = ICE_normalization(counts, output_bias=True)
-
-# Now replace missing data with NA
-missing_loci = counts.sum(axis=0) == 0
-counts[missing_loci] = np.nan
-counts[:, missing_loci] = np.nan
-
 
 circhicfig = CircHiCFigure(lengths)
 circhicfig.plot_hic(counts, outer_radius=0.75)
