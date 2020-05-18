@@ -37,7 +37,7 @@ class CircHiCFigure:
 
         # Create a gridspec : 1000 x 1000 should be enough for a high
         # resolution placements of axes.
-        self._gridspec = GridSpec(nrows=1000, ncols=1000, figure=self.figure)
+        self._gridspec = GridSpec(nrows=1100, ncols=1100, figure=self.figure)
 
         self.lengths = lengths
         self.origin = origin
@@ -327,20 +327,37 @@ class CircHiCFigure:
         ax.xaxis.grid(False)
         return ax
 
+    def set_colorbar(self, mappable, orientation="vertical"):
+        """
+        Set a colorbar on the plot
+
+        Parameters
+        ----------
+        mappable : matplotlib.cm.ScalarMappable
+            The matplotlib.cm.ScalarMappable (i.e., Image, ContourSet, etc.)
+            described by this colorbar.
+
+        orientation : {"vertical", "horizontal"}, default: "vertical"
+            Whether to plot a vertical or horizontal colorbar.
+        """
+        if orientation == "vertical":
+            ax = self.figure.add_subplot(
+                self._gridspec[:1000, 1070:1100])
+        else:
+            ax = self.figure.add_subplot(
+                self._gridspec[1070:1100, :1000])
+
+        cab = self.figure.colorbar(mappable, cax=ax, orientation=orientation)
+        return cab
+
     def _create_subplot(self, outer_radius=1, polar=True, label=None,
                         zorder=None):
-        if outer_radius == 1:
-            ax_g = self.figure.add_subplot(
-                polar=polar,
-                facecolor="none", label=label,
-                zorder=zorder)
-        else:
-            nrows = int(np.round((1 - outer_radius) / 2 * 1000))
-            ax_g = self.figure.add_subplot(
-                self._gridspec[nrows:-nrows, nrows:-nrows],
-                facecolor="none",
-                polar=polar,
-                label=label, zorder=zorder)
+        nrows = int(np.round((1 - outer_radius) / 2 * 1000))
+        ax_g = self.figure.add_subplot(
+            self._gridspec[nrows:-nrows-100, nrows:-nrows-100],
+            facecolor="none",
+            polar=polar,
+            label=label, zorder=zorder)
 
         if polar:
             theta_offset = (
