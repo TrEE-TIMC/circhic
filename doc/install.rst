@@ -4,7 +4,7 @@
 Installing circHiC
 ==================
 
-There are different ways to install scikit-learn:
+There are different ways to install `circhic`:
 
 - :ref:`Install the latest official release. <install_official_release>` This
   is the best approach for most users and will provide a stable version.
@@ -26,7 +26,7 @@ Then run::
 
 In order to check your installation you can use::
 
-  python -m pip show scikit-learn # to see which version and where scikit-learn is installed
+  python -m pip show circhic # to see which version and where circhic is installed
   python -m pip freeze # to see all packages installed in the active environment.
 
 
@@ -42,7 +42,7 @@ Building the package from source
 Building from source is required to work on a contribution (bug fix, new
 feature, code or documentation improvement).
 
-1. Use Git to check out the latest source from the scikit-learn repository on Github.::
+1. Use Git to check out the latest source from the circhic repository on Github.::
 
     git clone git://github.com/tree-timc/circhic.git
     cd circhic
@@ -78,7 +78,7 @@ feature, code or documentation improvement).
 
 4. Check that the installed `circhic` has a version number ending with `.dev0`::
 
-      python -c "import circhic; sklearn.show_versions()"
+      python -c "import circhic; circhic.__version__"
 
 
 Additional dependencies for building the documentation

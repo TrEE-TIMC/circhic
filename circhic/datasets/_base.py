@@ -1,6 +1,9 @@
 import os
+import warnings
 import numpy as np
-from iced import io
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    from iced import io
 
 
 def load_ccrescentus():
