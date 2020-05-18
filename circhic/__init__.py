@@ -1,4 +1,4 @@
-from . import tools
+from . import utils
 from ._base import CircHiCFigure
 from . import datasets
 

@@ -36,3 +36,21 @@ Datasets
    :template: function.rst
 
    datasets.load_ccrescentus
+
+
+Utils
+=====
+
+.. automodule:: circhic.utils
+   :no-members:
+   :no-inherited-members:
+
+.. currentmodule:: circhic
+
+.. autosummary::
+
+  :toctree: generated/
+  :template: function.rst
+
+  utils.generate_circular_map
+

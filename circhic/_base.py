@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from matplotlib.gridspec import GridSpec
-from .tools import genCircData as _generate_circular_data
+from .utils import generate_circular_map as _generate_circular_data
 
 
 class CircHiCFigure:
@@ -125,8 +125,9 @@ class CircHiCFigure:
         # Generate circular hic map
         circular_data = _generate_circular_data(
             counts, res=self.resolution,
-            pos0=self.origin, r_in=cir_inner_radius, s_in=inner_gdis,
-            s_out=outer_gdis)
+            origin=self.origin, inner_radius=cir_inner_radius,
+            inner_gdis=inner_gdis,
+            outer_gdis=outer_gdis)
         im = ax.imshow(
             circular_data, interpolation=None,
             norm=colors.SymLogNorm(1, base=10), cmap=cmap)
