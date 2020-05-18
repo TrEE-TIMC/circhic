@@ -340,8 +340,10 @@ class CircHiCFigure:
                 facecolor="none",
                 polar=polar,
                 label=label, zorder=zorder)
+
         if polar:
             theta_offset = (
-                (self.origin - 1) / (self.lengths.sum() * self.resolution))
+                (self.origin - 1) / (self.lengths.sum() * self.resolution) *
+                360)
             ax_g.set_theta_zero_location("E", offset=theta_offset)
         return ax_g
