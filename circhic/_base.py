@@ -49,7 +49,7 @@ class CircHiCFigure:
                  cmap="viridis",
                  ax=None):
         """
-        Plot a heatmap of the HiC contact countt matrix on a circular strip.
+        Plot a heatmap of the HiC contact count matrix on a circular strip.
 
         Parameters
         ----------
@@ -93,16 +93,39 @@ class CircHiCFigure:
             ax = self._create_subplot(
                 outer_radius, polar=False, zorder=-99,
                 label=("hic_%d" % (len(self._polar_axes)+1)))
+        else:
+            ax.set_xticks([])
+            ax.set_yticks([])
+            ax.spines["left"].set_linewidth(0)
+            ax.spines["top"].set_linewidth(0)
+            ax.spines["bottom"].set_linewidth(0)
+            ax.spines["right"].set_linewidth(0)
+
+            rect = ax.get_position(original=True).bounds
+            # Rect is left, bottom, width, height
+            # This needs to be reduced by height*outer_radius and
+            # width*outer_radius
+            new_width = rect[2] * outer_radius
+            new_height = rect[3] * outer_radius
+            new_left = rect[0] + rect[2] * (1-outer_radius) / 2
+            new_bottom = rect[1] + rect[3] * (1-outer_radius) / 2
+            ax = self.figure.add_axes(
+                (new_left, new_bottom, new_width, new_height),
+                facecolor="none")
 
         if outer_gdis is None:
             outer_gdis = int(np.round(counts.shape[0] / 2 * self.resolution))
         if inner_gdis is None:
             inner_gdis = int(np.round(counts.shape[0] / 2 * self.resolution))
 
+        # Need to convert inner_radius to what _generate_circular_data
+        # expects (outer_radius = 1)
+        cir_inner_radius = inner_radius / outer_radius
+
         # Generate circular hic map
         circular_data = _generate_circular_data(
             counts, res=self.resolution,
-            pos0=self.origin, r_in=inner_radius, s_in=inner_gdis,
+            pos0=self.origin, r_in=cir_inner_radius, s_in=inner_gdis,
             s_out=outer_gdis)
         im = ax.imshow(
             circular_data, interpolation=None,

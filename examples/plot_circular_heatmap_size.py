@@ -30,7 +30,7 @@ cumul_raw_counts = counts.sum(axis=0)
 counts, bias = ICE_normalization(counts, output_bias=True)
 
 # Now, create a figure with two rows and two columns
-fig, axes = plt.subplots(nrows=3, ncols=3, tight_layout=True, figsize=(8, 8))
+fig, axes = plt.subplots(nrows=3, ncols=3, figsize=(8, 8))
 circhicfig = CircHiCFigure(lengths, figure=fig)
 
 
@@ -62,7 +62,7 @@ circhicfig.plot_hic(counts, inner_gdis=0, inner_radius=0.25, ax=axes[1, 1])
 
 # The same data as the third plot, but with an inner radius corresponding to
 # 25% of the available size.
-circhicfig.plot_hic(counts, outer_gdis=0, inner_radius=0.5, ax=axes[1, 2])
+circhicfig.plot_hic(counts, outer_gdis=0, inner_radius=0.25, ax=axes[1, 2])
 
 # The same data as the first plot, but with an inner radius corresponding to
 # 25% of the available size.
