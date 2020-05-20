@@ -280,6 +280,25 @@ class CircHiCFigure:
         self._polar_axes += [ax]
         return (bars, ax)
 
+    def plot_bands(self, begin, end, colors=None, inner_radius=0,
+                   outer_radius=1):
+        """
+        Plot bands
+
+        Parameters
+        ----------
+        data : ndarray (n, 3)
+        """
+        ax = self._create_subplot(
+            outer_radius=outer_radius,
+            label=("bands_%d" % (len(self._polar_axes)+1)))
+
+        # Now compute the new origin
+        rorigin = (
+            (np.nanmin(data) - np.nanmax(data)) * outer_radius /
+            (outer_radius - inner_radius))
+        ax.set_rmin(rorigin)
+
     def set_genomic_ticklabels(self, ticklabels=None, tickpositions=None,
                                ax=None):
         """
@@ -346,7 +365,7 @@ class CircHiCFigure:
         else:
             ax = self.figure.add_subplot(
                 self._gridspec[1070:1100, :1000])
-
+        ax.tick_params(axis='both', which='major', labelsize="x-small")
         cab = self.figure.colorbar(mappable, cax=ax, orientation=orientation)
         return cab
 
