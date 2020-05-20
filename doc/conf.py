@@ -278,7 +278,10 @@ intersphinx_mapping = {
 sphinx_gallery_conf = {
     'backreferences_dir': "generated/backreferences",
     'doc_module': ("circhic", ),
-    "reference_url": {"circhic": None}
+    "reference_url": {"circhic": None},
+    'subsection_order': ExplicitOrder(['../examples/simple_plots',
+                                       '../examples/contact_map',
+                                       '../examples/datasets']),
 }
 
 # Add the 'copybutton' javascript, to hide/show the prompt in code examples

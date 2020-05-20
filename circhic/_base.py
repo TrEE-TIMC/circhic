@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from matplotlib.gridspec import GridSpec
+from matplotlib import patches
+from matplotlib.container import BarContainer
 from .utils import generate_circular_map as _generate_circular_data
 
 
@@ -287,17 +289,61 @@ class CircHiCFigure:
 
         Parameters
         ----------
-        data : ndarray (n, 3)
+        begin : ndarray (l, )
+
+        end : ndarray (l, )
+
+        colors : ndarray (l, )
         """
         ax = self._create_subplot(
             outer_radius=outer_radius,
             label=("bands_%d" % (len(self._polar_axes)+1)))
+        ax.set_axis_off()
 
+        n_bins = self.lengths.sum() / self.resolution
+        # Convert the left hand side of the rectangle to the correct angular
+        # form.
+        left = begin / self.resolution
+        left = np.array(
+                [np.pi/2-i*2*np.pi/n_bins for i in left])
+        # Do the same with the end of the band
+        right = end / self.resolution
+        right = np.array(
+                [np.pi/2-i*2*np.pi/n_bins for i in end])
+        width = right - left
+        height = 1
+        bottom = 0
+
+        _patches = []
+        for i, (l, w) in enumerate(zip(left, width)):
+            if colors is not None:
+                c = colors[i]
+            else:
+                c = "C%d" % i
+            r = patches.Rectangle(
+                xy=(l, bottom), width=w, height=height,
+                facecolor=c,
+                linewidth=0,
+                label='_nolegend_',
+                )
+            r.get_path()._interpolation_steps = 100
+            r.sticky_edges.y.append(0)
+            r.sticky_edges.y.append(1)
+
+            ax.add_patch(r)
+            _patches.append(r)
+
+        ax._request_autoscale_view()
+
+        bar_container = BarContainer(_patches)
+        ax.add_container(bar_container)
         # Now compute the new origin
         rorigin = (
-            (np.nanmin(data) - np.nanmax(data)) * outer_radius /
+            - outer_radius /
             (outer_radius - inner_radius))
         ax.set_rmin(rorigin)
+
+        return bar_container, ax
 
     def set_genomic_ticklabels(self, ticklabels=None, tickpositions=None,
                                ax=None):
