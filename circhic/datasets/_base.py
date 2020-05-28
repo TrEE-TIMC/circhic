@@ -21,7 +21,7 @@ def load_ccrescentus():
     module_path = os.path.dirname(__file__)
     counts = _load_counts(
         os.path.join(module_path,
-                     "data/ccrescentus/SRX263925_10000.matrix"))
+                     "data/ccrescentus/SRX263925_9894.matrix"))
     counts = counts.toarray()
     counts = counts.T + counts
     lengths = np.array([counts.shape[0]])
