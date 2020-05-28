@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+  
+    <title>circHiC &#8212; circHiC 0.1.0.dev0 documentation</title>
+  <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="../../_static/css/bootstrap.min.css"
+	media="screen" />
+    <script src="../../_static/js/jquery.js"
+          type="text/javascript"></script>
+  <script src="../../_static/js/bootstrap.min.js"
+          type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet"
+        href="../../_static/css/jhepc.css"
+         media="screen" />
+
+
+
+  </head><body><div class="navbar">
+      <a href="../../index.html">
+	
+      </a>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../install.html">Installation</a></li>
+      <li><a href="../../documentation.html">Documentation</a></li>
+      <li><a href="../../auto_examples/index.html">Gallery</a></li>
+      
+    </ul>
+  </div>
+    <div class="container">
+  
+  <div class="section" id="circhic-utils-generate-circular-map">
+<h1>circhic.utils.generate_circular_map<a class="headerlink" href="#circhic-utils-generate-circular-map" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="circhic.utils.generate_circular_map">
+<code class="sig-prename descclassname">circhic.utils.</code><code class="sig-name descname">generate_circular_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">bin_circ</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">res</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">inner_gdis</span><span class="o">=</span><span class="default_value">800000</span></em>, <em class="sig-param"><span class="n">outer_gdis</span><span class="o">=</span><span class="default_value">800000</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'circ'</span></em>, <em class="sig-param"><span class="n">frac_lin</span><span class="o">=</span><span class="default_value">0.7</span></em>, <em class="sig-param"><span class="n">rotate_lin</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.utils.generate_circular_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate Circular Strip Data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">ndarray</span></dt><dd><p>Input data matrix to circularize with size (N, N)</p>
+</dd>
+<dt><strong>bin_circ</strong><span class="classifier">float &lt;= 1</span></dt><dd><p>The size of the output matrix is (Nc, Nc) where Nc=N/bin_circ</p>
+</dd>
+<dt><strong>inner_radius</strong><span class="classifier">float &lt;= 1</span></dt><dd><p>Inner radius of the strip, supposing that the outer radius is equal to
+1</p>
+</dd>
+<dt><strong>res</strong><span class="classifier">integer</span></dt><dd><p>Resolution of data (in bp)</p>
+</dd>
+<dt><strong>inner_gdis</strong><span class="classifier">integer</span></dt><dd><p>Genomic distance corresponding to the inner circle</p>
+</dd>
+<dt><strong>outer_gdis: integer</strong></dt><dd><p>Genomic distance corresponding to the outer circle</p>
+</dd>
+<dt><strong>origin: integer</strong></dt><dd><p>Genomic position at the vertical top</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">string</span></dt><dd><p>‘circ’: circular chromosome, default
+‘lin’: linear chromosome</p>
+</dd>
+<dt><strong>frac_lin</strong><span class="classifier">float &lt;= 1</span></dt><dd><p>fraction of strip filled by linear chromosome</p>
+</dd>
+<dt><strong>rotate_lin</strong><span class="classifier">float &lt;= 360</span></dt><dd><p>rotation angle (in degree) of the chromosome (the linear chromosome is
+symmetric with respect to the vertical axis by default)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>(Nc, Nc) ndarray containing the count data projected on a circular strip.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="sphx-glr-clear"></div></div>
+
+
+    </div>
+<footer class="footer">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, circHiC contributors.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.4.<br/>
+    </p>
+</footer>
+  </body>
+</html>

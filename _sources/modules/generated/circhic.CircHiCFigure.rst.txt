@@ -1,0 +1,19 @@
+:orphan:
+
+:mod:`circhic`.CircHiCFigure
+===================================
+
+.. currentmodule:: circhic
+
+.. autoclass:: CircHiCFigure
+   :members:
+
+   
+   .. automethod:: __init__
+   
+
+.. include:: ../../generated/backreferences/circhic.CircHiCFigure.examples
+
+.. raw:: html
+
+    <div class="clearer"></div>

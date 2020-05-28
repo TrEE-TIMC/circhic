@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+  
+    <title>circHiC &#8212; circHiC 0.1.0.dev0 documentation</title>
+  <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="../../_static/css/bootstrap.min.css"
+	media="screen" />
+    <script src="../../_static/js/jquery.js"
+          type="text/javascript"></script>
+  <script src="../../_static/js/bootstrap.min.js"
+          type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet"
+        href="../../_static/css/jhepc.css"
+         media="screen" />
+
+
+
+  </head><body><div class="navbar">
+      <a href="../../index.html">
+	
+      </a>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../install.html">Installation</a></li>
+      <li><a href="../../documentation.html">Documentation</a></li>
+      <li><a href="../../auto_examples/index.html">Gallery</a></li>
+      
+    </ul>
+  </div>
+    <div class="container">
+  
+  <div class="section" id="circhic-circhicfigure">
+<h1><a class="reference internal" href="../classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a>.CircHiCFigure<a class="headerlink" href="#circhic-circhicfigure" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="circhic.CircHiCFigure">
+<em class="property">class </em><code class="sig-prename descclassname">circhic.</code><code class="sig-name descname">CircHiCFigure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure" title="Permalink to this definition">¶</a></dt>
+<dd><p>A circular HiC figure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lengths : ndarray</strong></dt><dd><p>array of chromosome length.</p>
+</dd>
+<dt><strong>origin</strong><span class="classifier">integer, optional, default: 1</span></dt><dd><p>position of the origin. The origin is set to the east of the plot</p>
+</dd>
+<dt><strong>resolution</strong><span class="classifier">integer, optional, default: None</span></dt><dd><p>The resolution of the contact count matrix.</p>
+</dd>
+<dt><strong>figure : matplotlib.figure.Figure, optional, default: None</strong></dt><dd><p>A Matplotlib figure. If not provided, will create it.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>See FIXME</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bands" title="circhic.CircHiCFigure.plot_bands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bands</span></code></a>(self, begin, end[, colors, …])</p></td>
+<td><p>Plot bands</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bars" title="circhic.CircHiCFigure.plot_bars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bars</span></code></a>(self, data[, color, inner_radius, …])</p></td>
+<td><p>Plot a bar chart</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hic</span></code></a>(self, counts[, inner_gdis, …])</p></td>
+<td><p>Plot a heatmap of the HiC contact count matrix on a circular strip.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_lines" title="circhic.CircHiCFigure.plot_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_lines</span></code></a>(self, data[, color, linestyle, …])</p></td>
+<td><p>Plot a line chart</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colorbar</span></code></a>(self, mappable[, orientation])</p></td>
+<td><p>Set a colorbar on the plot</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_genomic_ticklabels</span></code></a>(self[, outer_radius, …])</p></td>
+<td><p>Set the circular tick labels</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.plot_bands">
+<code class="sig-name descname">plot_bands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">begin</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot bands</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>begin</strong><span class="classifier">ndarray (l, )</span></dt><dd></dd>
+<dt><strong>end</strong><span class="classifier">ndarray (l, )</span></dt><dd></dd>
+<dt><strong>colors</strong><span class="classifier">ndarray (l, )</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.plot_bars">
+<code class="sig-name descname">plot_bars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">zorder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a bar chart</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier">ndarray (n, )</span></dt><dd></dd>
+<dt><strong>color</strong><span class="classifier">a compatible matplotlib color, optional, default: None</span></dt><dd><p>The line color. Possible values:</p>
+<ul class="simple">
+<li><p>A single color format string (e.g. “#000000”, “black”, “0”).</p></li>
+<li><p>A float between 0 and 1</p></li>
+</ul>
+<p>Defaults to <cite>None</cite>.</p>
+</dd>
+<dt><strong>linestyle</strong><span class="classifier">a compatible Matplotlib linestyle, optional, default: None</span></dt><dd></dd>
+<dt><strong>inner_radius : float (0, 1), optional, default: 0</strong></dt><dd><p>The inner radius of the plot, assuming the maximum outer radius
+possible is 1. Should be smaller than <cite>outer_radius</cite>.</p>
+</dd>
+<dt><strong>outer_radius : float (0, 1), optional, default: 1</strong></dt><dd><p>The outer radius of the plot, assuming the maximum outer radius
+possible is 1. Should be larger than <cite>inner_radius</cite>.</p>
+</dd>
+<dt><strong>zorder</strong><span class="classifier">float</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>(artists, ax)</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.plot_hic">
+<code class="sig-name descname">plot_hic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">counts</span></em>, <em class="sig-param"><span class="n">inner_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outer_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'viridis'</span></em>, <em class="sig-param"><span class="n">vmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_hic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a heatmap of the HiC contact count matrix on a circular strip.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>counts : ndarray (n, n)</strong></dt><dd><p>The contact count matrix of shape (n, n) where
+<cite>n = lengths.sum() / resolution</cite></p>
+</dd>
+<dt><strong>inner_gdis</strong><span class="classifier">integer, optional, default: None</span></dt><dd><p>Plot up to <cite>inner_gdis</cite> of the diagonal of the contact count
+matrix (in genomic distance). Corresponds to the lower-diagonal on
+a typical square HiC contact count matrix.</p>
+</dd>
+<dt><strong>outer_gdis</strong><span class="classifier">integer, optional, default: None</span></dt><dd><p>Plot up to <cite>outer_gdis</cite> of the diagonal of the contact count matrix
+(in genomic distance). Corresponds to the upper-diagonal part of
+the contact count matrix on a typical square contact count map.</p>
+</dd>
+<dt><strong>inner_radius : float, optional, default: 0</strong></dt><dd><p>Radius of the inner strip, considering that the maximum outer
+radius is 1. Should be smaller than <cite>outer_radius</cite>.
+Note that <cite>inner_radius</cite> will be ignored if ax is provided.</p>
+</dd>
+<dt><strong>outer_radius</strong><span class="classifier">float, optional, default: 1</span></dt><dd><p>Radius of the outer strip, considering that the maximum possible
+outer radius is 1. Should be larger than <cite>inner_radius</cite>.</p>
+</dd>
+<dt><strong>cmap</strong><span class="classifier">string, optional, default</span></dt><dd><p>A Matplotlib colormap.</p>
+</dd>
+<dt><strong>ax</strong><span class="classifier">matplotlib.axes.Axes object, optional, default: None</span></dt><dd><p>Matplotlib Axes object. By default, will create one. Note that
+outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>(im, ax) type of artist and axes</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.plot_lines">
+<code class="sig-name descname">plot_lines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linestyle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">zorder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a line chart</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier">ndarray (n, )</span></dt><dd></dd>
+<dt><strong>color</strong><span class="classifier">a compatible matplotlib color, optional, default: None</span></dt><dd><p>The line color. Possible values:</p>
+<ul class="simple">
+<li><p>A single color format string (e.g. “#000000”, “black”, “0”).</p></li>
+<li><p>A float between 0 and 1</p></li>
+</ul>
+<p>Defaults to <cite>None</cite>.</p>
+</dd>
+<dt><strong>linestyle</strong><span class="classifier">a compatible Matplotlib linestyle, optional, default: None</span></dt><dd></dd>
+<dt><strong>inner_radius : float (0, 1), optional, default: 0</strong></dt><dd><p>The inner radius of the plot, assuming the maximum outer radius
+possible is 1. Should be smaller than <cite>outer_radius</cite>.</p>
+</dd>
+<dt><strong>outer_radius : float (0, 1), optional, default: 1</strong></dt><dd><p>The outer radius of the plot, assuming the maximum outer radius
+possible is 1. Should be larger than <cite>inner_radius</cite>.</p>
+</dd>
+<dt><strong>zorder</strong><span class="classifier">float</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>(lines, ax)</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.set_colorbar">
+<code class="sig-name descname">set_colorbar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">mappable</span></em>, <em class="sig-param"><span class="n">orientation</span><span class="o">=</span><span class="default_value">'vertical'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_colorbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a colorbar on the plot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>mappable : matplotlib.cm.ScalarMappable</strong></dt><dd><p>The matplotlib.cm.ScalarMappable (i.e., Image, ContourSet, etc.)
+described by this colorbar.</p>
+</dd>
+<dt><strong>orientation</strong><span class="classifier">{“vertical”, “horizontal”}, default: “vertical”</span></dt><dd><p>Whether to plot a vertical or horizontal colorbar.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.set_genomic_ticklabels">
+<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the circular tick labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ticklabels</strong><span class="classifier">array-like of strings</span></dt><dd><p>the list of strings to plot. Should be the same length as the
+number of ticks.</p>
+</dd>
+<dt><strong>tickpositions</strong><span class="classifier">array of floats</span></dt><dd><p>the positions of the ticks. Should be the same length as the tick
+labels.</p>
+</dd>
+<dt><strong>ax</strong><span class="classifier">matplotlib.axes.Axes object, optional, default: None</span></dt><dd><p>Matplotlib Axes object. By default, will create one. Note that
+outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="examples-using-circhic-circhicfigure">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">circhic.CircHiCFigure</span></code><a class="headerlink" href="#examples-using-circhic-circhicfigure" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="a circHiC figure showing biases and mappability"><div class="figure align-default" id="id1">
+<img alt="a circHiC figure showing biases and mappability" src="../../_images/sphx_glr_plot_circhic_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_circhic.html#sphx-glr-auto-examples-plot-circhic-py"><span class="std std-ref">a circHiC figure showing biases and mappability</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Changing the origin of the heatmap"><div class="figure align-default" id="id2">
+<img alt="Changing the origin of the heatmap" src="../../_images/sphx_glr_plot_changing_ori_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/plot_changing_ori.html#sphx-glr-auto-examples-plot-changing-ori-py"><span class="std std-ref">Changing the origin of the heatmap</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip."><div class="figure align-default" id="id3">
+<img alt="Plotting bars" src="../../_images/sphx_glr_plot_bars_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/simple_plots/plot_bars.html#sphx-glr-auto-examples-simple-plots-plot-bars-py"><span class="std std-ref">Plotting bars</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip."><div class="figure align-default" id="id4">
+<img alt="Plotting lines" src="../../_images/sphx_glr_plot_lines_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/simple_plots/plot_lines.html#sphx-glr-auto-examples-simple-plots-plot-lines-py"><span class="std std-ref">Plotting lines</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data."><div class="figure align-default" id="id5">
+<img alt="Plotting bands" src="../../_images/sphx_glr_plot_bands_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/simple_plots/plot_bands.html#sphx-glr-auto-examples-simple-plots-plot-bands-py"><span class="std std-ref">Plotting bands</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar."><div class="figure align-default" id="id6">
+<img alt="Colorbars" src="../../_images/sphx_glr_plot_colorbar_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/contact_map/plot_colorbar.html#sphx-glr-auto-examples-contact-map-plot-colorbar-py"><span class="std std-ref">Colorbars</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one..."><div class="figure align-default" id="id7">
+<img alt="Exploring the options of the circular heatmaps" src="../../_images/sphx_glr_plot_circular_heatmap_size_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/contact_map/plot_circular_heatmap_size.html#sphx-glr-auto-examples-contact-map-plot-circular-heatmap-size-py"><span class="std std-ref">Exploring the options of the circular heatmaps</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="clearer"></div></div>
+</div>
+
+
+    </div>
+<footer class="footer">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, circHiC contributors.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.0.4.<br/>
+    </p>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+:orphan:
+
+circhic.utils.generate_circular_map
+===================================
+
+.. currentmodule:: circhic.utils
+
+.. autofunction:: generate_circular_map
+
+.. include:: ../../generated/backreferences/circhic.utils.generate_circular_map.examples
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>

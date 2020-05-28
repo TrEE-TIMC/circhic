@@ -1,0 +1,14 @@
+:orphan:
+
+circhic.datasets.load_ccrescentus
+=================================
+
+.. currentmodule:: circhic.datasets
+
+.. autofunction:: load_ccrescentus
+
+.. include:: ../../generated/backreferences/circhic.datasets.load_ccrescentus.examples
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
