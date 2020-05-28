@@ -49,6 +49,8 @@ class CircHiCFigure:
     def plot_hic(self, counts, inner_gdis=None, outer_gdis=None,
                  inner_radius=0, outer_radius=1,
                  cmap="viridis",
+                 vmin=None,
+                 vmax=None,
                  alpha=1,
                  ax=None):
         """
@@ -134,7 +136,9 @@ class CircHiCFigure:
         im = ax.imshow(
             circular_data, interpolation=None,
             alpha=alpha,
-            norm=colors.SymLogNorm(1, base=10), cmap=cmap)
+            vmin=vmin,
+            vmax=vmax,
+            norm=colors.SymLogNorm(max(1, vmin), base=10), cmap=cmap)
 
         # We don't want to remove entirely the axis, as it means setting
         # xlabels and ylabels don't work anymore.
@@ -169,7 +173,7 @@ class CircHiCFigure:
             else:
                 ms = mark['ms']
 
-            theta = [np.pi/2-mark['bin']*2*np.pi / self.lengths.sum()]
+            theta = [mark['bin']*2*np.pi / self.lengths.sum()]
             r = [r_in + s_in*(1 - r_in)/(s_out + s_in)]
             ax_m.plot(theta, r, marker, ms=ms, color=color, zorder=zorder)
             ax_m.set_rmax(1)
@@ -216,7 +220,7 @@ class CircHiCFigure:
 
         # Need to include the theta shift here.
         theta = np.array(
-            [np.pi/2-i*2*np.pi/len(data) for i in range(len(data))])
+            [i*2*np.pi/len(data) for i in range(len(data))])
 
         lines = ax_g.plot(
             np.concatenate((theta, [theta[0]])),
@@ -271,7 +275,7 @@ class CircHiCFigure:
             outer_radius=outer_radius,
             label=("bars_%d" % (len(self._polar_axes)+1)))
         theta = np.array(
-            [np.pi/2-i*2*np.pi/len(data) for i in range(len(data))])
+            [i*2*np.pi/len(data) for i in range(len(data))])
         width = theta[1] - theta[0]
         bars = ax.bar(theta, data, color=color, width=width, zorder=zorder)
 
@@ -308,11 +312,11 @@ class CircHiCFigure:
         # form.
         left = begin / self.resolution
         left = np.array(
-                [np.pi/2-i*2*np.pi/n_bins for i in left])
+                [i*2*np.pi/n_bins for i in left])
         # Do the same with the end of the band
         right = end / self.resolution
         right = np.array(
-                [np.pi/2-i*2*np.pi/n_bins for i in end])
+                [i*2*np.pi/n_bins for i in end])
         width = right - left
         height = 1
         bottom = 0
@@ -361,7 +365,7 @@ class CircHiCFigure:
             the list of strings to plot. Should be the same length as the
             number of ticks.
 
-        tickpositions : array of floas
+        tickpositions : array of floats
             the positions of the ticks. Should be the same length as the tick
             labels.
 
@@ -433,5 +437,7 @@ class CircHiCFigure:
             theta_offset = (
                 (self.origin - 1) / (self.lengths.sum() * self.resolution) *
                 360)
-            ax_g.set_theta_zero_location("E", offset=theta_offset)
+            ax_g.set_theta_zero_location("N", offset=theta_offset)
+            ax_g.set_theta_direction(-1)
+
         return ax_g
