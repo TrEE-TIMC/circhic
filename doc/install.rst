@@ -56,7 +56,6 @@ feature, code or documentation improvement).
    - SciPy (>= 0.17),
    - Matplotlib (>= 2.0),
    - pandas (>= FIXME)
-   - iced
 
 2. Optional (but recommended): create and activate a dedicated virtualenv or conda environment.
 

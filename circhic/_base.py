@@ -49,6 +49,7 @@ class CircHiCFigure:
     def plot_hic(self, counts, inner_gdis=None, outer_gdis=None,
                  inner_radius=0, outer_radius=1,
                  cmap="viridis",
+                 alpha=1,
                  ax=None):
         """
         Plot a heatmap of the HiC contact count matrix on a circular strip.
@@ -132,6 +133,7 @@ class CircHiCFigure:
             outer_gdis=outer_gdis)
         im = ax.imshow(
             circular_data, interpolation=None,
+            alpha=alpha,
             norm=colors.SymLogNorm(1, base=10), cmap=cmap)
 
         # We don't want to remove entirely the axis, as it means setting
@@ -144,6 +146,7 @@ class CircHiCFigure:
         ax.spines["top"].set_linewidth(0)
         ax.spines["bottom"].set_linewidth(0)
         ax.spines["right"].set_linewidth(0)
+
         return (im, ax)
 
     def _plot_marks(self, marks, s_out=1, s_in=1, r_in=0, outer_radius=1,
@@ -345,7 +348,8 @@ class CircHiCFigure:
 
         return bar_container, ax
 
-    def set_genomic_ticklabels(self, ticklabels=None, tickpositions=None,
+    def set_genomic_ticklabels(self, outer_radius=1, ticklabels=None,
+                               tickpositions=None,
                                ax=None):
         """
         Set the circular tick labels
@@ -367,7 +371,8 @@ class CircHiCFigure:
 
         """
         if ax is None:
-            ax = self._create_subplot(label="thetaticks")
+            ax = self._create_subplot(label="thetaticks",
+                                      outer_radius=outer_radius)
         else:
             rect = ax.get_position().bounds
             ax = self.figure.add_axes(rect, polar=True, facecolor="none")
