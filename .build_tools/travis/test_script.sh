@@ -27,7 +27,8 @@ run_tests() {
 
 compile_documentation() {
     pushd doc/
-    touch .nojekyll
+    mkdir -p _build/html
+    touch _build/html/.nojekyll
     make html SPHINXOPTS="-W"
     popd
 }
