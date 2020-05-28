@@ -27,6 +27,7 @@ run_tests() {
 
 compile_documentation() {
     pushd doc/
+    touch .nojekyll
     make html SPHINXOPTS="-W"
     popd
 }
