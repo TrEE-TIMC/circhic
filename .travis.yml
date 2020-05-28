@@ -20,3 +20,13 @@ install:
 
 script:
     - bash .build_tools/travis/test_script.sh
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    # Set in the settings page of your repository, as a secure variable
+    github-token: $GH_TOKEN  
+    keep-history: true
+    local-dir: doc/reports
+    on:
+        branch: master
