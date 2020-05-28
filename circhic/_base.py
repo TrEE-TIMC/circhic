@@ -133,12 +133,17 @@ class CircHiCFigure:
             origin=self.origin, inner_radius=cir_inner_radius,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
+        if vmin is None:
+            norm = colors.SymLogNorm(1, base=10)
+        else:
+            norm = colors.SymLogNorm(vmin, base=10)
+
         im = ax.imshow(
             circular_data, interpolation=None,
             alpha=alpha,
             vmin=vmin,
             vmax=vmax,
-            norm=colors.SymLogNorm(max(1, vmin), base=10), cmap=cmap)
+            norm=norm, cmap=cmap)
 
         # We don't want to remove entirely the axis, as it means setting
         # xlabels and ylabels don't work anymore.
