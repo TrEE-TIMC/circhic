@@ -1,4 +1,5 @@
 import numpy as np
+import warnings
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from matplotlib.gridspec import GridSpec
@@ -19,9 +20,6 @@ class CircHiCFigure:
     origin : integer, optional, default: 1
         position of the origin. The origin is set to the east of the plot
 
-    resolution : integer, optional, default: None
-        The resolution of the contact count matrix.
-
     figure : matplotlib.figure.Figure, optional, default: None
         A Matplotlib figure. If not provided, will create it.
 
@@ -32,7 +30,7 @@ class CircHiCFigure:
 
     name = "circhic"
 
-    def __init__(self, lengths, origin=1, resolution=None, figure=None):
+    def __init__(self, lengths, origin=1, figure=None):
         # If figure is not provided, create a square figure.
         self.figure = (
             figure if figure is not None else plt.figure(figsize=(8, 8)))
@@ -43,11 +41,11 @@ class CircHiCFigure:
 
         self.lengths = lengths
         self.origin = origin
-        self.resolution = resolution if resolution is not None else 1
         self._polar_axes = []
 
     def plot_hic(self, counts, inner_gdis=None, outer_gdis=None,
                  inner_radius=0, outer_radius=1,
+                 resolution=1,
                  cmap="viridis",
                  vmin=None,
                  vmax=None,
@@ -82,6 +80,11 @@ class CircHiCFigure:
             Radius of the outer strip, considering that the maximum possible
             outer radius is 1. Should be larger than `inner_radius`.
 
+        resolution : integer, optional, default: None
+            Resolution of the HiC contact count map. By default, the function
+            will estimate the resolution given the lengths of the chromosome
+            and the shape of the contact count matrix.
+
         cmap : string, optional, default : "viridis"
             A Matplotlib colormap.
 
@@ -92,11 +95,21 @@ class CircHiCFigure:
         Returns
         -------
         (im, ax) type of artist and axes
-
         """
+        n = counts.shape[0]
+        if resolution is None:
+            resolution = self.lengths.sum() / n
+        else:
+            estimate_shape = self.lengths.sum() / resolution
+            if not ((n - 1) < estimate_shape < (n + 1)):
+                warnings.warn(
+                    "The resolution provided does not match the shape of the "
+                    "contact count matrix and the length of the chromosome")
+
         if ax is None:
             ax = self._create_subplot(
                 outer_radius, polar=False, zorder=-99,
+                resolution=resolution,
                 label=("hic_%d" % (len(self._polar_axes)+1)))
         else:
             ax.set_xticks([])
@@ -118,10 +131,12 @@ class CircHiCFigure:
                 (new_left, new_bottom, new_width, new_height),
                 facecolor="none")
 
+        resolution = resolution if resolution is not None else 1
+
         if outer_gdis is None:
-            outer_gdis = int(np.round(counts.shape[0] / 2 * self.resolution))
+            outer_gdis = int(np.round(counts.shape[0] / 2 * resolution))
         if inner_gdis is None:
-            inner_gdis = int(np.round(counts.shape[0] / 2 * self.resolution))
+            inner_gdis = int(np.round(counts.shape[0] / 2 * resolution))
 
         # Need to convert inner_radius to what _generate_circular_data
         # expects (outer_radius = 1)
@@ -129,7 +144,7 @@ class CircHiCFigure:
 
         # Generate circular hic map
         circular_data = _generate_circular_data(
-            counts, res=self.resolution,
+            counts, res=resolution,
             origin=self.origin, inner_radius=cir_inner_radius,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
@@ -294,8 +309,8 @@ class CircHiCFigure:
         self._polar_axes += [ax]
         return (bars, ax)
 
-    def plot_bands(self, begin, end, colors=None, inner_radius=0,
-                   outer_radius=1):
+    def plot_bands(self, begin, end, resolution=None, colors=None,
+                   inner_radius=0, outer_radius=1):
         """
         Plot bands
 
@@ -307,19 +322,21 @@ class CircHiCFigure:
 
         colors : ndarray (l, )
         """
+        resolution = resolution if resolution is not None else 1
         ax = self._create_subplot(
             outer_radius=outer_radius,
+            resolution=resolution,
             label=("bands_%d" % (len(self._polar_axes)+1)))
         ax.set_axis_off()
 
-        n_bins = self.lengths.sum() / self.resolution
+        n_bins = self.lengths.sum() / resolution
         # Convert the left hand side of the rectangle to the correct angular
         # form.
-        left = begin / self.resolution
+        left = begin / resolution
         left = np.array(
                 [i*2*np.pi/n_bins for i in left])
         # Do the same with the end of the band
-        right = end / self.resolution
+        right = end / resolution
         right = np.array(
                 [i*2*np.pi/n_bins for i in end])
         width = right - left
@@ -359,6 +376,7 @@ class CircHiCFigure:
 
     def set_genomic_ticklabels(self, outer_radius=1, ticklabels=None,
                                tickpositions=None,
+                               resolution=None,
                                ax=None):
         """
         Set the circular tick labels
@@ -379,6 +397,7 @@ class CircHiCFigure:
             outer_radius and inner_radius will be ignored if `ax` is provided.
 
         """
+        resolution = resolution if resolution is not None else 1
         if ax is None:
             ax = self._create_subplot(label="thetaticks",
                                       outer_radius=outer_radius)
@@ -390,7 +409,7 @@ class CircHiCFigure:
         if tickpositions is not None:
             tickpositions = (
                 tickpositions / (self.lengths.sum() *
-                                 self.resolution) *
+                                 resolution) *
                 2 * np.pi)
             ax.set_xticks(tickpositions)
 
@@ -430,7 +449,8 @@ class CircHiCFigure:
         return cab
 
     def _create_subplot(self, outer_radius=1, polar=True, label=None,
-                        zorder=None):
+                        zorder=None, resolution=None):
+        resolution = resolution if resolution is not None else 1
         nrows = int(np.round((1 - outer_radius) / 2 * 1000))
         ax_g = self.figure.add_subplot(
             self._gridspec[nrows:-nrows-100, nrows:-nrows-100],
@@ -440,7 +460,7 @@ class CircHiCFigure:
 
         if polar:
             theta_offset = (
-                (self.origin - 1) / (self.lengths.sum() * self.resolution) *
+                (self.origin - 1) / (self.lengths.sum() * resolution) *
                 360)
             ax_g.set_theta_zero_location("N", offset=theta_offset)
             ax_g.set_theta_direction(-1)
