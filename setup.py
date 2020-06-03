@@ -115,7 +115,7 @@ def configuration(parent_package='', top_path=None):
                        assume_default_configuration=True,
                        delegate_options_to_subpackages=True,
                        quiet=True)
-
+    config.add_subpackage("circhic")
     return config
 
 
