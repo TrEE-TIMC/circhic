@@ -10,7 +10,6 @@ from distutils.command.clean import clean as Clean
 from pkg_resources import parse_version
 import traceback
 import importlib
-
 import circhic
 
 DISTNAME = 'circhic'
@@ -24,7 +23,7 @@ DOWNLOAD_URL = 'https://pypi.org/project/circHiC/#files'
 LICENSE = 'new BSD'
 PROJECT_URLS = {
     'Bug Tracker': 'https://github.com/tree-timc/circHiC/issues',
-    'Documentation': 'TODO',
+    'Documentation': 'https://tree-timc.github.io/circhic/',
     'Source Code': 'https://github.com/tree-timc/circHiC'
 }
 
@@ -46,6 +45,7 @@ SETUPTOOLS_COMMANDS = {
     'egg_info', 'easy_install', 'upload', 'bdist_wheel',
     '--single-version-externally-managed',
 }
+
 if SETUPTOOLS_COMMANDS.intersection(sys.argv):
     import setuptools
 
@@ -142,7 +142,7 @@ def check_package_status(package, min_version):
 
     instructions = ("Installation instructions are available on the "
                     "circHiC website: "
-                    "FIXME\n")
+                    "https://tree-timc.github.io/circhic/\n")
 
     if package_status['up_to_date'] is False:
         if package_status['version']:
@@ -194,7 +194,6 @@ def setup_package():
                         'scipy>={}'.format(SCIPY_MIN_VERSION),
                         'matplotlib>={}'.format(MATPLOTLIB_MIN_VERSION),
                     ],
-                    package_data={'': ['*.pxd']},
                     **extra_setuptools_args)
 
     if len(sys.argv) == 1 or (
