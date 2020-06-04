@@ -6,7 +6,7 @@
 CircHiC: Easy plotting of circular bacterial data
 =================================================
 
-.. image:: auto_examples/images/sphx_glr_plot_circhic_001.png
+.. image:: auto_examples/biological/images/sphx_glr_plot_circhic_001.png
   :scale: 50
   :align: center
 
