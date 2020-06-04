@@ -52,7 +52,7 @@ add white space to the disk.
     /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:91: RuntimeWarning: invalid value encountered in less_equal
       iT = (Theta_sin >= 0) & (Theta_cos <= np.pi/2)
 
-    (<matplotlib.image.AxesImage object at 0x7f2beb8b8f60>, <matplotlib.axes._axes.Axes object at 0x7f2be9815cf8>)
+    (<matplotlib.image.AxesImage object at 0x7fce8e7daef0>, <matplotlib.axes._axes.Axes object at 0x7fce8c738198>)
 
 
 
@@ -128,7 +128,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.837 seconds)
+   **Total running time of the script:** ( 0 minutes  9.076 seconds)
 
 
 .. _sphx_glr_download_auto_examples_contact_map_plot_circular_heatmap_size.py:
