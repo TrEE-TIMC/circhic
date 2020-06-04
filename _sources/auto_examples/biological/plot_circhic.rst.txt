@@ -3,20 +3,20 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_plot_changing_ori.py>`     to download the full example code
+        Click :ref:`here <sphx_glr_download_auto_examples_biological_plot_circhic.py>`     to download the full example code
     .. rst-class:: sphx-glr-example-title
 
-    .. _sphx_glr_auto_examples_plot_changing_ori.py:
+    .. _sphx_glr_auto_examples_biological_plot_circhic.py:
 
 
-==================================
-Changing the origin of the heatmap
-==================================
+===============================================
+a circHiC figure showing biases and mappability
+===============================================
 
 
 
-.. image:: /auto_examples/images/sphx_glr_plot_changing_ori_001.png
-    :alt: plot changing ori
+.. image:: /auto_examples/biological/images/sphx_glr_plot_circhic_001.png
+    :alt: plot circhic
     :class: sphx-glr-single-img
 
 
@@ -26,6 +26,8 @@ Changing the origin of the heatmap
 
  .. code-block:: none
 
+    /home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/iced/normalization/_ca_utils.py:9: UserWarning: The API of this module is likely to change. Use only for testing purposes
+      "The API of this module is likely to change. "
     /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:80: RuntimeWarning: invalid value encountered in true_divide
       Theta_cos[iR] = np.arccos(V[iR]/R[iR])
     /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:81: RuntimeWarning: invalid value encountered in true_divide
@@ -61,13 +63,14 @@ Changing the origin of the heatmap
     # Normale the data using ICE, and keep the biases
     counts, bias = ICE_normalization(counts, output_bias=True)
 
-    circhicfig = CircHiCFigure(lengths, origin=lengths.sum() / 4)
+    circhicfig = CircHiCFigure(lengths)
     circhicfig.plot_hic(counts, outer_radius=0.75)
 
     # Assume you want to plot data from that ranges in a polar plot outside of the
     # first one. Then the 0 axis should be at, say, 80% of the axis
     circhicfig.plot_bars(cumul_raw_counts, inner_radius=0.8, outer_radius=0.9,
                          color="0")
+
     # Now, plot a last plot, for the top 10% of the original axes
     circhicfig.plot_lines(bias, color="0", inner_radius=0.9, outer_radius=1)
 
@@ -78,10 +81,10 @@ Changing the origin of the heatmap
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.627 seconds)
+   **Total running time of the script:** ( 0 minutes  1.685 seconds)
 
 
-.. _sphx_glr_download_auto_examples_plot_changing_ori.py:
+.. _sphx_glr_download_auto_examples_biological_plot_circhic.py:
 
 
 .. only :: html
@@ -93,13 +96,13 @@ Changing the origin of the heatmap
 
   .. container:: sphx-glr-download sphx-glr-download-python
 
-     :download:`Download Python source code: plot_changing_ori.py <plot_changing_ori.py>`
+     :download:`Download Python source code: plot_circhic.py <plot_circhic.py>`
 
 
 
   .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-     :download:`Download Jupyter notebook: plot_changing_ori.ipynb <plot_changing_ori.ipynb>`
+     :download:`Download Jupyter notebook: plot_circhic.ipynb <plot_circhic.ipynb>`
 
 
 .. only:: html

@@ -12,6 +12,22 @@ General examples
 General-purpose and introductory examples for `circhic`.
 
 
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_auto_examples_biological:
+
+.. _biological_examples:
+
+Real-case gallery
+-----------------
+
+General-purpose real-case examples for `circhic`.
+
+
 
 .. raw:: html
 
@@ -19,10 +35,10 @@ General-purpose and introductory examples for `circhic`.
 
 .. only:: html
 
- .. figure:: /auto_examples/images/thumb/sphx_glr_plot_circhic_thumb.png
+ .. figure:: /auto_examples/biological/images/thumb/sphx_glr_plot_circhic_thumb.png
      :alt: a circHiC figure showing biases and mappability
 
-     :ref:`sphx_glr_auto_examples_plot_circhic.py`
+     :ref:`sphx_glr_auto_examples_biological_plot_circhic.py`
 
 .. raw:: html
 
@@ -32,7 +48,23 @@ General-purpose and introductory examples for `circhic`.
 .. toctree::
    :hidden:
 
-   /auto_examples/plot_circhic
+   /auto_examples/biological/plot_circhic
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_auto_examples_technical:
+
+.. _technical_examples:
+
+Technical examples
+------------------
+
+Introductory examples for `circhic`.
+
+
 
 .. raw:: html
 
@@ -40,10 +72,10 @@ General-purpose and introductory examples for `circhic`.
 
 .. only:: html
 
- .. figure:: /auto_examples/images/thumb/sphx_glr_plot_changing_ori_thumb.png
+ .. figure:: /auto_examples/technical/images/thumb/sphx_glr_plot_changing_ori_thumb.png
      :alt: Changing the origin of the heatmap
 
-     :ref:`sphx_glr_auto_examples_plot_changing_ori.py`
+     :ref:`sphx_glr_auto_examples_technical_plot_changing_ori.py`
 
 .. raw:: html
 
@@ -53,181 +85,7 @@ General-purpose and introductory examples for `circhic`.
 .. toctree::
    :hidden:
 
-   /auto_examples/plot_changing_ori
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_simple_plots:
-
-.. _simple_plots_examples:
-
-Simple plots
-------------
-
-The basic units of a `circhic` plot.
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip.">
-
-.. only:: html
-
- .. figure:: /auto_examples/simple_plots/images/thumb/sphx_glr_plot_bars_thumb.png
-     :alt: Plotting bars
-
-     :ref:`sphx_glr_auto_examples_simple_plots_plot_bars.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/simple_plots/plot_bars
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip.">
-
-.. only:: html
-
- .. figure:: /auto_examples/simple_plots/images/thumb/sphx_glr_plot_lines_thumb.png
-     :alt: Plotting lines
-
-     :ref:`sphx_glr_auto_examples_simple_plots_plot_lines.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/simple_plots/plot_lines
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data.">
-
-.. only:: html
-
- .. figure:: /auto_examples/simple_plots/images/thumb/sphx_glr_plot_bands_thumb.png
-     :alt: Plotting bands
-
-     :ref:`sphx_glr_auto_examples_simple_plots_plot_bands.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/simple_plots/plot_bands
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_contact_map:
-
-.. _contact_count_map_example:
-
-Contact count maps as a circular strip
----------------------------------------
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar.">
-
-.. only:: html
-
- .. figure:: /auto_examples/contact_map/images/thumb/sphx_glr_plot_colorbar_thumb.png
-     :alt: Colorbars
-
-     :ref:`sphx_glr_auto_examples_contact_map_plot_colorbar.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/contact_map/plot_colorbar
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one...">
-
-.. only:: html
-
- .. figure:: /auto_examples/contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
-     :alt: Exploring the options of the circular heatmaps
-
-     :ref:`sphx_glr_auto_examples_contact_map_plot_circular_heatmap_size.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/contact_map/plot_circular_heatmap_size
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_datasets:
-
-.. _datasets_examples:
-
-Data sets
------------
-  
-Examples concerning the :mod:`circhic.datasets` module.
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *C. crescentus* data.">
-
-.. only:: html
-
- .. figure:: /auto_examples/datasets/images/thumb/sphx_glr_plot_ccrescentus_thumb.png
-     :alt: *C. crescentus*
-
-     :ref:`sphx_glr_auto_examples_datasets_plot_ccrescentus.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/datasets/plot_ccrescentus
+   /auto_examples/technical/plot_changing_ori
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
