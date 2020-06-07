@@ -136,8 +136,8 @@ def generate_circular_map(data, bin_circ=0.5, inner_radius=0.5, res=0,
         # handling non-periodic conditions
         which_indices = np.argwhere(
             (iR > 0) &
-            (Theta <= frac_lin*2*np.pi) & (Bref - Half_s > 0) &
-            (Bref + Half_s < N))
+            (Theta <= frac_lin*2*np.pi) & (Bref - np.abs(Half_s) > 0) &
+            (Bref + np.abs(Half_s) < N))
         for ic, jc in which_indices:
             C[ic, jc] = data[Ih[ic, jc], Jh[ic, jc]]
 
