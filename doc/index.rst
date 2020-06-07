@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-CircHiC: Easy plotting of circular bacterial data
+circHiC: circular visualization of HiC data and integration of genomic data
 =================================================
 
 .. image:: auto_examples/biological/images/sphx_glr_plot_circhic_001.png
