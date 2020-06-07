@@ -2,7 +2,7 @@ import sys
 import numpy as np
 
 
-def generate_circular_map(data, bin_circ=0.5, inner_radius=0.5, res=0,
+def generate_circular_map(data, granul=0.5, inner_radius=0.5, res=0,
                           inner_gdis=800000, outer_gdis=800000, origin=1,
                           mode='circ', frac_lin=0.7, rotate_lin=0):
 
@@ -14,8 +14,9 @@ def generate_circular_map(data, bin_circ=0.5, inner_radius=0.5, res=0,
     data : ndarray
         Input data matrix to circularize with size (N, N)
 
-    bin_circ : float <= 1
-        The size of the output matrix is (Nc, Nc) where Nc=N/bin_circ
+    granul : float <= 1
+        Granularity of display: the size of the output matrix is (Nc, Nc)
+        where Nc=N/granul; the smaller, the neater but also the longer
 
     inner_radius : float <= 1
         Inner radius of the strip, supposing that the outer radius is equal to
@@ -57,7 +58,7 @@ def generate_circular_map(data, bin_circ=0.5, inner_radius=0.5, res=0,
     if origin > Lg:
         sys.exit('origin must be <= Lg')
 
-    N, Nc = int(len(data)), int(len(data)/bin_circ)
+    N, Nc = int(len(data)), int(len(data)/granul)
 
     # converting indexes of the output matrix into real values (from -1 to 1)
     # such that the size of the matrix is 2 and, hence, the outer radius of
