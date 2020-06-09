@@ -28,18 +28,6 @@ a circHiC figure showing biases and mappability
 
     /home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/iced/normalization/_ca_utils.py:9: UserWarning: The API of this module is likely to change. Use only for testing purposes
       "The API of this module is likely to change. "
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:214: RuntimeWarning: invalid value encountered in true_divide
-      Theta_cos[iR] = np.arccos(V[iR]/R[iR])
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:215: RuntimeWarning: invalid value encountered in true_divide
-      Theta_sin[iR] = np.arcsin(np.flip(np.transpose(V)[iR]/R[iR]))
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:222: RuntimeWarning: invalid value encountered in greater_equal
-      iT = (Theta_sin >= 0) & (Theta_cos > np.pi/2)
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:222: RuntimeWarning: invalid value encountered in greater
-      iT = (Theta_sin >= 0) & (Theta_cos > np.pi/2)
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:225: RuntimeWarning: invalid value encountered in greater_equal
-      iT = (Theta_sin >= 0) & (Theta_cos <= np.pi/2)
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:225: RuntimeWarning: invalid value encountered in less_equal
-      iT = (Theta_sin >= 0) & (Theta_cos <= np.pi/2)
 
 
 
@@ -81,7 +69,7 @@ a circHiC figure showing biases and mappability
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.756 seconds)
+   **Total running time of the script:** ( 0 minutes  1.708 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_plot_circhic.py:

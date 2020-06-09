@@ -54,25 +54,6 @@ A simple vertical colorbar
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:214: RuntimeWarning: invalid value encountered in true_divide
-      Theta_cos[iR] = np.arccos(V[iR]/R[iR])
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:215: RuntimeWarning: invalid value encountered in true_divide
-      Theta_sin[iR] = np.arcsin(np.flip(np.transpose(V)[iR]/R[iR]))
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:222: RuntimeWarning: invalid value encountered in greater_equal
-      iT = (Theta_sin >= 0) & (Theta_cos > np.pi/2)
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:222: RuntimeWarning: invalid value encountered in greater
-      iT = (Theta_sin >= 0) & (Theta_cos > np.pi/2)
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:225: RuntimeWarning: invalid value encountered in greater_equal
-      iT = (Theta_sin >= 0) & (Theta_cos <= np.pi/2)
-    /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:225: RuntimeWarning: invalid value encountered in less_equal
-      iT = (Theta_sin >= 0) & (Theta_cos <= np.pi/2)
-
 
 
 
@@ -99,7 +80,7 @@ A simple horizontal colorbar
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.862 seconds)
+   **Total running time of the script:** ( 0 minutes  2.764 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_colorbar.py:
