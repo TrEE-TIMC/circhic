@@ -31,7 +31,7 @@ Loading and plotting *C. crescentus* data.
     /home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_ccrescentus.py:16: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
       ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")
 
-    <matplotlib.image.AxesImage object at 0x7f55beb15978>
+    <matplotlib.image.AxesImage object at 0x7efee94c2710>
 
 
 
@@ -55,7 +55,7 @@ Loading and plotting *C. crescentus* data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.168 seconds)
+   **Total running time of the script:** ( 0 minutes  0.158 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_datasets_plot_ccrescentus.py:
