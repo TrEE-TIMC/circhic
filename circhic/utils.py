@@ -2,17 +2,17 @@ import sys
 import numpy as np
 
 
-def generate_borders(data, granul=0.5, inner_radius=0.5, res=0,
+def generate_borders(data, granul=0.5, inner_radius=0.5, resolution=0,
                      inner_gdis=800000, outer_gdis=800000, origin=1,
                      mode='circ', frac_lin=0.7, rotate_lin=0, thick_r=0.005,
                      thick_extreme=0.002):
 
-    if not res:
+    if not resolution:
         raise ValueError("Data resolution must be set")
     if inner_radius >= 1:
         sys.exit('inner_radius is normalized wrt 1, i.e. it must be <= 1')
 
-    Lg = res*len(data)  # genome length given the input resolution
+    Lg = resolution*len(data)  # genome length given the input resolution
     if origin > Lg:
         sys.exit('origin must be <= Lg')
 
@@ -80,7 +80,9 @@ def generate_borders(data, granul=0.5, inner_radius=0.5, res=0,
         # Half_s[iR] = ((outer_gdis*N/Lg - (R[iR] - 1)/(inner_radius -
         # 1)*(-inner_gdis+outer_gdis)*N/Lg)/2).astype(int)
         if inner_gdis <= 0:
-            r_mid = (outer_gdis*inner_radius+np.abs(inner_gdis)*1)/(outer_gdis+np.abs(inner_gdis))
+            r_mid = (
+                (outer_gdis*inner_radius+np.abs(inner_gdis)*1) /
+                (outer_gdis+np.abs(inner_gdis)))
             iS = (R <= r_mid)
             Half_s[iR & iS] = (
                 ((inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
@@ -133,7 +135,7 @@ def generate_borders(data, granul=0.5, inner_radius=0.5, res=0,
         sys.exit('Unknown mode for generating circular data')
 
 
-def generate_circular_map(data, granul=0.5, inner_radius=0.5, res=0,
+def generate_circular_map(data, bin_circ=0.5, inner_radius=0.5, resolution=0,
                           inner_gdis=800000, outer_gdis=800000, origin=1,
                           mode='circ', frac_lin=0.7, rotate_lin=0):
 
@@ -153,8 +155,8 @@ def generate_circular_map(data, granul=0.5, inner_radius=0.5, res=0,
         Inner radius of the strip, supposing that the outer radius is equal to
         1
 
-    res : integer
-        Resolution of data (in bp)
+    resolution : integer
+        resolution of data (in bp)
 
     inner_gdis : integer
         Genomic distance corresponding to the inner circle
@@ -180,12 +182,12 @@ def generate_circular_map(data, granul=0.5, inner_radius=0.5, res=0,
     -------
     (Nc, Nc) ndarray containing the count data projected on a circular strip.
     """
-    if not res:
+    if not resolution:
         raise ValueError("Data resolution must be set")
     if inner_radius >= 1:
         raise ValueError("Inner radius should be <= 1")
 
-    Lg = res*len(data)  # genome length given the input resolution
+    Lg = resolution*len(data)  # genome length given the input resolution
     if origin > Lg:
         sys.exit('origin must be <= Lg')
 
