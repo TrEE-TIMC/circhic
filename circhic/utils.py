@@ -204,12 +204,11 @@ def generate_circular_map(data, granul=0.5, inner_radius=0.5, resolution=0,
 
     # indexes of non-zero R entries (to work only with the circular strip
     # entries)
-    iR = (R >= inner_radius) & (R <= 1)
+    iR = (R > 0) & (R >= inner_radius) & (R <= 1)
 
     # corresponding CLOCKWISE polar angles (Theta); here, we need to consider
     # separately the angles given by acos and asin
     # REM: genomic coordinate goes clockwise
-
     Theta_cos, Theta_sin = np.zeros((Nc, Nc)), np.zeros((Nc, Nc))
     Theta_cos[iR] = np.arccos(V[iR]/R[iR])
     Theta_sin[iR] = np.arcsin(np.flip(np.transpose(V)[iR]/R[iR]))
