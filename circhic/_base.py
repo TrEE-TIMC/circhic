@@ -38,7 +38,7 @@ class CircHiCFigure:
 
         # Create a gridspec : 1000 x 1000 should be enough for a high
         # resolution placements of axes.
-        self._gridspec = GridSpec(nrows=1100, ncols=1100, figure=self.figure)
+        self._gridspec = GridSpec(nrows=1150, ncols=1150, figure=self.figure)
 
         self.lengths = lengths
         self.origin = origin
@@ -52,7 +52,8 @@ class CircHiCFigure:
                  vmax=None,
                  alpha=1,
                  border_thickness=0.02,
-                 ax=None):
+                 ax=None,
+                 granularity=0.5):
         """
         Plot a heatmap of the HiC contact count matrix on a circular strip.
 
@@ -147,6 +148,7 @@ class CircHiCFigure:
         # Generate circular hic map
         circular_data = _generate_circular_data(
             counts, resolution=resolution,
+            granularity=granularity,
             origin=self.origin, inner_radius=cir_inner_radius,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
@@ -154,23 +156,26 @@ class CircHiCFigure:
             norm = colors.SymLogNorm(1, base=10)
         else:
             norm = colors.SymLogNorm(vmin, base=10)
-
         im = ax.imshow(
-            circular_data, interpolation=None,
+            circular_data, 
+            interpolation=None,
             alpha=alpha,
             vmin=vmin,
             vmax=vmax,
-            norm=norm, cmap=cmap)
-
+            norm=norm, cmap=cmap,
+            extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+            )
         if border_thickness != 0:
             border_im = generate_borders(
-                counts, resolution=resolution,
+                counts, granularity=granularity,
+                resolution=resolution,
                 origin=self.origin, inner_radius=cir_inner_radius,
                 inner_gdis=inner_gdis,
                 outer_gdis=outer_gdis,
                 thick_r=border_thickness)
             ax.imshow(
                 border_im, interpolation=None,
+                extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
                 cmap="Greys_r")
         # We don't want to remove entirely the axis, as it means setting
         # xlabels and ylabels don't work anymore.
@@ -379,9 +384,7 @@ class CircHiCFigure:
         bar_container = BarContainer(_patches)
         ax.add_container(bar_container)
         # Now compute the new origin
-        rorigin = (
-            - outer_radius /
-            (outer_radius - inner_radius))
+        rorigin = _compute_rorigin(0, 1, inner_radius, outer_radius)
         ax.set_rmin(rorigin)
 
         return bar_container, ax
@@ -452,10 +455,10 @@ class CircHiCFigure:
         """
         if orientation == "vertical":
             ax = self.figure.add_subplot(
-                self._gridspec[:1000, 1070:1100])
+                self._gridspec[50:1050, 1130:1150])
         else:
             ax = self.figure.add_subplot(
-                self._gridspec[1070:1100, :1000])
+                self._gridspec[1130:1150, 50:1050])
         ax.tick_params(axis='both', which='major', labelsize="x-small")
         cab = self.figure.colorbar(mappable, cax=ax, orientation=orientation)
         return cab
@@ -465,7 +468,7 @@ class CircHiCFigure:
         resolution = resolution if resolution is not None else 1
         nrows = int(np.round((1 - outer_radius) / 2 * 1000))
         ax_g = self.figure.add_subplot(
-            self._gridspec[nrows:-nrows-100, nrows:-nrows-100],
+            self._gridspec[50+nrows:-nrows-150, 50+nrows:-nrows-150],
             facecolor="none",
             polar=polar,
             label=label, zorder=zorder)
@@ -478,3 +481,10 @@ class CircHiCFigure:
             ax_g.set_theta_direction(-1)
 
         return ax_g
+
+
+def _compute_rorigin(min_data, max_data, inner_radius, outer_radius):
+    origin_data = (
+        min_data - inner_radius * (max_data - min_data) /
+        (outer_radius - inner_radius))
+    return origin_data
