@@ -282,10 +282,9 @@ sphinx_gallery_conf = {
     'subsection_order': ExplicitOrder([
         '../examples/biological',
         '../examples/technical',
-        '../examples/technical/simple_plots',       
-         '../examples/technical/contact_map',
-         '../examples/technical/datasets',
-      
+        '../examples/technical_simple_plots',
+        '../examples/technical_contact_map',
+        '../examples/technical_datasets',
         ])
 }
 

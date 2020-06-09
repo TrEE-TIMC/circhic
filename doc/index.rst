@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 circHiC: circular visualization of HiC data and integration of genomic data
-=================================================
+===========================================================================
 
 .. image:: auto_examples/biological/images/sphx_glr_plot_circhic_001.png
   :scale: 50

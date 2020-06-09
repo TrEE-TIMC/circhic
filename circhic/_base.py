@@ -6,6 +6,7 @@ from matplotlib.gridspec import GridSpec
 from matplotlib import patches
 from matplotlib.container import BarContainer
 from .utils import generate_circular_map as _generate_circular_data
+from .utils import generate_borders
 
 
 class CircHiCFigure:
@@ -50,6 +51,7 @@ class CircHiCFigure:
                  vmin=None,
                  vmax=None,
                  alpha=1,
+                 border_thickness=0.02,
                  ax=None):
         """
         Plot a heatmap of the HiC contact count matrix on a circular strip.
@@ -144,7 +146,7 @@ class CircHiCFigure:
 
         # Generate circular hic map
         circular_data = _generate_circular_data(
-            counts, res=resolution,
+            counts, resolution=resolution,
             origin=self.origin, inner_radius=cir_inner_radius,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
@@ -160,6 +162,16 @@ class CircHiCFigure:
             vmax=vmax,
             norm=norm, cmap=cmap)
 
+        if border_thickness != 0:
+            border_im = generate_borders(
+                counts, resolution=resolution,
+                origin=self.origin, inner_radius=cir_inner_radius,
+                inner_gdis=inner_gdis,
+                outer_gdis=outer_gdis,
+                thick_r=border_thickness)
+            ax.imshow(
+                border_im, interpolation=None,
+                cmap="Greys_r")
         # We don't want to remove entirely the axis, as it means setting
         # xlabels and ylabels don't work anymore.
         # Actually, is that an issue apart from the gallery?? I'm not so sure
