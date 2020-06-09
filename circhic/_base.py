@@ -154,7 +154,6 @@ class CircHiCFigure:
             norm = colors.SymLogNorm(1, base=10)
         else:
             norm = colors.SymLogNorm(vmin, base=10)
-
         im = ax.imshow(
             circular_data, interpolation=None,
             alpha=alpha,
@@ -379,9 +378,7 @@ class CircHiCFigure:
         bar_container = BarContainer(_patches)
         ax.add_container(bar_container)
         # Now compute the new origin
-        rorigin = (
-            - outer_radius /
-            (outer_radius - inner_radius))
+        rorigin = _compute_rorigin(0, 1, inner_radius, outer_radius)
         ax.set_rmin(rorigin)
 
         return bar_container, ax
@@ -478,3 +475,9 @@ class CircHiCFigure:
             ax_g.set_theta_direction(-1)
 
         return ax_g
+
+
+def _compute_rorigin(min_data, max_data, inner_radius, outer_radius):
+    origin_data = (
+        min_data - inner_radius * (max_data - min_data) / (outer_radius - inner_radius))
+    return origin_data
