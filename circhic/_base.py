@@ -144,7 +144,7 @@ class CircHiCFigure:
 
         # Generate circular hic map
         circular_data = _generate_circular_data(
-            counts, res=resolution,
+            counts, resolution=resolution,
             origin=self.origin, inner_radius=cir_inner_radius,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)

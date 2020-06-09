@@ -135,7 +135,7 @@ def generate_borders(data, granul=0.5, inner_radius=0.5, resolution=0,
         sys.exit('Unknown mode for generating circular data')
 
 
-def generate_circular_map(data, bin_circ=0.5, inner_radius=0.5, resolution=0,
+def generate_circular_map(data, granul=0.5, inner_radius=0.5, resolution=0,
                           inner_gdis=800000, outer_gdis=800000, origin=1,
                           mode='circ', frac_lin=0.7, rotate_lin=0):
 
