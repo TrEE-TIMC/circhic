@@ -4,12 +4,13 @@
 
 .. _sphx_glr_auto_examples:
 
-.. _general_examples:
-
+================
 General examples
 ================
 
 General-purpose and introductory examples for `circhic`.
+
+.. contents::
 
 
 .. raw:: html
