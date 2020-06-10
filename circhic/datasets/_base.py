@@ -11,12 +11,11 @@ def load_ccrescentus():
 
     Returns
     -------
-
-    counts, lengths :
-        a tuple containing an (n, n) ndarray corresponding to the raw contact
-        counts for *C. crescentus*, and an (l, ) ndarray containing the
-        lengths of all chromosomes.
-
+    dictionary :
+        a dictionary containing:
+            - counts: an (n, n) ndarray corresponding to the raw contact
+        counts for *C. crescentus*
+            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
     """
     module_path = os.path.dirname(__file__)
     counts = _load_counts(
@@ -25,7 +24,35 @@ def load_ccrescentus():
     counts = counts.toarray()
     counts = counts.T + counts
     lengths = np.array([counts.shape[0]])
-    return counts, lengths
+
+    results = {"counts": counts,
+               "lengths": lengths}
+    return results
+
+
+def load_bsubtilis():
+    """
+    Loads *B. subtilis* contact counts.
+
+    Returns
+    -------
+    dictionary :
+        a dictionary containing:
+            - counts: an (n, n) ndarray corresponding to the raw contact
+              counts for *B. subtilis*
+            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+    """
+    module_path = os.path.dirname(__file__)
+    counts = _load_counts(
+        os.path.join(module_path,
+                     "data/bsubtilis/SRX1014144_9790.matrix"))
+    counts = counts.toarray()
+    counts = counts.T + counts
+    lengths = np.array([counts.shape[0]])
+    results = {"counts": counts,
+               "lengths": lengths}
+
+    return results
 
 
 def _load_counts(filename, lengths=None):

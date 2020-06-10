@@ -10,7 +10,8 @@ from circhic import datasets
 import matplotlib.pyplot as plt
 from matplotlib import colors
 
-counts, lengths = datasets.load_ccrescentus()
+data = datasets.load_ccrescentus()
+counts = data["counts"]
 
 fig, ax = plt.subplots()
 ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")

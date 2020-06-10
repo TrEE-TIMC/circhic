@@ -36,6 +36,7 @@ Datasets
    :template: function.rst
 
    datasets.load_ccrescentus
+   datasets.load_bsubtilis
 
 
 Utils
