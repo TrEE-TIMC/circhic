@@ -106,7 +106,7 @@ The basic units of a `circhic` plot.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip. ">
 
 .. only:: html
 
@@ -127,7 +127,7 @@ The basic units of a `circhic` plot.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip. ">
 
 .. only:: html
 
@@ -148,7 +148,7 @@ The basic units of a `circhic` plot.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data. ">
 
 .. only:: html
 
@@ -183,7 +183,7 @@ Contact count maps as a circular strip
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar. ">
 
 .. only:: html
 
@@ -242,7 +242,7 @@ Examples concerning the :mod:`circhic.datasets` module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting KBM7&#x27;s chromosome 14 data.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting KBM7&#x27;s chromosome 14 data. ">
 
 .. only:: html
 
@@ -263,7 +263,7 @@ Examples concerning the :mod:`circhic.datasets` module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *E. coli* data.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *E. coli* data. ">
 
 .. only:: html
 
@@ -284,7 +284,7 @@ Examples concerning the :mod:`circhic.datasets` module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *B. subtilis* data.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *B. subtilis* data. ">
 
 .. only:: html
 
@@ -305,7 +305,7 @@ Examples concerning the :mod:`circhic.datasets` module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *C. crescentus* data.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *C. crescentus* data. ">
 
 .. only:: html
 
