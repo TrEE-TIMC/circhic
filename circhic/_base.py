@@ -369,6 +369,14 @@ class CircHiCFigure:
         bottom = 0
 
         _patches = []
+
+        # Now compute the new origin
+        rorigin = _compute_rorigin(0, 1, inner_radius, outer_radius)
+        if matplotlib.__version__ == "3.2.0":
+            ax.set_rmin(rorigin)
+        else:
+            ax.set_rorigin(rorigin)
+
         for i, (l, w) in enumerate(zip(left, width)):
             if colors is not None:
                 c = colors[i]
@@ -387,13 +395,17 @@ class CircHiCFigure:
             ax.add_patch(r)
             _patches.append(r)
 
-        ax._request_autoscale_view()
-
         bar_container = BarContainer(_patches)
         ax.add_container(bar_container)
+
         # Now compute the new origin
         rorigin = _compute_rorigin(0, 1, inner_radius, outer_radius)
         ax.set_rmin(rorigin)
+
+        if matplotlib.__version__ < "3.2.0":
+            ax.autoscale_view()
+        else:
+            ax._request_autoscale_view()
 
         return bar_container, ax
 
