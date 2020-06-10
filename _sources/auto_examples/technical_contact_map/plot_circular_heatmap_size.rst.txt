@@ -39,16 +39,16 @@ add white space to the disk.
 
  .. code-block:: none
 
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:166: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
-      extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:166: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
-      extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:179: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
-      cmap="Greys_r")
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:179: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
-      cmap="Greys_r")
+    /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/matplotlib/image.py:863: UserWarning: Attempting to set identical left==right results
+    in singular transformations; automatically expanding.
+    left=0, right=0
+      self.axes.set_xlim((xmin, xmax), auto=None)
+    /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/matplotlib/image.py:865: UserWarning: Attempting to set identical bottom==top results
+    in singular transformations; automatically expanding.
+    bottom=0, top=0
+      self.axes.set_ylim((ymin, ymax), auto=None)
 
-    (<matplotlib.image.AxesImage object at 0x7f514c477898>, <matplotlib.axes._axes.Axes object at 0x7f514cb83e48>)
+    (<matplotlib.image.AxesImage object at 0x7f7c5e70b4a8>, <matplotlib.axes._axes.Axes object at 0x7f7c608cba20>)
 
 
 
@@ -124,7 +124,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.174 seconds)
+   **Total running time of the script:** ( 0 minutes  9.255 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
