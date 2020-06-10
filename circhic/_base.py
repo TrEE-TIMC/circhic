@@ -20,7 +20,7 @@ class CircHiCFigure:
         array of chromosome length.
 
     origin : integer, optional, default: 1
-        position of the origin. The origin is set to the east of the plot
+        position of the origin. The origin is set to the North of the plot
 
     figure : matplotlib.figure.Figure, optional, default: None
         A Matplotlib figure. If not provided, will create it.
