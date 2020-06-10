@@ -14,7 +14,10 @@ matrix:
     include:
         - name: "Python 3.6"
           python: 3.6
-          env: MATPLOTLIB_VERSION=3.0 NUMPY_VERSION=1.16 SCIPY_VERSION=0.19
+          env: MATPLOTLIB_VERSION=3.0 NUMPY_VERSION=1.16 SCIPY_VERSION=0.19.1
+        - name: "Python 3.7"
+          python: 3.7
+          env: MATPLOTLIB_VERSION=3.1 NUMPY_VERSION=1.17 SCIPY_VERSION=1.2
         - name: "Python 3.8"
           python: 3.8
           env: MATPLOTLIB_VERSION=* NUMPY_VERSION=* SCIPY_VERSION=*
