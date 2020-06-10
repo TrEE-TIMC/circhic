@@ -31,9 +31,9 @@ PROJECT_URLS = {
 # __init__.py
 VERSION = circhic.__version__
 
-SCIPY_MIN_VERSION = '0.19.1'  # FIXME Do we even need scipy?
-NUMPY_MIN_VERSION = '1.13.3'  # FIXME
-MATPLOTLIB_MIN_VERSION = '3.0.0'  # FIXME
+SCIPY_MIN_VERSION = '0.19.1'
+NUMPY_MIN_VERSION = '1.16'
+MATPLOTLIB_MIN_VERSION = '3.0.0'
 
 # Optional setuptools features
 # We need to import setuptools early, if we want setuptools features,

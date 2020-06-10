@@ -51,11 +51,11 @@ feature, code or documentation improvement).
 
 2. Install the following dependencies if they are not already installed:
 
-   - Python (>= 3.5)
-   - NumPy (>= 1.11),
-   - SciPy (>= 0.17),
-   - Matplotlib (>= 2.0),
-   - pandas (>= FIXME)
+   - Python (>= 3.7)
+   - NumPy (>= 1.16),
+   - SciPy (>= 0.19.1),
+   - Matplotlib (>= 3.0),
+   - pandas
 
 2. Optional (but recommended): create and activate a dedicated virtualenv or conda environment.
 

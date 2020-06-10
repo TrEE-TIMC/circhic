@@ -1,5 +1,6 @@
 import numpy as np
 import warnings
+import matplotlib  # Need this to check the version
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from matplotlib.gridspec import GridSpec
@@ -153,11 +154,18 @@ class CircHiCFigure:
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
         if vmin is None:
-            norm = colors.SymLogNorm(1, base=10)
+            if matplotlib.__version__ < "3.2.0":
+                norm = colors.SymLogNorm(1)
+            else:
+                norm = colors.SymLogNorm(1, base=10)
         else:
-            norm = colors.SymLogNorm(vmin, base=10)
+            if matplotlib.__version__ < "3.2.0":
+                norm = colors.SymLogNorm(vmin)
+            else:
+                norm = colors.SymLogNorm(vmin, base=10)
+
         im = ax.imshow(
-            circular_data, 
+            circular_data,
             interpolation=None,
             alpha=alpha,
             vmin=vmin,
@@ -361,6 +369,14 @@ class CircHiCFigure:
         bottom = 0
 
         _patches = []
+
+        # Now compute the new origin
+        rorigin = _compute_rorigin(0, 1, inner_radius, outer_radius)
+        if matplotlib.__version__ == "3.2.0":
+            ax.set_rmin(rorigin)
+        else:
+            ax.set_rorigin(rorigin)
+
         for i, (l, w) in enumerate(zip(left, width)):
             if colors is not None:
                 c = colors[i]
@@ -379,13 +395,17 @@ class CircHiCFigure:
             ax.add_patch(r)
             _patches.append(r)
 
-        ax._request_autoscale_view()
-
         bar_container = BarContainer(_patches)
         ax.add_container(bar_container)
+
         # Now compute the new origin
         rorigin = _compute_rorigin(0, 1, inner_radius, outer_radius)
         ax.set_rmin(rorigin)
+
+        if matplotlib.__version__ < "3.2.0":
+            ax.autoscale_view()
+        else:
+            ax._request_autoscale_view()
 
         return bar_container, ax
 
