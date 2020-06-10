@@ -1,5 +1,6 @@
 import numpy as np
 import warnings
+import matplotlib  # Need this to check the version
 import matplotlib.pyplot as plt
 from matplotlib import colors
 from matplotlib.gridspec import GridSpec
@@ -153,11 +154,18 @@ class CircHiCFigure:
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
         if vmin is None:
-            norm = colors.SymLogNorm(1, base=10)
+            if matplotlib.__version__ < "3.2.0":
+                norm = colors.SymLogNorm(1)
+            else:
+                norm = colors.SymLogNorm(1, base=10)
         else:
-            norm = colors.SymLogNorm(vmin, base=10)
+            if matplotlib.__version__ < "3.2.0":
+                norm = colors.SymLogNorm(vmin)
+            else:
+                norm = colors.SymLogNorm(vmin, base=10)
+
         im = ax.imshow(
-            circular_data, 
+            circular_data,
             interpolation=None,
             alpha=alpha,
             vmin=vmin,
