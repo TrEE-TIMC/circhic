@@ -1,16 +1,16 @@
 """
 ===============
-*C. crescentus*
+*B. subtilis*
 ===============
 
-Loading and plotting *C. crescentus* data.
+Loading and plotting *B. subtilis* data.
 """
 
 from circhic import datasets
 import matplotlib.pyplot as plt
 from matplotlib import colors
 
-data = datasets.load_ccrescentus()
+data = datasets.load_bsubtilis()
 counts = data["counts"]
 
 fig, ax = plt.subplots()

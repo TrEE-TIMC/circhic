@@ -24,8 +24,10 @@ from circhic._base import CircHiCFigure
 
 
 # Load the data, compute the cumulative raw counts.
-counts, lengths = datasets.load_ccrescentus()
-cumul_raw_counts = counts.sum(axis=0)
+data = datasets.load_bsubtilis()
+counts = data["counts"]
+lengths = data["lengths"]
+
 # Normale the data using ICE, and keep the biases
 counts, bias = ICE_normalization(counts, output_bias=True)
 
