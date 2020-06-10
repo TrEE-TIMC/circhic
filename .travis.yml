@@ -37,4 +37,4 @@ deploy:
     local-dir: doc/_build/html
     on:
         branch: master
-        condition: DEPLOY=true
+        python: 3.8
