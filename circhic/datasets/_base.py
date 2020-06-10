@@ -41,14 +41,63 @@ def load_bsubtilis():
             - counts: an (n, n) ndarray corresponding to the raw contact
               counts for *B. subtilis*
             - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+
+    Example
+    -------
+
+    loading the data
+
+    >> from circhic import datasets
+    >> data = datasets.load_bsubtilis()
+    >> print(data)
+        {'counts': array([[  62.,  469.,  457., ...,  382.,  701., 2311.],
+            [ 469., 4908., 1245., ...,  362.,  642., 1227.],
+            [ 457., 1245., 5940., ...,  487.,  753., 1180.],
+            ...,
+            [ 382.,  362.,  487., ..., 2740., 1496., 1210.],
+            [ 701.,  642.,  753., ..., 1496., 3778., 2406.],
+            [2311., 1227., 1180., ..., 1210., 2406., 5244.]]),
+        'lengths': array([412])}
     """
     module_path = os.path.dirname(__file__)
+    lengths = _load_lengths(
+        os.path.join(module_path,
+                     "data/bsubtilis/SRX1014144_9790_abs.bed"))
+
     counts = _load_counts(
         os.path.join(module_path,
-                     "data/bsubtilis/SRX1014144_9790.matrix"))
+                     "data/bsubtilis/SRX1014144_9790.matrix"),
+        lengths=lengths)
     counts = counts.toarray()
     counts = counts.T + counts
-    lengths = np.array([counts.shape[0]])
+    results = {"counts": counts,
+               "lengths": lengths}
+
+    return results
+
+
+def load_ecoli():
+    """
+    Loads *E. coli* contact counts.
+
+    Returns
+    -------
+    dictionary :
+        a dictionary containing:
+            - counts: an (n, n) ndarray corresponding to the raw contact
+              counts for *B. subtilis*
+            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+    """
+    module_path = os.path.dirname(__file__)
+    lengths = _load_lengths(
+        os.path.join(module_path,
+                     "data/ecoli/SRX3451210_9897_abs.bed"))
+    counts = _load_counts(
+        os.path.join(module_path,
+                     "data/ecoli/SRX3451210_9897.matrix"),
+        lengths=lengths)
+    counts = counts.toarray()
+    counts = counts.T + counts
     results = {"counts": counts,
                "lengths": lengths}
 
@@ -103,3 +152,29 @@ def _load_counts(filename, lengths=None):
     data = data.astype(float)
     counts = sparse.coo_matrix((data, (row, col)), shape=shape)
     return counts
+
+
+def _load_lengths(filename, return_base=False):
+    """
+    Fast loading of the bed files
+
+    Parameters
+    ----------
+    filename : str,
+        path to the file to load. The file should be a bed file
+
+    return_base : bool, optional, default: False
+        whether to return if it is 0 or 1-base
+
+    Returns
+    -------
+    lengths : the lengths of each chromosomes
+    """
+    data = pd.read_csv(filename, sep="\t", comment="#", header=None)
+    data = data.values
+    _, idx, lengths = np.unique(data[:, 0], return_counts=True,
+                                return_index=True)
+    if return_base:
+        return lengths[idx.argsort()], data[0, 3]
+    else:
+        return lengths[idx.argsort()]

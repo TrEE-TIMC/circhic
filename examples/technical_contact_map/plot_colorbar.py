@@ -12,7 +12,7 @@ from circhic._base import CircHiCFigure
 
 
 # Load the data, compute the cumulative raw counts.
-data = datasets.load_ccrescentus()
+data = datasets.load_ecoli()
 counts = data["counts"]
 lengths = data["lengths"]
 
