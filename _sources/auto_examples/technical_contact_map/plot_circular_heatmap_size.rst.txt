@@ -48,7 +48,7 @@ add white space to the disk.
     /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:179: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
       cmap="Greys_r")
 
-    (<matplotlib.image.AxesImage object at 0x7efee8e329b0>, <matplotlib.axes._axes.Axes object at 0x7efee95a9f98>)
+    (<matplotlib.image.AxesImage object at 0x7f514c477898>, <matplotlib.axes._axes.Axes object at 0x7f514cb83e48>)
 
 
 
@@ -124,7 +124,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.237 seconds)
+   **Total running time of the script:** ( 0 minutes  9.174 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
