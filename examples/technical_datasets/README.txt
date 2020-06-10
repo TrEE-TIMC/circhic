@@ -1,7 +1,7 @@
 .. _datasets_examples:
 
-Data sets
-*********
+Datasets
+********
   
 Examples concerning the :mod:`circhic.datasets` module.
 

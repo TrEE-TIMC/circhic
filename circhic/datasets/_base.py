@@ -104,6 +104,34 @@ def load_ecoli():
     return results
 
 
+def load_kbm7():
+    """
+    Loading chromosome 14 of KBM7
+
+    Returns
+    -------
+    dictionary :
+        a dictionary containing:
+            - counts: an (n, n) ndarray corresponding to the raw contact
+        counts for *C. crescentus*
+            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+    """
+    module_path = os.path.dirname(__file__)
+    lengths = _load_lengths(
+        os.path.join(module_path,
+                     "data/KBM7/HIC_076_50000_chr14.bed"))
+    counts = _load_counts(
+        os.path.join(module_path,
+                     "data/KBM7/HIC_076_50000_chr14.matrix"),
+        lengths=lengths)
+    counts = counts.toarray()
+    counts = counts.T + counts
+
+    results = {"counts": counts,
+               "lengths": lengths}
+    return results
+
+
 def _load_counts(filename, lengths=None):
     """
     Fast loading of a raw interaction counts file
