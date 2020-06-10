@@ -8,7 +8,19 @@
 set -e
 
 pip install --upgrade pip pytest pytest-cov
-pip install --upgrade numpy scipy matplotlib
+if [[ $NUMPY_VERSION != "*" ]]; then
+    pip install --upgrade \
+        numpy==$NUMPY_VERSION
+else
+    pip install numpy --upgrade
+fi
+if [[ $MATPLOTLIB_VERSION != "*" ]]; then
+    pip install matplotlib==$MATPLOTLIB_VERSION
+else
+    pip install matplotlib --upgrade
+fi
+
+pip install --upgrade scipy
 pip install --upgrade pandas iced
 
 # For the documentation
