@@ -39,16 +39,16 @@ add white space to the disk.
 
  .. code-block:: none
 
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:167: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
-      im = ax.imshow(
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:167: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
-      im = ax.imshow(
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:184: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
-      ax.imshow(
-    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:184: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
-      ax.imshow(
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:174: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+      extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:174: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
+      extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:187: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+      cmap="Greys_r")
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:187: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
+      cmap="Greys_r")
 
-    (<matplotlib.image.AxesImage object at 0x7f0f21f8a100>, <matplotlib.axes._axes.Axes object at 0x7f0f1fcc6d00>)
+    (<matplotlib.image.AxesImage object at 0x7f68195a57f0>, <matplotlib.axes._axes.Axes object at 0x7f681beada90>)
 
 
 
@@ -126,7 +126,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.747 seconds)
+   **Total running time of the script:** ( 0 minutes  9.449 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:

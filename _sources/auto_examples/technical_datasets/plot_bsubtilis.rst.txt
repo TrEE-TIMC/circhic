@@ -28,10 +28,8 @@ Loading and plotting *B. subtilis* data.
 
  .. code-block:: none
 
-    /home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_bsubtilis.py:17: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
-      ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")
 
-    <matplotlib.image.AxesImage object at 0x7f0f1fdc0bb0>
+    <matplotlib.image.AxesImage object at 0x7f681beab710>
 
 
 
@@ -56,7 +54,7 @@ Loading and plotting *B. subtilis* data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.173 seconds)
+   **Total running time of the script:** ( 0 minutes  0.175 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_datasets_plot_bsubtilis.py:

@@ -26,8 +26,8 @@ a circHiC figure showing biases and mappability
 
  .. code-block:: none
 
-    /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
-      warnings.warn(
+    /home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/iced/normalization/_ca_utils.py:9: UserWarning: The API of this module is likely to change. Use only for testing purposes
+      "The API of this module is likely to change. "
 
 
 
@@ -71,7 +71,7 @@ a circHiC figure showing biases and mappability
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.694 seconds)
+   **Total running time of the script:** ( 0 minutes  1.703 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_plot_circhic.py:
