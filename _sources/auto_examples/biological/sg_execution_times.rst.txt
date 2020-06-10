@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:01.758** total execution time for **auto_examples_biological** files:
+**00:01.738** total execution time for **auto_examples_biological** files:
 
 +--------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_plot_circhic.py` (``plot_circhic.py``) | 00:01.758 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_plot_circhic.py` (``plot_circhic.py``) | 00:01.738 | 0.0 MB |
 +--------------------------------------------------------------------------------+-----------+--------+
