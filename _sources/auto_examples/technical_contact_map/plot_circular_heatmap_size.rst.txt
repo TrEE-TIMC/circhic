@@ -39,16 +39,16 @@ add white space to the disk.
 
  .. code-block:: none
 
-    /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/matplotlib/image.py:863: UserWarning: Attempting to set identical left==right results
-    in singular transformations; automatically expanding.
-    left=0, right=0
-      self.axes.set_xlim((xmin, xmax), auto=None)
-    /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/matplotlib/image.py:865: UserWarning: Attempting to set identical bottom==top results
-    in singular transformations; automatically expanding.
-    bottom=0, top=0
-      self.axes.set_ylim((ymin, ymax), auto=None)
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:167: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+      im = ax.imshow(
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:167: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
+      im = ax.imshow(
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:184: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+      ax.imshow(
+    /home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:184: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
+      ax.imshow(
 
-    (<matplotlib.image.AxesImage object at 0x7f9c82285518>, <matplotlib.axes._axes.Axes object at 0x7f9c822aca90>)
+    (<matplotlib.image.AxesImage object at 0x7f9ddc642d90>, <matplotlib.axes._axes.Axes object at 0x7f9dda561df0>)
 
 
 
@@ -124,7 +124,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.141 seconds)
+   **Total running time of the script:** ( 0 minutes  9.684 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
