@@ -26,8 +26,8 @@ a circHiC figure showing biases and mappability
 
  .. code-block:: none
 
-    /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
-      warnings.warn(
+    /home/travis/virtualenv/python3.7.1/lib/python3.7/site-packages/iced/normalization/_ca_utils.py:9: UserWarning: The API of this module is likely to change. Use only for testing purposes
+      "The API of this module is likely to change. "
 
 
 
@@ -46,7 +46,9 @@ a circHiC figure showing biases and mappability
 
 
     # Load the data, compute the cumulative raw counts.
-    counts, lengths = datasets.load_ccrescentus()
+    data = datasets.load_ccrescentus()
+    counts = data["counts"]
+    lengths = data["lengths"]
     cumul_raw_counts = counts.sum(axis=0)
     # Normale the data using ICE, and keep the biases
     counts, bias = ICE_normalization(counts, output_bias=True)
@@ -69,7 +71,7 @@ a circHiC figure showing biases and mappability
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.731 seconds)
+   **Total running time of the script:** ( 0 minutes  1.711 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_plot_circhic.py:

@@ -69,7 +69,9 @@
 
 
 <span class="c1"># Load the data, compute the cumulative raw counts.</span>
-<span class="n">counts</span><span class="p">,</span> <span class="n">lengths</span> <span class="o">=</span> <a href="../../modules/generated/circhic.datasets.load_ccrescentus.html#circhic.datasets.load_ccrescentus" title="circhic.datasets.load_ccrescentus" class="sphx-glr-backref-module-circhic-datasets sphx-glr-backref-type-py-function"><span class="n">datasets</span><span class="o">.</span><span class="n">load_ccrescentus</span></a><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <a href="../../modules/generated/circhic.datasets.load_ccrescentus.html#circhic.datasets.load_ccrescentus" title="circhic.datasets.load_ccrescentus" class="sphx-glr-backref-module-circhic-datasets sphx-glr-backref-type-py-function"><span class="n">datasets</span><span class="o">.</span><span class="n">load_ccrescentus</span></a><span class="p">()</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;lengths&quot;</span><span class="p">]</span>
 <span class="n">cumul_raw_counts</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="c1"># Normale the data using ICE, and keep the biases</span>
 <span class="n">counts</span><span class="p">,</span> <span class="n">bias</span> <span class="o">=</span> <span class="n">ICE_normalization</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">output_bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -89,7 +91,7 @@
 <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">set_genomic_ticklabels</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.647 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.624 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-plot-changing-ori-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c7b8d9dad09a097723b31e6b90486870/plot_changing_ori.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_changing_ori.py</span></code></a></p>

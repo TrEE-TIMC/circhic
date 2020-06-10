@@ -33,7 +33,9 @@ Changing the origin of the heatmap
 
 
     # Load the data, compute the cumulative raw counts.
-    counts, lengths = datasets.load_ccrescentus()
+    data = datasets.load_ccrescentus()
+    counts = data["counts"]
+    lengths = data["lengths"]
     cumul_raw_counts = counts.sum(axis=0)
     # Normale the data using ICE, and keep the biases
     counts, bias = ICE_normalization(counts, output_bias=True)
@@ -55,7 +57,7 @@ Changing the origin of the heatmap
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.647 seconds)
+   **Total running time of the script:** ( 0 minutes  1.624 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_plot_changing_ori.py:

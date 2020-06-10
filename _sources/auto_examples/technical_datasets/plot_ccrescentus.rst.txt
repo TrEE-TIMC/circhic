@@ -28,10 +28,8 @@ Loading and plotting *C. crescentus* data.
 
  .. code-block:: none
 
-    /home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_ccrescentus.py:16: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
-      ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")
 
-    <matplotlib.image.AxesImage object at 0x7f9dda41b400>
+    <matplotlib.image.AxesImage object at 0x7f2dbc237278>
 
 
 
@@ -47,7 +45,8 @@ Loading and plotting *C. crescentus* data.
     import matplotlib.pyplot as plt
     from matplotlib import colors
 
-    counts, lengths = datasets.load_ccrescentus()
+    data = datasets.load_ccrescentus()
+    counts = data["counts"]
 
     fig, ax = plt.subplots()
     ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")

@@ -1,0 +1,14 @@
+:orphan:
+
+circhic.datasets.load_ecoli
+===========================
+
+.. currentmodule:: circhic.datasets
+
+.. autofunction:: load_ecoli
+
+.. include:: ../../generated/backreferences/circhic.datasets.load_ecoli.examples
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>

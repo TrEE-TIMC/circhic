@@ -232,13 +232,76 @@ Contact count maps as a circular strip
 
 .. _datasets_examples:
 
-Data sets
-*********
+Datasets
+********
   
 Examples concerning the :mod:`circhic.datasets` module.
 
 
 
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting KBM7&#x27;s chromosome 14 data.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_datasets/images/thumb/sphx_glr_plot_kbm7_thumb.png
+     :alt: Human (KBM7) - chromosome 14
+
+     :ref:`sphx_glr_auto_examples_technical_datasets_plot_kbm7.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_datasets/plot_kbm7
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *E. coli* data.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_datasets/images/thumb/sphx_glr_plot_ecoli_thumb.png
+     :alt: *E. coli*
+
+     :ref:`sphx_glr_auto_examples_technical_datasets_plot_ecoli.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_datasets/plot_ecoli
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Loading and plotting *B. subtilis* data.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_datasets/images/thumb/sphx_glr_plot_bsubtilis_thumb.png
+     :alt: *B. subtilis*
+
+     :ref:`sphx_glr_auto_examples_technical_datasets_plot_bsubtilis.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_datasets/plot_bsubtilis
 
 .. raw:: html
 

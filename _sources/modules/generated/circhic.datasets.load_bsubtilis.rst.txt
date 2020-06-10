@@ -1,0 +1,14 @@
+:orphan:
+
+circhic.datasets.load_bsubtilis
+===============================
+
+.. currentmodule:: circhic.datasets
+
+.. autofunction:: load_bsubtilis
+
+.. include:: ../../generated/backreferences/circhic.datasets.load_bsubtilis.examples
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>

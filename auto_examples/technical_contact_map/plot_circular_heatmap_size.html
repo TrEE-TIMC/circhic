@@ -74,16 +74,16 @@ of the total available space is used, while the inner radius will effectively
 add white space to the disk.</p>
 <img alt="Default, Varying data plotted on the inner genomic distance, Varying data plotted on the outer genomic distance" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_circular_heatmap_size_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:167: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
-  im = ax.imshow(
-/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:167: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
-  im = ax.imshow(
-/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:184: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
-  ax.imshow(
-/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:184: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
-  ax.imshow(
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:174: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+  extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:174: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
+  extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:187: UserWarning: Attempting to set identical left == right == 0 results in singular transformations; automatically expanding.
+  cmap=&quot;Greys_r&quot;)
+/home/travis/build/TrEE-TIMC/circhic/circhic/_base.py:187: UserWarning: Attempting to set identical bottom == top == 0 results in singular transformations; automatically expanding.
+  cmap=&quot;Greys_r&quot;)
 
-(&lt;matplotlib.image.AxesImage object at 0x7f9ddc642d90&gt;, &lt;matplotlib.axes._axes.Axes object at 0x7f9dda561df0&gt;)
+(&lt;matplotlib.image.AxesImage object at 0x7f2dbbc5d898&gt;, &lt;matplotlib.axes._axes.Axes object at 0x7f2dbc23eb00&gt;)
 </pre></div>
 </div>
 <div class="line-block">
@@ -97,8 +97,10 @@ add white space to the disk.</p>
 
 
 <span class="c1"># Load the data, compute the cumulative raw counts.</span>
-<span class="n">counts</span><span class="p">,</span> <span class="n">lengths</span> <span class="o">=</span> <a href="../../modules/generated/circhic.datasets.load_ccrescentus.html#circhic.datasets.load_ccrescentus" title="circhic.datasets.load_ccrescentus" class="sphx-glr-backref-module-circhic-datasets sphx-glr-backref-type-py-function"><span class="n">datasets</span><span class="o">.</span><span class="n">load_ccrescentus</span></a><span class="p">()</span>
-<span class="n">cumul_raw_counts</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <a href="../../modules/generated/circhic.datasets.load_bsubtilis.html#circhic.datasets.load_bsubtilis" title="circhic.datasets.load_bsubtilis" class="sphx-glr-backref-module-circhic-datasets sphx-glr-backref-type-py-function"><span class="n">datasets</span><span class="o">.</span><span class="n">load_bsubtilis</span></a><span class="p">()</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;lengths&quot;</span><span class="p">]</span>
+
 <span class="c1"># Normale the data using ICE, and keep the biases</span>
 <span class="n">counts</span><span class="p">,</span> <span class="n">bias</span> <span class="o">=</span> <span class="n">ICE_normalization</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">output_bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -152,7 +154,7 @@ add white space to the disk.</p>
 <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">outer_gdis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.684 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.648 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-circular-heatmap-size-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b03b5bfe77c32add56ccb46bcb05225c/plot_circular_heatmap_size.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_circular_heatmap_size.py</span></code></a></p>

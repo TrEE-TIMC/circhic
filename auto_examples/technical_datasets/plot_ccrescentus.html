@@ -64,10 +64,7 @@
 <p>Loading and plotting <em>C. crescentus</em> data.</p>
 <img alt="plot ccrescentus" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_ccrescentus_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_ccrescentus.py:16: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
-  ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation=&quot;none&quot;)
-
-&lt;matplotlib.image.AxesImage object at 0x7f9dda41b400&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage object at 0x7f2dbc237278&gt;
 </pre></div>
 </div>
 <div class="line-block">
@@ -77,7 +74,8 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">colors</span>
 
-<span class="n">counts</span><span class="p">,</span> <span class="n">lengths</span> <span class="o">=</span> <a href="../../modules/generated/circhic.datasets.load_ccrescentus.html#circhic.datasets.load_ccrescentus" title="circhic.datasets.load_ccrescentus" class="sphx-glr-backref-module-circhic-datasets sphx-glr-backref-type-py-function"><span class="n">datasets</span><span class="o">.</span><span class="n">load_ccrescentus</span></a><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <a href="../../modules/generated/circhic.datasets.load_ccrescentus.html#circhic.datasets.load_ccrescentus" title="circhic.datasets.load_ccrescentus" class="sphx-glr-backref-module-circhic-datasets sphx-glr-backref-type-py-function"><span class="n">datasets</span><span class="o">.</span><span class="n">load_ccrescentus</span></a><span class="p">()</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">colors</span><span class="o">.</span><span class="n">SymLogNorm</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
