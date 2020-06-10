@@ -29,7 +29,7 @@ Loading and plotting *C. crescentus* data.
  .. code-block:: none
 
 
-    <matplotlib.image.AxesImage object at 0x7f15b9698668>
+    <matplotlib.image.AxesImage object at 0x7f9c820410f0>
 
 
 
@@ -53,7 +53,7 @@ Loading and plotting *C. crescentus* data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.156 seconds)
+   **Total running time of the script:** ( 0 minutes  0.180 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_datasets_plot_ccrescentus.py:
