@@ -183,6 +183,27 @@ Contact count maps as a circular strip
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example, we showcase the difference between the reflect versus the distant mode.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_reflect_vs_distant_mode_thumb.png
+     :alt: Reflect versus distant mode
+
+     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_contact_map/plot_reflect_vs_distant_mode
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar.">
 
 .. only:: html

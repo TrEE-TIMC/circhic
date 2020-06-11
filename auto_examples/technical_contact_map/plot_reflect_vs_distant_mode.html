@@ -57,11 +57,12 @@
   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-technical-contact-map-plot-colorbar-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-technical-contact-map-plot-reflect-vs-distant-mode-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="colorbars">
-<span id="sphx-glr-auto-examples-technical-contact-map-plot-colorbar-py"></span><h1>Colorbars<a class="headerlink" href="#colorbars" title="Permalink to this headline">¶</a></h1>
-<p>Small example showcasing how to plot a vertical or horizontal colorbar.</p>
+<div class="sphx-glr-example-title section" id="reflect-versus-distant-mode">
+<span id="sphx-glr-auto-examples-technical-contact-map-plot-reflect-vs-distant-mode-py"></span><h1>Reflect versus distant mode<a class="headerlink" href="#reflect-versus-distant-mode" title="Permalink to this headline">¶</a></h1>
+<p>In this example, we showcase the difference between the reflect versus the
+distant mode.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iced.normalization</span> <span class="kn">import</span> <span class="n">ICE_normalization</span>
 
 <span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <span class="n">datasets</span>
@@ -77,29 +78,29 @@
 <span class="n">counts</span><span class="p">,</span> <span class="n">bias</span> <span class="o">=</span> <span class="n">ICE_normalization</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">output_bias</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>A simple vertical colorbar</p>
+<p>The reflect mode (the default) will plot data corresponding to the upper and
+lower triangular of the original contact count matrix</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
-<span class="n">im</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
-<span class="n">cab</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">set_colorbar</span></a><span class="p">(</span><span class="n">im</span><span class="p">)</span>
-<span class="n">cab</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Normalized contact counts&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">im</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;reflect&quot;</span><span class="p">,</span> <span class="n">inner_gdis</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+                             <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="plot colorbar" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_colorbar_001.png" />
-<p>A simple horizontal colorbar</p>
+<img alt="plot reflect vs distant mode" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_reflect_vs_distant_mode_001.png" />
+<p>The distant mode will plot the data between inner_gdis and outer_gdis, thus
+ignoring the section close to the diagonal.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
-<span class="n">im</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone_r&quot;</span><span class="p">)</span>
-<span class="n">cab</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">set_colorbar</span></a><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span><span class="p">)</span>
-<span class="n">cab</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Normalized contact counts&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+<span class="n">im</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;distant&quot;</span><span class="p">,</span> <span class="n">inner_gdis</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+                             <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="plot colorbar" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_colorbar_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.752 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-colorbar-py">
+<img alt="plot reflect vs distant mode" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_reflect_vs_distant_mode_002.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.165 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-reflect-vs-distant-mode-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/c89d597199d6b4c4e38e785d56bf89ca/plot_colorbar.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_colorbar.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/6fb62e6a2c974c7e77678d99d84253c2/plot_reflect_vs_distant_mode.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_reflect_vs_distant_mode.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/bde826815c109f8901fedfdcfd3d92ef/plot_colorbar.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_colorbar.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/94922385ccd627e4d26df4271048bd9c/plot_reflect_vs_distant_mode.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_reflect_vs_distant_mode.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
