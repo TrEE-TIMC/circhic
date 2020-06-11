@@ -4,8 +4,8 @@ import numpy as np
 
 def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
                      inner_gdis=800000, outer_gdis=800000, origin=1,
-                     mode='circ', frac_lin=0.7, rotate_lin=0, thick_r=0.005,
-                     thick_extreme=0.002):
+                     chromosome_type='circular', frac_lin=0.7, rotate_lin=0,
+                     thick_r=0.005, thick_extreme=0.002):
 
     if not resolution:
         raise ValueError("Data resolution must be set")
@@ -33,12 +33,12 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
         ((R >= inner_radius) &
          (R <= inner_radius+thick_r)) | ((R >= 1-thick_r) & (R <= 1)))
 
-    if mode == 'circ':
+    if chromosome_type == 'circular':
         C = np.empty((Nc, Nc)) * np.nan  # background mask
         for ic, jc in np.argwhere(iR_bord > 0):
             C[ic, jc] = 1
         return C
-    elif mode == 'lin':
+    elif chromosome_type == 'linear':
 
         iR = (R >= inner_radius) & (R <= 1)
 
@@ -107,7 +107,6 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
 
         # handling angles larger than frac_lin*2*pi
         # handling non-periodic conditions
-#
         iT = (Theta <= frac_lin*2*np.pi)
         which_indices = np.argwhere(
             (iR_bord > 0) & (iT > 0) &
@@ -132,14 +131,16 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
         return C
 
     else:
-        sys.exit('Unknown mode for generating circular data')
+        sys.exit('Unknown chromosome_type for generating circular data')
 
 
 def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
-                          resolution=0, inner_gdis=800000, outer_gdis=800000,
-                          origin=1, mode='circ', frac_lin=0.7, rotate_lin=0):
-
-    """Generate Circular Strip Data
+                          resolution=None, inner_gdis=800000,
+                          outer_gdis=800000,
+                          mode="reflect",
+                          origin=1, chromosome_type='circular', frac_lin=0.7,
+                          rotate_lin=0):
+    """Generate circular Strip Data
 
 
     Parameters
@@ -167,8 +168,8 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
     origin: integer
         Genomic position at the vertical top
 
-    mode : string
-        'circ': circular chromosome, default
+    chromosome_type : string
+        'circular': circular chromosome, default
         'lin': linear chromosome
 
     frac_lin : float <= 1
@@ -182,14 +183,20 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
     -------
     (Nc, Nc) ndarray containing the count data projected on a circular strip.
     """
-    if not resolution:
+    if resolution is None:
         raise ValueError("Data resolution must be set")
+
     if inner_radius >= 1:
         raise ValueError("Inner radius should be <= 1")
 
+    if mode not in ["reflect", "distant"]:
+        raise ValueError(
+            "mode %s is unknown. Possible values for mode are "
+            "'reflect', and 'distant'.")
+
     Lg = resolution*len(data)  # genome length given the input resolution
     if origin > Lg:
-        sys.exit('origin must be <= Lg')
+        raise ValueError('origin must be <= Lg')
 
     N, Nc = int(len(data)), int(len(data)/granularity)
 
@@ -225,19 +232,19 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
     Theta[iT & iR] = 2*np.pi - Theta_sin[iT & iR]
 
     # setting the origin of the clockwise polar angle at the top vertical
-    if mode == 'circ':
+    if chromosome_type == 'circular':
         Theta[iR] = (Theta[iR] + np.pi/2) % (2*np.pi)
-    elif mode == 'lin':
+    elif chromosome_type == 'linear':
         Theta[iR] = (
             (Theta[iR] + np.pi/2 + frac_lin*np.pi-rotate_lin/360*2*np.pi) %
             (2*np.pi))
     else:
-        raise ValueError("mode should be 'circ' or 'lin'.")
+        raise ValueError("chromosome_type should be 'circular' or 'linear'.")
 
     # Bref is the bin "x" of the ms where we consider a contact between x-s/2
     # and x+s/2
     Bref = np.zeros((Nc, Nc), dtype=int)
-    if mode == 'circ':
+    if chromosome_type == 'circular':
         Bref[iR] = ((((origin-1)/Lg+Theta[iR]/2/np.pi)*N).astype(int)) % N
     else:
         # with this defition, angles larger than frac_lin*2*pi are irrelevant,
@@ -247,11 +254,24 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
     # Half_s is the corresponding "s/2" in x-s/2 and x+s/2
     Half_s = np.zeros((Nc, Nc), dtype=int)
 
-    Half_s[iR] = np.round(
-        (outer_gdis*N/Lg - (R[iR] - 1) /
-         (inner_radius - 1) * (inner_gdis+outer_gdis) *
-         N / Lg) /
-        2).astype(int)
+    if mode == "reflect":
+        r_mid = (
+            (outer_gdis*inner_radius+inner_gdis) /
+            (outer_gdis+inner_gdis))
+        iS = (R <= r_mid)
+        Half_s[iR & iS] = (
+            (-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
+             (inner_radius - r_mid) *
+             (1-inner_gdis*N/Lg))/2).astype(int)
+        iS = (R >= r_mid)
+        Half_s[iR & iS] = (
+            (2+(R[iR & iS] - r_mid) /
+             (1 - r_mid) *
+             (outer_gdis*N/Lg-2))/2).astype(int)
+    else:
+        Half_s[iR] = (
+            ((outer_gdis*N/Lg - (R[iR] - 1) /
+             (inner_radius - 1)*(-inner_gdis+outer_gdis)*N/Lg)/2).astype(int))
 
     # building bins x-s/2 and x+s/2
     Ih, Jh = np.zeros((Nc, Nc), dtype=int), np.zeros((Nc, Nc), dtype=int)
@@ -261,7 +281,7 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
     # filling up the final matrix
     C = np.empty((Nc, Nc)) * np.nan  # background mask
 
-    if mode == 'circ':
+    if chromosome_type == 'circular':
         for ic, jc in np.argwhere(iR > 0):
             C[ic, jc] = data[Ih[ic, jc], Jh[ic, jc]]
     else:
