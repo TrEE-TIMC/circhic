@@ -6,7 +6,7 @@ from matplotlib import colors
 from matplotlib.gridspec import GridSpec
 from matplotlib import patches
 from matplotlib.container import BarContainer
-from .utils import generate_circular_map as _generate_circular_data
+from .utils import generate_circular_map
 from .utils import generate_borders
 
 
@@ -49,6 +49,7 @@ class CircHiCFigure:
                  inner_radius=0, outer_radius=1,
                  resolution=1,
                  cmap="viridis",
+                 mode="reflect",
                  vmin=None,
                  vmax=None,
                  alpha=1,
@@ -92,6 +93,20 @@ class CircHiCFigure:
         cmap : string, optional, default : "viridis"
             A Matplotlib colormap.
 
+        mode : {"reflect", "distant"}, optional, default: "reflect"
+
+            - if `"reflect"`, the contact count matrix will be plotted from
+              `inner_gdis` to 0, then 0 to `outer_gdis`.
+            - if `"distant"`, the contact count matrix will be plotted from
+              `inner_gdis` to `outer_gdis`: this option is useful to visualize
+              contact counts far away from the diagonal.
+
+        vmin, vmax : float, optional, default: None
+            `vmin` and `vmax` define the data range that the colormap covers.
+            By default, the colormap covers the complete value range of the
+            supplied data.
+
+
         ax : matplotlib.axes.Axes object, optional, default: None
             Matplotlib Axes object. By default, will create one. Note that
             outer_radius and inner_radius will be ignored if `ax` is provided.
@@ -100,6 +115,11 @@ class CircHiCFigure:
         -------
         (im, ax) type of artist and axes
         """
+
+        if mode not in ["reflect", "distant"]:
+            raise ValueError(
+                "mode %s is unknown. Possible values for mode are "
+                "'reflect', and 'distant'.")
         n = counts.shape[0]
         if resolution is None:
             resolution = self.lengths.sum() / n
@@ -147,10 +167,11 @@ class CircHiCFigure:
         cir_inner_radius = inner_radius / outer_radius
 
         # Generate circular hic map
-        circular_data = _generate_circular_data(
+        circular_data = generate_circular_map(
             counts, resolution=resolution,
             granularity=granularity,
             origin=self.origin, inner_radius=cir_inner_radius,
+            mode=mode,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
         if vmin is None:
