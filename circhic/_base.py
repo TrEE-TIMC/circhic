@@ -532,25 +532,3 @@ def _compute_rorigin(min_data, max_data, inner_radius, outer_radius):
         min_data - inner_radius * (max_data - min_data) /
         (outer_radius - inner_radius))
     return origin_data
-
-
-def _convert_from_gdis_to_theta(gdis, lengths, resolution=None):
-    """
-    Converts from genomic distance to theta.
-
-    Parameters
-    ----------
-    gdis : array (n, )
-        Array of genomic distances to convert
-
-    lengths : array (l, )
-        Lengths of the chromosomes
-
-    resolution : integer, optional, default: None
-        Resolution
-    """
-    if resolution is None:
-        resolution = 1
-
-    theta = gdis * 2 * np.pi / lengths.sum() * resolution
-    return theta

@@ -295,3 +295,62 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
             C[ic, jc] = data[Ih[ic, jc], Jh[ic, jc]]
 
     return C
+
+
+def _convert_from_x_to_theta(x, lengths, resolution=None):
+    """
+    Converts from genomic distance to theta.
+
+    Parameters
+    ----------
+    gdis : array (n, )
+        Array of genomic distances to convert
+
+    lengths : array (l, )
+        Lengths of the chromosomes
+
+    resolution : integer, optional, default: None
+        Resolution
+    """
+    if resolution is None:
+        resolution = 1
+
+    theta = x * 2 * np.pi / lengths.sum() * resolution
+    return theta
+
+
+def convert_xy_to_thetar(coordinates, lengths, resolution=None):
+    """
+    Convert from (x, y) coordinates to (theta, r)
+
+    Parameters
+    ----------
+    coordinates : tuple of ndarray
+        (x, y) where x and y are in genomics coordinates
+
+    lengths : ndarray (l, )
+        the lengths of the chromosome
+
+    resolution : integer, optional, default: None
+        Resolution
+
+    Returns
+    -------
+    (theta, s) tuple of polar coordinates
+    """
+    if resolution is None:
+        resolution = 1
+
+    x, y = coordinates
+    if x.shape[0] != y.shape[0]:
+        raise ValueError("coordinates should be of the same length")
+
+    if np.any(x > (lengths.sum() / resolution)):
+        raise ValueError("value in x larger than expected")
+
+    if np.any(y > (lengths.sum() / resolution)):
+        raise ValueError("value in x larger than expected")
+
+    s = y - x
+    theta = (x + s / 2) * 2 * np.pi / lengths.sum() * resolution
+    return (theta, s)

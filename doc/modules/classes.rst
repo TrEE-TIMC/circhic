@@ -55,4 +55,5 @@ Utils
   :template: function.rst
 
   utils.generate_circular_map
+  utils.convert_xy_to_thetar
 
