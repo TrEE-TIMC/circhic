@@ -29,7 +29,7 @@ a circHiC figure showing biases and mappability
     /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
       warnings.warn(
 
-    <matplotlib.legend.Legend object at 0x7fe7ede053a0>
+    <matplotlib.legend.Legend object at 0x7f849c4a83a0>
 
 
 
@@ -104,7 +104,7 @@ a circHiC figure showing biases and mappability
 
     # Now, try to do a simple "theta-axis" on the outer
     ticklabels = [
-            "%d~kb" % (i * 10) for i in np.arange(0, lengths.sum(), 50)[:-1]]
+            "%d kb" % (i * 10) for i in np.arange(0, lengths.sum(), 50)[:-1]]
     ticklabels[0] = "ORI"
     ax = circhicfig.set_genomic_ticklabels(
         tickpositions=np.arange(0, lengths.sum(), 50)[:-1],
@@ -118,7 +118,7 @@ a circHiC figure showing biases and mappability
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.836 seconds)
+   **Total running time of the script:** ( 0 minutes  1.842 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_plot_circhic.py:
