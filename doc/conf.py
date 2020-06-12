@@ -293,7 +293,7 @@ sphinx_gallery_conf = {
         'branch': 'master',
         'binderhub_url': 'https://mybinder.org',  # Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
         'dependencies': '../.binder/requirements.txt',
-        'use_jupyter_lab': False
+        'use_jupyter_lab': True
      }
 }
 
