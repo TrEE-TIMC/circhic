@@ -3,7 +3,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py>`     to download the full example code
+        Click :ref:`here <sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py>`     to download the full example code or to run this example in your browser via Binder
     .. rst-class:: sphx-glr-example-title
 
     .. _sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
@@ -52,7 +52,7 @@ add white space to the disk.
     /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:263: RuntimeWarning: invalid value encountered in true_divide
       (-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
 
-    (<matplotlib.image.AxesImage object at 0x7fc50df1b6a0>, <matplotlib.axes._axes.Axes object at 0x7fc50e01a160>)
+    (<matplotlib.image.AxesImage object at 0x7fe7ee04a700>, <matplotlib.axes._axes.Axes object at 0x7fe7edf5a610>)
 
 
 
@@ -130,7 +130,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.436 seconds)
+   **Total running time of the script:** ( 0 minutes  9.636 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
@@ -141,6 +141,12 @@ add white space to the disk.
  .. container:: sphx-glr-footer
     :class: sphx-glr-footer-example
 
+
+  .. container:: binder-badge
+
+    .. image:: https://mybinder.org/badge_logo.svg
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?filepath=notebooks/auto_examples/technical_contact_map/plot_circular_heatmap_size.ipynb
+      :width: 150 px
 
 
   .. container:: sphx-glr-download sphx-glr-download-python

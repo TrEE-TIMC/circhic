@@ -3,7 +3,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_plot_changing_ori.py>`     to download the full example code
+        Click :ref:`here <sphx_glr_download_auto_examples_technical_plot_changing_ori.py>`     to download the full example code or to run this example in your browser via Binder
     .. rst-class:: sphx-glr-example-title
 
     .. _sphx_glr_auto_examples_technical_plot_changing_ori.py:
@@ -68,6 +68,12 @@ Changing the origin of the heatmap
  .. container:: sphx-glr-footer
     :class: sphx-glr-footer-example
 
+
+  .. container:: binder-badge
+
+    .. image:: https://mybinder.org/badge_logo.svg
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?filepath=notebooks/auto_examples/technical/plot_changing_ori.ipynb
+      :width: 150 px
 
 
   .. container:: sphx-glr-download sphx-glr-download-python

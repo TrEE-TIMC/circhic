@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**00:00.616** total execution time for **auto_examples_technical_datasets** files:
+**00:00.627** total execution time for **auto_examples_technical_datasets** files:
 
 +------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_datasets_plot_bsubtilis.py` (``plot_bsubtilis.py``)     | 00:00.171 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_datasets_plot_bsubtilis.py` (``plot_bsubtilis.py``)     | 00:00.173 | 0.0 MB |
 +------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_datasets_plot_ccrescentus.py` (``plot_ccrescentus.py``) | 00:00.155 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_datasets_plot_ccrescentus.py` (``plot_ccrescentus.py``) | 00:00.157 | 0.0 MB |
 +------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_datasets_plot_ecoli.py` (``plot_ecoli.py``)             | 00:00.152 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_datasets_plot_ecoli.py` (``plot_ecoli.py``)             | 00:00.153 | 0.0 MB |
 +------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_datasets_plot_kbm7.py` (``plot_kbm7.py``)               | 00:00.139 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_datasets_plot_kbm7.py` (``plot_kbm7.py``)               | 00:00.143 | 0.0 MB |
 +------------------------------------------------------------------------------------------------+-----------+--------+

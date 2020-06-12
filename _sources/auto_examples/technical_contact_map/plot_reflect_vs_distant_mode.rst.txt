@@ -3,7 +3,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py>`     to download the full example code
+        Click :ref:`here <sphx_glr_download_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py>`     to download the full example code or to run this example in your browser via Binder
     .. rst-class:: sphx-glr-example-title
 
     .. _sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py:
@@ -84,7 +84,7 @@ ignoring the section close to the diagonal.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.985 seconds)
+   **Total running time of the script:** ( 0 minutes  3.039 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py:
@@ -95,6 +95,12 @@ ignoring the section close to the diagonal.
  .. container:: sphx-glr-footer
     :class: sphx-glr-footer-example
 
+
+  .. container:: binder-badge
+
+    .. image:: https://mybinder.org/badge_logo.svg
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?filepath=notebooks/auto_examples/technical_contact_map/plot_reflect_vs_distant_mode.ipynb
+      :width: 150 px
 
 
   .. container:: sphx-glr-download sphx-glr-download-python
