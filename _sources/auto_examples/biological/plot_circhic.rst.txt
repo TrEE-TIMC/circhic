@@ -29,7 +29,7 @@ a circHiC figure showing biases and mappability
     /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
       warnings.warn(
 
-    <matplotlib.legend.Legend object at 0x7f04aba4b3a0>
+    <matplotlib.legend.Legend object at 0x7fd3848bc3a0>
 
 
 
@@ -118,7 +118,7 @@ a circHiC figure showing biases and mappability
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.836 seconds)
+   **Total running time of the script:** ( 0 minutes  1.849 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_plot_circhic.py:
@@ -133,7 +133,7 @@ a circHiC figure showing biases and mappability
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/gh-pages/master?urlpath=lab/tree/notebooks/auto_examples/biological/plot_circhic.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/biological/plot_circhic.ipynb
       :width: 150 px
 
 
