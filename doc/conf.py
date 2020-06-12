@@ -289,7 +289,7 @@ sphinx_gallery_conf = {
     'binder': {
         # Required keys
         'org': 'TrEE-TIMC',
-        'repo': 'circhic',
+        'repo': 'gh-pages',
         'branch': 'master',
         'binderhub_url': 'https://mybinder.org',  # Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
         'dependencies': '../.binder/requirements.txt',
