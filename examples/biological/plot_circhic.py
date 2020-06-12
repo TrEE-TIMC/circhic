@@ -68,7 +68,7 @@ cab.set_label("Normalized contact counts", fontweight="bold",
 
 # Now, try to do a simple "theta-axis" on the outer
 ticklabels = [
-        "%d~kb" % (i * 10) for i in np.arange(0, lengths.sum(), 50)[:-1]]
+        "%d kb" % (i * 10) for i in np.arange(0, lengths.sum(), 50)[:-1]]
 ticklabels[0] = "ORI"
 ax = circhicfig.set_genomic_ticklabels(
     tickpositions=np.arange(0, lengths.sum(), 50)[:-1],
