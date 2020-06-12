@@ -77,7 +77,7 @@ Then, create the `circhic` figure and plot the bars
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.193 seconds)
+   **Total running time of the script:** ( 0 minutes  0.186 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_simple_plots_plot_bars.py:
@@ -92,7 +92,7 @@ Then, create the `circhic` figure and plot the bars
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?filepath=notebooks/auto_examples/technical_simple_plots/plot_bars.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_bars.ipynb
       :width: 150 px
 
 

@@ -31,7 +31,7 @@ Loading and plotting KBM7's chromosome 14 data.
     /home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_kbm7.py:17: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
       ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")
 
-    <matplotlib.image.AxesImage object at 0x7f849c5b7220>
+    <matplotlib.image.AxesImage object at 0x7f0e5e916a90>
 
 
 
@@ -56,7 +56,7 @@ Loading and plotting KBM7's chromosome 14 data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.146 seconds)
+   **Total running time of the script:** ( 0 minutes  0.142 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_datasets_plot_kbm7.py:
@@ -71,7 +71,7 @@ Loading and plotting KBM7's chromosome 14 data.
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?filepath=notebooks/auto_examples/technical_datasets/plot_kbm7.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?urlpath=lab/tree/notebooks/auto_examples/technical_datasets/plot_kbm7.ipynb
       :width: 150 px
 
 

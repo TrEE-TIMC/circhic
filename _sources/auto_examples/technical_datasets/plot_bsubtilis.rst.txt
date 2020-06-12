@@ -31,7 +31,7 @@ Loading and plotting *B. subtilis* data.
     /home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_bsubtilis.py:17: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
       ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")
 
-    <matplotlib.image.AxesImage object at 0x7f849c6034c0>
+    <matplotlib.image.AxesImage object at 0x7f0e5e9636d0>
 
 
 
@@ -71,7 +71,7 @@ Loading and plotting *B. subtilis* data.
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?filepath=notebooks/auto_examples/technical_datasets/plot_bsubtilis.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?urlpath=lab/tree/notebooks/auto_examples/technical_datasets/plot_bsubtilis.ipynb
       :width: 150 px
 
 
