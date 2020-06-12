@@ -187,7 +187,7 @@ class CircHiCFigure:
 
         im = ax.imshow(
             circular_data,
-            interpolation=None,
+            interpolation="none",
             alpha=alpha,
             vmin=vmin,
             vmax=vmax,
@@ -203,7 +203,7 @@ class CircHiCFigure:
                 outer_gdis=outer_gdis,
                 thick_r=border_thickness)
             ax.imshow(
-                border_im, interpolation=None,
+                border_im, interpolation="none",
                 extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
                 cmap="Greys_r")
         # We don't want to remove entirely the axis, as it means setting
