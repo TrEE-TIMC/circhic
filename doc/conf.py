@@ -285,7 +285,16 @@ sphinx_gallery_conf = {
         '../examples/technical_simple_plots',
         '../examples/technical_contact_map',
         '../examples/technical_datasets',
-        ])
+        ]),
+    'binder': {
+        # Required keys
+        'org': 'TrEE-TIMC',
+        'repo': 'circhic',
+        'branch': 'master',
+        'binderhub_url': 'https://mybinder.org',  # Any URL of a binderhub deployment. Must be full URL (e.g. https://mybinder.org).
+        'dependencies': '../.binder/requirements.txt',
+        'use_jupyter_lab': False
+     }
 }
 
 # Add the 'copybutton' javascript, to hide/show the prompt in code examples
