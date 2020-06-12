@@ -219,33 +219,36 @@ class CircHiCFigure:
 
         return (im, ax)
 
-    def _plot_marks(self, marks, s_out=1, s_in=1, r_in=0, outer_radius=1,
-                    inner_radius=0, zorder=None):
-        ax_m = self._create_subplot(outer_radius)
+    def _plot_raxis(self, outer_radius, inner_radius, outer_gdis, inner_gdis):
+        nrows = int(np.round((1 - outer_radius) / 2 * 1000))
+        inner_nrows = int(np.round((1-inner_radius) / 2 * 1000))
+        side_spine = self.figure.add_subplot(
+            self._gridspec[50+nrows:-nrows-150, 0:50+inner_nrows],
+            facecolor="none")
+        side_spine.spines["right"].set_linewidth(0)
+        side_spine.spines["top"].set_linewidth(0)
+        side_spine.spines["bottom"].set_linewidth(0)
+        side_spine.set_xticks([])
+        rorigin = -inner_gdis - inner_radius * (outer_gdis+inner_gdis)/(outer_radius-inner_radius)
+        y_bottom_lim = rorigin*2 - 60
 
-        for name, mark in marks.items():
-            if 'color' not in mark:
-                color = 'white'
-            else:
-                color = mark['color']
+        side_spine.set_ylim((y_bottom_lim, 60))
+        side_spine.axhline(0, linestyle="--", linewidth=0.5, color="0.3")
+        side_spine.axhline(outer_gdis, linestyle="--", linewidth=0.5, color="0.3")
+        side_spine.axhline(-inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+        side_spine.tick_params(labelsize="x-small", colors="0.3")
+        side_spine.spines["left"].set_bounds(-inner_gdis, outer_gdis)
+        side_spine.set_yticks([-inner_gdis, 0, outer_gdis])
+        side_spine.set_yticklabels(["1200 kb", "0 kb", "600 kb"])
+        side_spine.spines["left"].set_color("0.3")
+        side_spine.spines["left"].set_facecolor("0.3")
+        side_spine.spines["left"].set_edgecolor("0.3")
+        side_spine.set_ylabel("Genomic\ndistance", color="0.3",
+                              rotation="horizontal",
+                              fontweight="bold",
+                              fontsize="small")
+        side_spine.yaxis.set_label_coords(-0.1, 1.02)
 
-            if 'marker' not in mark:
-                marker = 'o'
-            else:
-                marker = mark['marker']
-
-            if 'ms' not in mark:
-                ms = 14
-            else:
-                ms = mark['ms']
-
-            theta = [mark['bin']*2*np.pi / self.lengths.sum()]
-            r = [r_in + s_in*(1 - r_in)/(s_out + s_in)]
-            ax_m.plot(theta, r, marker, ms=ms, color=color, zorder=zorder)
-            ax_m.set_rmax(1)
-
-        ax_m.set_axis_off()
-        self._polar_axes += [ax_m]
 
     def plot_lines(self, data, color=None, linestyle=None,
                    inner_radius=0, outer_radius=1, zorder=None):
@@ -529,3 +532,25 @@ def _compute_rorigin(min_data, max_data, inner_radius, outer_radius):
         min_data - inner_radius * (max_data - min_data) /
         (outer_radius - inner_radius))
     return origin_data
+
+
+def _convert_from_gdis_to_theta(gdis, lengths, resolution=None):
+    """
+    Converts from genomic distance to theta.
+
+    Parameters
+    ----------
+    gdis : array (n, )
+        Array of genomic distances to convert
+
+    lengths : array (l, )
+        Lengths of the chromosomes
+
+    resolution : integer, optional, default: None
+        Resolution
+    """
+    if resolution is None:
+        resolution = 1
+
+    theta = gdis * 2 * np.pi / lengths.sum() * resolution
+    return theta
