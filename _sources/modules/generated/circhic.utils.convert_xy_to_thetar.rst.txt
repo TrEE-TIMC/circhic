@@ -1,0 +1,14 @@
+:orphan:
+
+circhic.utils.convert_xy_to_thetar
+==================================
+
+.. currentmodule:: circhic.utils
+
+.. autofunction:: convert_xy_to_thetar
+
+.. include:: ../../generated/backreferences/circhic.utils.convert_xy_to_thetar.examples
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>

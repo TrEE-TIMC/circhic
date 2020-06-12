@@ -49,37 +49,38 @@
       <li><a href="../../index.html">Home</a></li>
       <li><a href="../../install.html">Installation</a></li>
       <li><a href="../../documentation.html">Documentation</a></li>
-      <li><a href="../index.html">Gallery</a></li>
+      <li><a href="../../auto_examples/index.html">Gallery</a></li>
       
     </ul>
   </div>
     <div class="container">
   
-  <div class="section" id="computation-times">
-<span id="sphx-glr-auto-examples-technical-simple-plots-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Permalink to this headline">¶</a></h1>
-<p><strong>00:00.582</strong> total execution time for <strong>auto_examples_technical_simple_plots</strong> files:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 82%" />
-<col style="width: 10%" />
-<col style="width: 7%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="plot_bands.html#sphx-glr-auto-examples-technical-simple-plots-plot-bands-py"><span class="std std-ref">Plotting bands</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_bands.py</span></code>)</p></td>
-<td><p>00:00.289</p></td>
-<td><p>0.0 MB</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="plot_bars.html#sphx-glr-auto-examples-technical-simple-plots-plot-bars-py"><span class="std std-ref">Plotting bars</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_bars.py</span></code>)</p></td>
-<td><p>00:00.188</p></td>
-<td><p>0.0 MB</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="plot_lines.html#sphx-glr-auto-examples-technical-simple-plots-plot-lines-py"><span class="std std-ref">Plotting lines</span></a> (<code class="docutils literal notranslate"><span class="pre">plot_lines.py</span></code>)</p></td>
-<td><p>00:00.104</p></td>
-<td><p>0.0 MB</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+  <div class="section" id="circhic-utils-convert-xy-to-thetar">
+<h1>circhic.utils.convert_xy_to_thetar<a class="headerlink" href="#circhic-utils-convert-xy-to-thetar" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="circhic.utils.convert_xy_to_thetar">
+<code class="sig-prename descclassname">circhic.utils.</code><code class="sig-name descname">convert_xy_to_thetar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coordinates</span></em>, <em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.utils.convert_xy_to_thetar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from (x, y) coordinates to (theta, r)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>coordinates</strong><span class="classifier">tuple of ndarray</span></dt><dd><p>(x, y) where x and y are in genomics coordinates</p>
+</dd>
+<dt><strong>lengths</strong><span class="classifier">ndarray (l, )</span></dt><dd><p>the lengths of the chromosome</p>
+</dd>
+<dt><strong>resolution : integer, optional, default: None</strong></dt><dd><p>Resolution</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>(theta, s) tuple of polar coordinates</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="sphx-glr-clear"></div></div>
 
 
     </div>
