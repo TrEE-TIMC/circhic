@@ -118,7 +118,7 @@ this, we create a vector of colors representing the labels
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.285 seconds)
+   **Total running time of the script:** ( 0 minutes  0.279 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_simple_plots_plot_bands.py:
@@ -133,7 +133,7 @@ this, we create a vector of colors representing the labels
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_bands.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/gh-pages/master?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_bands.ipynb
       :width: 150 px
 
 

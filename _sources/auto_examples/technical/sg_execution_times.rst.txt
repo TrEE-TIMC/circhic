@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:01.632** total execution time for **auto_examples_technical** files:
+**00:01.620** total execution time for **auto_examples_technical** files:
 
 +-----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_plot_changing_ori.py` (``plot_changing_ori.py``) | 00:01.632 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_plot_changing_ori.py` (``plot_changing_ori.py``) | 00:01.620 | 0.0 MB |
 +-----------------------------------------------------------------------------------------+-----------+--------+

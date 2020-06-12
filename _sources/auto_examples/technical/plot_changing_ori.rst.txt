@@ -57,7 +57,7 @@ Changing the origin of the heatmap
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.632 seconds)
+   **Total running time of the script:** ( 0 minutes  1.620 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_plot_changing_ori.py:
@@ -72,7 +72,7 @@ Changing the origin of the heatmap
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?urlpath=lab/tree/notebooks/auto_examples/technical/plot_changing_ori.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/gh-pages/master?urlpath=lab/tree/notebooks/auto_examples/technical/plot_changing_ori.ipynb
       :width: 150 px
 
 

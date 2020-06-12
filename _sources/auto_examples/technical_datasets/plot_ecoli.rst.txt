@@ -31,7 +31,7 @@ Loading and plotting *E. coli* data.
     /home/travis/build/TrEE-TIMC/circhic/examples/technical_datasets/plot_ecoli.py:17: MatplotlibDeprecationWarning: default base may change from np.e to 10.  To suppress this warning specify the base keyword argument.
       ax.imshow(counts, norm=colors.SymLogNorm(1), interpolation="none")
 
-    <matplotlib.image.AxesImage object at 0x7f0e5eb510d0>
+    <matplotlib.image.AxesImage object at 0x7f04abd44f10>
 
 
 
@@ -56,7 +56,7 @@ Loading and plotting *E. coli* data.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.154 seconds)
+   **Total running time of the script:** ( 0 minutes  0.151 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_datasets_plot_ecoli.py:
@@ -71,7 +71,7 @@ Loading and plotting *E. coli* data.
   .. container:: binder-badge
 
     .. image:: https://mybinder.org/badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/master?urlpath=lab/tree/notebooks/auto_examples/technical_datasets/plot_ecoli.ipynb
+      :target: https://mybinder.org/v2/gh/TrEE-TIMC/gh-pages/master?urlpath=lab/tree/notebooks/auto_examples/technical_datasets/plot_ecoli.ipynb
       :width: 150 px
 
 
