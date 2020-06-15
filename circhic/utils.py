@@ -86,7 +86,8 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
             iS = (R <= r_mid)
             Half_s[iR & iS] = (
                 ((inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
-                 (inner_radius - r_mid)*(1+inner_gdis*N/Lg))/2).astype(int))
+                    (inner_radius - r_mid)*(1+inner_gdis*N/Lg))
+                    / 2).astype(int))
             iS = (R >= r_mid)
             Half_s[iR & iS] = (
                 ((2+(R[iR & iS] - r_mid)/(1 - r_mid) *
@@ -253,7 +254,6 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
 
     # Half_s is the corresponding "s/2" in x-s/2 and x+s/2
     Half_s = np.zeros((Nc, Nc), dtype=int)
-
     if mode == "reflect":
         r_mid = (
             (outer_gdis*inner_radius+inner_gdis) /
@@ -261,13 +261,14 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
         iS = (R <= r_mid)
         Half_s[iR & iS] = (
             (-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
-             (inner_radius - r_mid) *
-             (1-inner_gdis*N/Lg))/2).astype(int)
+                (inner_radius - r_mid) *
+                (1-inner_gdis*N/Lg))/2).astype(int)
         iS = (R >= r_mid)
-        Half_s[iR & iS] = (
-            (2+(R[iR & iS] - r_mid) /
-             (1 - r_mid) *
-             (outer_gdis*N/Lg-2))/2).astype(int)
+        if r_mid != 1:
+            Half_s[iR & iS] = (
+                (2+(R[iR & iS] - r_mid) /
+                 (1 - r_mid) *
+                 (outer_gdis*N/Lg-2))/2).astype(int)
     else:
         Half_s[iR] = (
             ((outer_gdis*N/Lg - (R[iR] - 1) /
