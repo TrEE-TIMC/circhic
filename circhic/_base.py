@@ -178,12 +178,18 @@ class CircHiCFigure:
             if matplotlib.__version__ < "3.2.0":
                 norm = colors.SymLogNorm(1)
             else:
-                norm = colors.SymLogNorm(1, base=10)
+                norm = colors.SymLogNorm(1, base=np.e)
         else:
             if matplotlib.__version__ < "3.2.0":
                 norm = colors.SymLogNorm(vmin)
             else:
-                norm = colors.SymLogNorm(vmin, base=10)
+                norm = colors.SymLogNorm(vmin, base=np.e)
+
+        if outer_gdis != 0:
+            extent = (-outer_gdis, outer_gdis, -outer_gdis, outer_gdis) 
+        else:
+            # I'm not sure this makes sense?
+            extent = (-inner_gdis, inner_gdis, -inner_gdis, inner_gdis)
 
         im = ax.imshow(
             circular_data,
@@ -192,7 +198,7 @@ class CircHiCFigure:
             vmin=vmin,
             vmax=vmax,
             norm=norm, cmap=cmap,
-            extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+            extent=extent,
             )
         if border_thickness != 0:
             border_im = generate_borders(
@@ -204,7 +210,7 @@ class CircHiCFigure:
                 thick_r=border_thickness)
             ax.imshow(
                 border_im, interpolation="none",
-                extent=(-outer_gdis, outer_gdis, -outer_gdis, outer_gdis),
+                extent=extent,
                 cmap="Greys_r")
         # We don't want to remove entirely the axis, as it means setting
         # xlabels and ylabels don't work anymore.
