@@ -223,7 +223,29 @@ class CircHiCFigure:
         ax.spines["bottom"].set_linewidth(0)
         ax.spines["right"].set_linewidth(0)
 
+        # Now, keep stuff in memory for raxis
+        contact_count_maps = {
+            "outer_gdis": outer_gdis,
+            "inner_gdis": inner_gdis,
+            "outer_radius": outer_radius,
+            "inner_radius": inner_radius,
+            "mode": mode,
+            "resolution": resolution
+        }
+        self._contact_count_maps = contact_count_maps
         return (im, ax)
+
+    def plot_raxis(self):
+        """Plot the r-axis, corresponding to the genomic distance
+        """
+        sspines = self._plot_raxis(
+            self._contact_count_maps["outer_radius"],
+            self._contact_count_maps["inner_radius"],
+            self._contact_count_maps["outer_gdis"],
+            self._contact_count_maps["inner_gdis"],
+            self._contact_count_maps["resolution"],
+            mode=self._contact_count_maps["mode"])
+        return sspines
 
     def _plot_raxis(self, outer_radius, inner_radius, outer_gdis, inner_gdis,
                     resolution=None, mode="reflect"):
@@ -283,6 +305,7 @@ class CircHiCFigure:
                               fontweight="bold",
                               fontsize="small")
         side_spine.yaxis.set_label_coords(-0.1, 1.02)
+        return side_spine
 
     def plot_lines(self, data, color=None, linestyle=None,
                    inner_radius=0, outer_radius=1, zorder=None):
