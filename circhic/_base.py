@@ -238,6 +238,9 @@ class CircHiCFigure:
     def plot_raxis(self):
         """Plot the r-axis, corresponding to the genomic distance
         """
+        if not hasattr(self, "_contact_count_maps"):
+            raise ValueError(
+                "The raxis can only be plotted if a contact map is plotted")
         sspines = self._plot_raxis(
             self._contact_count_maps["outer_radius"],
             self._contact_count_maps["inner_radius"],
