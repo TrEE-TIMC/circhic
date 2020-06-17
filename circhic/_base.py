@@ -186,7 +186,7 @@ class CircHiCFigure:
                 norm = colors.SymLogNorm(vmin, base=np.e)
 
         if outer_gdis != 0:
-            extent = (-outer_gdis, outer_gdis, -outer_gdis, outer_gdis) 
+            extent = (-outer_gdis, outer_gdis, -outer_gdis, outer_gdis)
         else:
             # I'm not sure this makes sense?
             extent = (-inner_gdis, inner_gdis, -inner_gdis, inner_gdis)
@@ -225,7 +225,11 @@ class CircHiCFigure:
 
         return (im, ax)
 
-    def _plot_raxis(self, outer_radius, inner_radius, outer_gdis, inner_gdis):
+    def _plot_raxis(self, outer_radius, inner_radius, outer_gdis, inner_gdis,
+                    resolution=None):
+        if resolution is None:
+            resolution = 1
+
         nrows = int(np.round((1 - outer_radius) / 2 * 1000))
         inner_nrows = int(np.round((1-inner_radius) / 2 * 1000))
         side_spine = self.figure.add_subplot(
@@ -235,17 +239,26 @@ class CircHiCFigure:
         side_spine.spines["top"].set_linewidth(0)
         side_spine.spines["bottom"].set_linewidth(0)
         side_spine.set_xticks([])
-        rorigin = -inner_gdis - inner_radius * (outer_gdis+inner_gdis)/(outer_radius-inner_radius)
-        y_bottom_lim = rorigin*2 - 60
+        rorigin = (
+            -inner_gdis - inner_radius *
+            (outer_gdis+inner_gdis) / (outer_radius-inner_radius))
+        y_bottom_lim = rorigin*2 - outer_gdis
 
-        side_spine.set_ylim((y_bottom_lim, 60))
+        side_spine.set_ylim((y_bottom_lim, outer_gdis))
         side_spine.axhline(0, linestyle="--", linewidth=0.5, color="0.3")
-        side_spine.axhline(outer_gdis, linestyle="--", linewidth=0.5, color="0.3")
-        side_spine.axhline(-inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+        side_spine.axhline(
+            outer_gdis, linestyle="--", linewidth=0.5, color="0.3")
+        side_spine.axhline(
+            -inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
         side_spine.tick_params(labelsize="x-small", colors="0.3")
         side_spine.spines["left"].set_bounds(-inner_gdis, outer_gdis)
         side_spine.set_yticks([-inner_gdis, 0, outer_gdis])
-        side_spine.set_yticklabels(["1200 kb", "0 kb", "600 kb"])
+
+        ticklabels = ["%d kb" % (inner_gdis * resolution / 1000),
+                      "0 kb",
+                      "%d kb" % (outer_gdis * resolution / 1000)]
+
+        side_spine.set_yticklabels(ticklabels)
         side_spine.spines["left"].set_color("0.3")
         side_spine.spines["left"].set_facecolor("0.3")
         side_spine.spines["left"].set_edgecolor("0.3")
@@ -254,7 +267,6 @@ class CircHiCFigure:
                               fontweight="bold",
                               fontsize="small")
         side_spine.yaxis.set_label_coords(-0.1, 1.02)
-
 
     def plot_lines(self, data, color=None, linestyle=None,
                    inner_radius=0, outer_radius=1, zorder=None):
