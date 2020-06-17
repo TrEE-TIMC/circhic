@@ -186,7 +186,7 @@ class CircHiCFigure:
                 norm = colors.SymLogNorm(vmin, base=np.e)
 
         if outer_gdis != 0:
-            extent = (-outer_gdis, outer_gdis, -outer_gdis, outer_gdis) 
+            extent = (-outer_gdis, outer_gdis, -outer_gdis, outer_gdis)
         else:
             # I'm not sure this makes sense?
             extent = (-inner_gdis, inner_gdis, -inner_gdis, inner_gdis)
@@ -223,29 +223,83 @@ class CircHiCFigure:
         ax.spines["bottom"].set_linewidth(0)
         ax.spines["right"].set_linewidth(0)
 
+        # Now, keep stuff in memory for raxis
+        contact_count_maps = {
+            "outer_gdis": outer_gdis,
+            "inner_gdis": inner_gdis,
+            "outer_radius": outer_radius,
+            "inner_radius": inner_radius,
+            "mode": mode,
+            "resolution": resolution
+        }
+        self._contact_count_maps = contact_count_maps
         return (im, ax)
 
-    def _plot_raxis(self, outer_radius, inner_radius, outer_gdis, inner_gdis):
+    def plot_raxis(self):
+        """Plot the r-axis, corresponding to the genomic distance
+        """
+        if not hasattr(self, "_contact_count_maps"):
+            raise ValueError(
+                "The raxis can only be plotted if a contact map is plotted")
+        sspines = self._plot_raxis(
+            self._contact_count_maps["outer_radius"],
+            self._contact_count_maps["inner_radius"],
+            self._contact_count_maps["outer_gdis"],
+            self._contact_count_maps["inner_gdis"],
+            self._contact_count_maps["resolution"],
+            mode=self._contact_count_maps["mode"])
+        return sspines
+
+    def _plot_raxis(self, outer_radius, inner_radius, outer_gdis, inner_gdis,
+                    resolution=None, mode="reflect"):
+        if resolution is None:
+            resolution = 1
+
         nrows = int(np.round((1 - outer_radius) / 2 * 1000))
-        inner_nrows = int(np.round((1-inner_radius) / 2 * 1000))
         side_spine = self.figure.add_subplot(
-            self._gridspec[50+nrows:-nrows-150, 0:50+inner_nrows],
+            self._gridspec[50+nrows:-nrows-150, 0:550],
             facecolor="none")
         side_spine.spines["right"].set_linewidth(0)
         side_spine.spines["top"].set_linewidth(0)
         side_spine.spines["bottom"].set_linewidth(0)
         side_spine.set_xticks([])
-        rorigin = -inner_gdis - inner_radius * (outer_gdis+inner_gdis)/(outer_radius-inner_radius)
-        y_bottom_lim = rorigin*2 - 60
 
-        side_spine.set_ylim((y_bottom_lim, 60))
-        side_spine.axhline(0, linestyle="--", linewidth=0.5, color="0.3")
-        side_spine.axhline(outer_gdis, linestyle="--", linewidth=0.5, color="0.3")
-        side_spine.axhline(-inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+        if mode == "reflect":
+            rorigin = (
+                -inner_gdis - inner_radius *
+                (outer_gdis+inner_gdis) / (outer_radius-inner_radius))
+            yticks = [-inner_gdis, 0, outer_gdis]
+            ticklabels = ["%d kb" % (inner_gdis * resolution / 1000),
+                          "0 kb",
+                          "%d kb" % (outer_gdis * resolution / 1000)]
+
+        else:
+            rorigin = (
+                inner_gdis - inner_radius *
+                (outer_gdis - inner_gdis) / (outer_radius - inner_radius))
+            yticks = [inner_gdis, outer_gdis]
+            ticklabels = ["%d kb" % (inner_gdis * resolution / 1000),
+                          "%d kb" % (outer_gdis * resolution / 1000)]
+
+        y_bottom_lim = rorigin*2 - outer_gdis
+
+        side_spine.set_ylim((y_bottom_lim, outer_gdis))
+        if mode == "reflect":
+            side_spine.axhline(0, linestyle="--", linewidth=0.5, color="0.3")
+            side_spine.axhline(
+                -inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+            side_spine.spines["left"].set_bounds(-inner_gdis, outer_gdis)
+        else:
+            side_spine.axhline(
+                inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+            side_spine.spines["left"].set_bounds(inner_gdis, outer_gdis)
+
+        side_spine.axhline(
+            outer_gdis, linestyle="--", linewidth=0.5, color="0.3")
         side_spine.tick_params(labelsize="x-small", colors="0.3")
-        side_spine.spines["left"].set_bounds(-inner_gdis, outer_gdis)
-        side_spine.set_yticks([-inner_gdis, 0, outer_gdis])
-        side_spine.set_yticklabels(["1200 kb", "0 kb", "600 kb"])
+        side_spine.set_yticks(yticks)
+
+        side_spine.set_yticklabels(ticklabels)
         side_spine.spines["left"].set_color("0.3")
         side_spine.spines["left"].set_facecolor("0.3")
         side_spine.spines["left"].set_edgecolor("0.3")
@@ -254,7 +308,7 @@ class CircHiCFigure:
                               fontweight="bold",
                               fontsize="small")
         side_spine.yaxis.set_label_coords(-0.1, 1.02)
-
+        return side_spine
 
     def plot_lines(self, data, color=None, linestyle=None,
                    inner_radius=0, outer_radius=1, zorder=None):

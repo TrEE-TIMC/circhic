@@ -32,25 +32,7 @@ m, ax = circhicfig.plot_hic(counts, granularity=granularity,
                             inner_gdis=120, outer_gdis=60,
                             vmin=77, cmap="bone_r")
 
-rax = circhicfig._create_subplot(outer_radius=0.75)
-rax.set_rlim((-120, 60))
-inner_radius = 0.1
-outer_radius = 0.75
-
-rorigin = -120 - inner_radius * (60+120)/(outer_radius-inner_radius)
-# rax.set_rorigin(rorigin)
-
-rax.spines["polar"].set_linewidth(0)
-rax.spines["inner"].set_linewidth(0)
-rax.set_thetagrids([], labels=[""])
-rax.set_rgrids([])
-
-
-outer_gdis = 60
-inner_gdis = 120
-
-side = True
-circhicfig._plot_raxis(outer_radius, inner_radius, outer_gdis, inner_gdis)
+circhicfig.plot_raxis()
 
 # Assume you want to plot data from that ranges in a polar plot outside of the
 # first one. Then the 0 axis should be at, say, 80% of the axis
