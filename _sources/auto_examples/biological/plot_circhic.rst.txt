@@ -29,7 +29,7 @@ a circHiC figure showing biases and mappability
     /home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
       warnings.warn(
 
-    <matplotlib.legend.Legend object at 0x7f31bdf884c0>
+    <matplotlib.legend.Legend object at 0x7f9dc0361c10>
 
 
 
@@ -68,25 +68,7 @@ a circHiC figure showing biases and mappability
                                 inner_gdis=120, outer_gdis=60,
                                 vmin=77, cmap="bone_r")
 
-    rax = circhicfig._create_subplot(outer_radius=0.75)
-    rax.set_rlim((-120, 60))
-    inner_radius = 0.1
-    outer_radius = 0.75
-
-    rorigin = -120 - inner_radius * (60+120)/(outer_radius-inner_radius)
-    # rax.set_rorigin(rorigin)
-
-    rax.spines["polar"].set_linewidth(0)
-    rax.spines["inner"].set_linewidth(0)
-    rax.set_thetagrids([], labels=[""])
-    rax.set_rgrids([])
-
-
-    outer_gdis = 60
-    inner_gdis = 120
-
-    side = True
-    circhicfig._plot_raxis(outer_radius, inner_radius, outer_gdis, inner_gdis)
+    circhicfig.plot_raxis()
 
     # Assume you want to plot data from that ranges in a polar plot outside of the
     # first one. Then the 0 axis should be at, say, 80% of the axis
@@ -118,7 +100,7 @@ a circHiC figure showing biases and mappability
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.870 seconds)
+   **Total running time of the script:** ( 0 minutes  1.833 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_plot_circhic.py:
