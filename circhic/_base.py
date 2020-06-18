@@ -418,7 +418,7 @@ class CircHiCFigure:
         self._polar_axes += [ax]
         return (bars, ax)
 
-    def plot_bands(self, begin, end, resolution=None, colors=None,
+    def plot_bands(self, begin, end, colors=None,
                    inner_radius=0, outer_radius=1):
         """
         Plot bands
@@ -431,21 +431,19 @@ class CircHiCFigure:
 
         colors : ndarray (l, )
         """
-        resolution = resolution if resolution is not None else 1
         ax = self._create_subplot(
             outer_radius=outer_radius,
-            resolution=resolution,
             label=("bands_%d" % (len(self._polar_axes)+1)))
         ax.set_axis_off()
 
-        n_bins = self.lengths.sum() / resolution
+        n_bins = self.lengths.sum()
         # Convert the left hand side of the rectangle to the correct angular
         # form.
-        left = begin / resolution
+        left = begin
         left = np.array(
                 [i*2*np.pi/n_bins for i in left])
         # Do the same with the end of the band
-        right = end / resolution
+        right = end
         right = np.array(
                 [i*2*np.pi/n_bins for i in end])
         width = right - left
@@ -495,7 +493,6 @@ class CircHiCFigure:
 
     def set_genomic_ticklabels(self, outer_radius=1, ticklabels=None,
                                tickpositions=None,
-                               resolution=None,
                                ax=None):
         """
         Set the circular tick labels
@@ -516,7 +513,6 @@ class CircHiCFigure:
             outer_radius and inner_radius will be ignored if `ax` is provided.
 
         """
-        resolution = resolution if resolution is not None else 1
         if ax is None:
             ax = self._create_subplot(label="thetaticks",
                                       outer_radius=outer_radius)
@@ -527,8 +523,7 @@ class CircHiCFigure:
         ax.set_rgrids([])
         if tickpositions is not None:
             tickpositions = (
-                tickpositions / (self.lengths.sum() *
-                                 resolution) *
+                tickpositions / self.lengths.sum() *
                 2 * np.pi)
             ax.set_xticks(tickpositions)
 
