@@ -82,7 +82,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bands" title="circhic.CircHiCFigure.plot_bands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bands</span></code></a>(self, begin, end[, resolution, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bands" title="circhic.CircHiCFigure.plot_bands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bands</span></code></a>(self, begin, end[, colors, …])</p></td>
 <td><p>Plot bands</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bars" title="circhic.CircHiCFigure.plot_bars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bars</span></code></a>(self, data[, color, inner_radius, …])</p></td>
@@ -113,14 +113,22 @@
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.plot_bands">
-<code class="sig-name descname">plot_bands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">begin</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bands" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_bands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">begin</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bands" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot bands</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>begin</strong><span class="classifier">ndarray (l, )</span></dt><dd></dd>
-<dt><strong>end</strong><span class="classifier">ndarray (l, )</span></dt><dd></dd>
-<dt><strong>colors</strong><span class="classifier">ndarray (l, )</span></dt><dd></dd>
+<dt><strong>begin</strong><span class="classifier">ndarray (l, )</span></dt><dd><p>List of the all the beginnings of each band.</p>
+</dd>
+<dt><strong>end</strong><span class="classifier">ndarray (l, )</span></dt><dd><p>List of all the ends of each band.</p>
+</dd>
+<dt><strong>colors</strong><span class="classifier">ndarray (l, )</span></dt><dd><p>List of colors. Should be the same size as <cite>begin</cite> and <cite>end</cite></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>(artists, ax)</dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -273,7 +281,7 @@ described by this colorbar.</p>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.set_genomic_ticklabels">
-<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the circular tick labels</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
