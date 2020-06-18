@@ -426,10 +426,17 @@ class CircHiCFigure:
         Parameters
         ----------
         begin : ndarray (l, )
+            List of the all the beginnings of each band.
 
         end : ndarray (l, )
+            List of all the ends of each band.
 
         colors : ndarray (l, )
+            List of colors. Should be the same size as `begin` and `end`
+
+        Returns
+        -------
+        (artists, ax)
         """
         ax = self._create_subplot(
             outer_radius=outer_radius,
