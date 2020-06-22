@@ -500,6 +500,7 @@ class CircHiCFigure:
 
     def set_genomic_ticklabels(self, outer_radius=1, ticklabels=None,
                                tickpositions=None,
+                               fontdict=None,
                                ax=None):
         """
         Set the circular tick labels
@@ -514,6 +515,18 @@ class CircHiCFigure:
         tickpositions : array of floats
             the positions of the ticks. Should be the same length as the tick
             labels.
+
+        fontdict : dict, optional
+            A dictionary controlling the appearance of the ticklabels.
+            The default `fontdict` is:
+
+                {'fontsize': rcParams['axes.titlesize'],
+                 'fontweight': rcParams['axes.titleweight'],
+                 'verticalalignment': 'baseline',
+                 'horizontalalignment': loc}
+
+            See the Maplotlib documentation for more information on the
+            fontdict.
 
         ax : matplotlib.axes.Axes object, optional, default: None
             Matplotlib Axes object. By default, will create one. Note that
@@ -540,7 +553,7 @@ class CircHiCFigure:
                 "%d" % np.round(s)
                 for s
                 in theta_ticks]
-        ax.set_xticklabels(ticklabels, fontsize="x-small")
+        ax.set_xticklabels(ticklabels, fontdict=fontdict)
         ax.spines["polar"].set_linewidth(0)
         ax.spines["inner"].set_linewidth(0)
         ax.xaxis.grid(False)
