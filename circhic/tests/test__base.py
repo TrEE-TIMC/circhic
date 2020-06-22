@@ -11,7 +11,7 @@ def test_plot_raxis():
 
     data = datasets.load_ccrescentus()
     counts = data["counts"]
-    lengths = data["lengths"]
+    lengths = data["nbins"]
 
     # Some small flush test
     fig = CircHiCFigure(lengths=lengths)

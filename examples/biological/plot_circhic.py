@@ -19,7 +19,7 @@ granularity = 0.5
 # Load the data, compute the cumulative raw counts.
 data = datasets.load_ccrescentus()
 counts = data["counts"]
-lengths = data["lengths"]
+lengths = data["nbins"]
 
 cumul_raw_counts = counts.sum(axis=0)
 # Normale the data using ICE, and keep the biases
