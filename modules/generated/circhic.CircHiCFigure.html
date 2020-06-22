@@ -281,16 +281,29 @@ described by this colorbar.</p>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.set_genomic_ticklabels">
-<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fontdict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the circular tick labels</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>ticklabels</strong><span class="classifier">array-like of strings</span></dt><dd><p>the list of strings to plot. Should be the same length as the
 number of ticks.</p>
 </dd>
 <dt><strong>tickpositions</strong><span class="classifier">array of floats</span></dt><dd><p>the positions of the ticks. Should be the same length as the tick
 labels.</p>
+</dd>
+<dt><strong>fontdict : dict, optional</strong></dt><dd><p>A dictionary controlling the appearance of the ticklabels.
+The default <cite>fontdict</cite> is:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{‘fontsize’: rcParams[‘axes.titlesize’],</dt><dd><p>‘fontweight’: rcParams[‘axes.titleweight’],
+‘verticalalignment’: ‘baseline’,
+‘horizontalalignment’: loc}</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>See the Maplotlib documentation for more information on the
+fontdict.</p>
 </dd>
 <dt><strong>ax</strong><span class="classifier">matplotlib.axes.Axes object, optional, default: None</span></dt><dd><p>Matplotlib Axes object. By default, will create one. Note that
 outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p>
