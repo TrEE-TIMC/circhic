@@ -27,7 +27,7 @@ Small example showcasing how to plot a vertical or horizontal colorbar.
     # Load the data, compute the cumulative raw counts.
     data = datasets.load_ecoli()
     counts = data["counts"]
-    lengths = data["lengths"]
+    lengths = data["nbins"]
 
     # Normale the data using ICE, and keep the biases
     counts, bias = ICE_normalization(counts, output_bias=True)
@@ -83,7 +83,7 @@ A simple horizontal colorbar
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.786 seconds)
+   **Total running time of the script:** ( 0 minutes  3.811 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_colorbar.py:

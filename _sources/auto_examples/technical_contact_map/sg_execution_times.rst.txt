@@ -5,12 +5,12 @@
 
 Computation times
 =================
-**00:17.444** total execution time for **auto_examples_technical_contact_map** files:
+**00:17.793** total execution time for **auto_examples_technical_contact_map** files:
 
 +---------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)     | 00:10.425 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)     | 00:10.680 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)                               | 00:03.786 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)                               | 00:03.811 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py` (``plot_reflect_vs_distant_mode.py``) | 00:03.233 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py` (``plot_reflect_vs_distant_mode.py``) | 00:03.302 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------+-----------+--------+
