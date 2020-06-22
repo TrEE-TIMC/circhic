@@ -32,7 +32,10 @@ m, ax = circhicfig.plot_hic(counts, granularity=granularity,
                             inner_gdis=120, outer_gdis=60,
                             vmin=77, cmap="bone_r")
 
-circhicfig.plot_raxis()
+rax = circhicfig.plot_raxis()
+rax.set_yticklabels(["120 kb", "0 kb", "60 kb"], fontsize="x-small")
+rax.set_ylabel("Genomic distance (kb)", fontsize="x-small", color="0.3")
+rax.tick_params(colors="0.3")
 
 # Assume you want to plot data from that ranges in a polar plot outside of the
 # first one. Then the 0 axis should be at, say, 80% of the axis
@@ -55,7 +58,8 @@ ticklabels[0] = "ORI"
 ax = circhicfig.set_genomic_ticklabels(
     tickpositions=np.arange(0, lengths.sum(), 50)[:-1],
     ticklabels=ticklabels,
-    outer_radius=0.95)
+    outer_radius=0.99,
+    fontdict={"fontsize": "x-small"})
 ax.tick_params(colors="0.3")
 #             verticalalignment="bottom")
 fig.legend((bar, lines[0]), ("Mappability", "Bias"), fontsize="x-small",
