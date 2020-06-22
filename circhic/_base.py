@@ -6,6 +6,7 @@ from matplotlib import colors
 from matplotlib.gridspec import GridSpec
 from matplotlib import patches
 from matplotlib.container import BarContainer
+from matplotlib import rcParams
 from .utils import generate_circular_map
 from .utils import generate_borders
 
@@ -269,45 +270,64 @@ class CircHiCFigure:
                 -inner_gdis - inner_radius *
                 (outer_gdis+inner_gdis) / (outer_radius-inner_radius))
             yticks = [-inner_gdis, 0, outer_gdis]
-            ticklabels = ["%d kb" % (inner_gdis * resolution / 1000),
-                          "0 kb",
-                          "%d kb" % (outer_gdis * resolution / 1000)]
+            ticklabels = ["%d" % (inner_gdis * resolution),
+                          "0",
+                          "%d" % (outer_gdis * resolution)]
 
         else:
             rorigin = (
                 inner_gdis - inner_radius *
                 (outer_gdis - inner_gdis) / (outer_radius - inner_radius))
             yticks = [inner_gdis, outer_gdis]
-            ticklabels = ["%d kb" % (inner_gdis * resolution / 1000),
-                          "%d kb" % (outer_gdis * resolution / 1000)]
+            ticklabels = ["%d" % (inner_gdis * resolution),
+                          "%d" % (outer_gdis * resolution)]
 
         y_bottom_lim = rorigin*2 - outer_gdis
 
         side_spine.set_ylim((y_bottom_lim, outer_gdis))
         if mode == "reflect":
-            side_spine.axhline(0, linestyle="--", linewidth=0.5, color="0.3")
+            # Dude !! Use the grid option
+            side_spine.axhline(0, linestyle="--",
+                               linewidth=rcParams['axes.linewidth'],
+                               color=rcParams['axes.edgecolor'])
+
             side_spine.axhline(
-                -inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+                -inner_gdis, linestyle="--",
+                linewidth=rcParams["axes.linewidth"],
+                color=rcParams['axes.edgecolor'])
             side_spine.spines["left"].set_bounds(-inner_gdis, outer_gdis)
         else:
             side_spine.axhline(
-                inner_gdis, linestyle="--", linewidth=0.5, color="0.3")
+                inner_gdis, linestyle="--",
+                linewidth=rcParams["axes.linewidth"],
+                color=rcParams["axes.edgecolor"])
             side_spine.spines["left"].set_bounds(inner_gdis, outer_gdis)
 
         side_spine.axhline(
-            outer_gdis, linestyle="--", linewidth=0.5, color="0.3")
-        side_spine.tick_params(labelsize="x-small", colors="0.3")
+            outer_gdis, linestyle="--", linewidth=rcParams["axes.linewidth"],
+            color=rcParams["axes.edgecolor"])
+        side_spine.tick_params(
+            colors=rcParams["axes.edgecolor"])
         side_spine.set_yticks(yticks)
 
+        # Need to set the label coordinate such that it is in the middle, like
+        # in a normal Matplotlib axis
+
+        # I would much rather have the same default as matplotlib, ie a
+        # vertical label, at the midpoint. In order to do this, we either need
+        # to reduce the size of the yaxis to match exactly what we need or we
+        # need to set the coordinate of the label, but taking in account the
+        # size of the ticklabels.
+
+        # This isn't used, but let's keep for now.
+        # y_mid_point = 1 - (
+        #     (outer_gdis - rorigin) / (outer_gdis - y_bottom_lim) * 0.5)
+
         side_spine.set_yticklabels(ticklabels)
-        side_spine.spines["left"].set_color("0.3")
-        side_spine.spines["left"].set_facecolor("0.3")
-        side_spine.spines["left"].set_edgecolor("0.3")
-        side_spine.set_ylabel("Genomic\ndistance", color="0.3",
-                              rotation="horizontal",
-                              fontweight="bold",
-                              fontsize="small")
+        side_spine.yaxis.label.set_verticalalignment("bottom")
+        side_spine.yaxis.label.set_rotation("horizontal")
         side_spine.yaxis.set_label_coords(-0.1, 1.02)
+
         return side_spine
 
     def plot_lines(self, data, color=None, linestyle=None,
