@@ -13,7 +13,7 @@ from circhic._base import CircHiCFigure
 # Load the data, compute the cumulative raw counts.
 data = datasets.load_ccrescentus()
 counts = data["counts"]
-lengths = data["lengths"]
+lengths = data["nbins"]
 cumul_raw_counts = counts.sum(axis=0)
 # Normale the data using ICE, and keep the biases
 counts, bias = ICE_normalization(counts, output_bias=True)

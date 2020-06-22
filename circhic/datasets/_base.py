@@ -14,8 +14,10 @@ def load_ccrescentus():
     dictionary :
         a dictionary containing:
             - counts: an (n, n) ndarray corresponding to the raw contact
-        counts for *C. crescentus*
-            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+              counts for *C. crescentus*
+            - nbins: (l, ) ndarray containing the number of bins of all
+              chromosomes.
+
     """
     module_path = os.path.dirname(__file__)
     counts = _load_counts(
@@ -23,10 +25,10 @@ def load_ccrescentus():
                      "data/ccrescentus/SRX263925_9958.matrix"))
     counts = counts.toarray()
     counts = counts.T + counts
-    lengths = np.array([counts.shape[0]])
+    nbins = np.array([counts.shape[0]])
 
     results = {"counts": counts,
-               "lengths": lengths}
+               "nbins": nbins}
     return results
 
 
@@ -40,7 +42,8 @@ def load_bsubtilis():
         a dictionary containing:
             - counts: an (n, n) ndarray corresponding to the raw contact
               counts for *B. subtilis*
-            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+            - nbins: (l, ) ndarray containing the number of bins of all
+              chromosomes.
 
     Example
     -------
@@ -57,21 +60,21 @@ def load_bsubtilis():
             [ 382.,  362.,  487., ..., 2740., 1496., 1210.],
             [ 701.,  642.,  753., ..., 1496., 3778., 2406.],
             [2311., 1227., 1180., ..., 1210., 2406., 5244.]]),
-        'lengths': array([412])}
+        'nbins': array([412])}
     """
     module_path = os.path.dirname(__file__)
-    lengths = _load_lengths(
+    nbins = _load_nbins(
         os.path.join(module_path,
                      "data/bsubtilis/SRX1014144_9790_abs.bed"))
 
     counts = _load_counts(
         os.path.join(module_path,
                      "data/bsubtilis/SRX1014144_9790.matrix"),
-        lengths=lengths)
+        nbins=nbins)
     counts = counts.toarray()
     counts = counts.T + counts
     results = {"counts": counts,
-               "lengths": lengths}
+               "nbins": nbins}
 
     return results
 
@@ -86,20 +89,22 @@ def load_ecoli():
         a dictionary containing:
             - counts: an (n, n) ndarray corresponding to the raw contact
               counts for *B. subtilis*
-            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+            - nbins: (l, ) ndarray containing the number of bins of all
+              chromosomes.
     """
     module_path = os.path.dirname(__file__)
-    lengths = _load_lengths(
+    nbins = _load_nbins(
         os.path.join(module_path,
                      "data/ecoli/SRX3451210_9897_abs.bed"))
     counts = _load_counts(
         os.path.join(module_path,
                      "data/ecoli/SRX3451210_9897.matrix"),
-        lengths=lengths)
+        nbins=nbins)
     counts = counts.toarray()
     counts = counts.T + counts
     results = {"counts": counts,
-               "lengths": lengths}
+               "nbins": nbins,
+               "lengths": np.array([4641652])}
 
     return results
 
@@ -114,25 +119,26 @@ def load_kbm7():
         a dictionary containing:
             - counts: an (n, n) ndarray corresponding to the raw contact
         counts for *C. crescentus*
-            - lengths: (l, ) ndarray containing the lengths of all chromosomes.
+            - nbins: (l, ) ndarray containing the number bins of all
+              chromosomes.
     """
     module_path = os.path.dirname(__file__)
-    lengths = _load_lengths(
+    nbins = _load_nbins(
         os.path.join(module_path,
                      "data/KBM7/HIC_076_50000_chr14.bed"))
     counts = _load_counts(
         os.path.join(module_path,
                      "data/KBM7/HIC_076_50000_chr14.matrix"),
-        lengths=lengths)
+        nbins=nbins)
     counts = counts.toarray()
     counts = counts.T + counts
 
     results = {"counts": counts,
-               "lengths": lengths}
+               "nbins": nbins}
     return results
 
 
-def _load_counts(filename, lengths=None):
+def _load_counts(filename, nbins=None):
     """
     Fast loading of a raw interaction counts file
 
@@ -142,8 +148,8 @@ def _load_counts(filename, lengths=None):
         path to the file to load. The file should be of the following format:
         i, j, counts
 
-    lengths : ndarray
-        lengths of each chromosomes
+    nbins : ndarray
+        nbins of each chromosomes
 
     Returns
     --------
@@ -151,8 +157,8 @@ def _load_counts(filename, lengths=None):
     """
     base = 1
     n = None
-    if lengths is not None:
-        n = lengths.sum()
+    if nbins is not None:
+        n = nbins.sum()
         shape = (n, n)
     else:
         shape = None
@@ -182,7 +188,7 @@ def _load_counts(filename, lengths=None):
     return counts
 
 
-def _load_lengths(filename, return_base=False):
+def _load_nbins(filename, return_base=False):
     """
     Fast loading of the bed files
 
@@ -196,13 +202,13 @@ def _load_lengths(filename, return_base=False):
 
     Returns
     -------
-    lengths : the lengths of each chromosomes
+    nbins : the number of bins of each chromosomes
     """
     data = pd.read_csv(filename, sep="\t", comment="#", header=None)
     data = data.values
-    _, idx, lengths = np.unique(data[:, 0], return_counts=True,
-                                return_index=True)
+    _, idx, nbins = np.unique(data[:, 0], return_counts=True,
+                              return_index=True)
     if return_base:
-        return lengths[idx.argsort()], data[0, 3]
+        return nbins[idx.argsort()], data[0, 3]
     else:
-        return lengths[idx.argsort()]
+        return nbins[idx.argsort()]
