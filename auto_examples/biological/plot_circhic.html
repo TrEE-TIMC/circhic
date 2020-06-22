@@ -66,7 +66,7 @@
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
   warnings.warn(
 
-&lt;matplotlib.legend.Legend object at 0x7fa8d38fd910&gt;
+&lt;matplotlib.legend.Legend object at 0x7f39585027c0&gt;
 </pre></div>
 </div>
 <div class="line-block">
@@ -100,7 +100,10 @@
                             <span class="n">inner_gdis</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">outer_gdis</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
                             <span class="n">vmin</span><span class="o">=</span><span class="mi">77</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone_r&quot;</span><span class="p">)</span>
 
-<a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_raxis" title="circhic.CircHiCFigure.plot_raxis" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_raxis</span></a><span class="p">()</span>
+<span class="n">rax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_raxis" title="circhic.CircHiCFigure.plot_raxis" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_raxis</span></a><span class="p">()</span>
+<span class="n">rax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s2">&quot;120 kb&quot;</span><span class="p">,</span> <span class="s2">&quot;0 kb&quot;</span><span class="p">,</span> <span class="s2">&quot;60 kb&quot;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;x-small&quot;</span><span class="p">)</span>
+<span class="n">rax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Genomic distance (kb)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;x-small&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
+<span class="n">rax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
 
 <span class="c1"># Assume you want to plot data from that ranges in a polar plot outside of the</span>
 <span class="c1"># first one. Then the 0 axis should be at, say, 80% of the axis</span>
@@ -123,14 +126,15 @@
 <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">set_genomic_ticklabels</span></a><span class="p">(</span>
     <span class="n">tickpositions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">lengths</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">50</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
     <span class="n">ticklabels</span><span class="o">=</span><span class="n">ticklabels</span><span class="p">,</span>
-    <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.95</span><span class="p">)</span>
+    <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
+    <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="s2">&quot;x-small&quot;</span><span class="p">})</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
 <span class="c1">#             verticalalignment=&quot;bottom&quot;)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">bar</span><span class="p">,</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">(</span><span class="s2">&quot;Mappability&quot;</span><span class="p">,</span> <span class="s2">&quot;Bias&quot;</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;x-small&quot;</span><span class="p">,</span>
            <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">),</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.024 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.943 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-biological-plot-circhic-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/biological/plot_circhic.ipynb"><img alt="https://mybinder.org/badge_logo.svg" src="https://mybinder.org/badge_logo.svg" width="150px" /></a>
