@@ -5,6 +5,7 @@ Comparing square and circular representations
 """
 import numpy as np
 
+import matplotlib  # Need this to check the version
 from matplotlib import rc
 rc('text', usetex=True)
 
@@ -43,13 +44,17 @@ min_non_zero=np.min(counts[counts>0])
 plt.figure(figsize=(15,12))
 
 plt.subplot(1,2,1)
-plt.imshow(counts,norm=colors.SymLogNorm(min_non_zero, base=np.e),vmin=vmin,vmax=vmax,cmap='bone_r')
+
+if matplotlib.__version__ < "3.2.0": norm = colors.SymLogNorm(min_non_zero)
+else: norm = colors.SymLogNorm(min_non_zero, base=np.e)
+
+plt.imshow(counts,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r')
 plt.xticks([]); plt.yticks([]);
 plt.title(r'\textrm{square}',pad=10, fontsize=20);
 
 plt.subplot(1,2,2)
-plt.imshow(Circ,norm=colors.SymLogNorm(min_non_zero, base=np.e),vmin=vmin,vmax=vmax,cmap='bone_r',interpolation='None')
-plt.imshow(vmax*Bord,norm=colors.SymLogNorm(min_non_zero, base=np.e),vmin=vmin,vmax=vmax,cmap='Greys',interpolation='None')
+plt.imshow(Circ,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r',interpolation='None')
+plt.imshow(vmax*Bord,norm=norm,vmin=vmin,vmax=vmax,cmap='Greys',interpolation='None')
 plt.xticks([]); plt.yticks([]);
 plt.axis('off');
 plt.title(r'\textrm{circular}'+'\n'+r'\textrm{inner\_gdis = 200 kb, outer\_gdis = 60 kb}',pad=10, fontsize=20);
