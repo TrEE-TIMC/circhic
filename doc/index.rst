@@ -3,12 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+###########################################################################
 circHiC: circular visualization of HiC data and integration of genomic data
-===========================================================================
+###########################################################################
 
-.. image:: auto_examples/biological/images/sphx_glr_plot_circhic_001.png
-  :scale: 75
-  :align: center
+.. image:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_1_001.png
+  :scale: 80
+  :align: left
+
+.. image:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_2_001.png
+  :scale: 80
+  :align: right
 
 
 Genome wide contact frequencies obtained using HiC-like experiments have

@@ -2,6 +2,7 @@
 *.swo
 *.html
 *.pdf
+.DS_Store
 
 dist
 *__pycache__*
