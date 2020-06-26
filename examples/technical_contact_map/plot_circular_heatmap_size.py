@@ -25,7 +25,7 @@ from circhic._base import CircHiCFigure
 
 # Load the data, compute the cumulative raw counts.
 data = datasets.load_bsubtilis()
-counts = data["counts"]
+counts = data["counts"] * 0
 lengths = data["nbins"]
 
 # Normale the data using ICE, and keep the biases
