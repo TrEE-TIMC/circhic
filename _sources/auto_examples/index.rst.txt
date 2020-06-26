@@ -56,6 +56,21 @@ General-purpose real-case examples for `circhic`.
 
 
 
+.. _sphx_glr_auto_examples_biological_ccrescentus:
+
+.. _ccrescentus_example:
+
+*Caulobacter crescentus*, data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.1126/science.1242059>`_
+****************************************************************************************************************************
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_auto_examples_technical:
 
 .. _technical_examples:
@@ -106,6 +121,27 @@ The basic units of a `circhic` plot.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data.">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bands_thumb.png
+     :alt: Plotting bands
+
+     :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_simple_plots/plot_bands
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip.">
 
 .. only:: html
@@ -145,27 +181,6 @@ The basic units of a `circhic` plot.
    :hidden:
 
    /auto_examples/technical_simple_plots/plot_lines
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data.">
-
-.. only:: html
-
- .. figure:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bands_thumb.png
-     :alt: Plotting bands
-
-     :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_simple_plots/plot_bands
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -183,14 +198,14 @@ Contact count maps as a circular strip
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="In this example, we showcase the difference between the reflect versus the distant mode.">
+    <div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one...">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_reflect_vs_distant_mode_thumb.png
-     :alt: Reflect versus distant mode
+ .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
+     :alt: Exploring the options of the circular heatmaps
 
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py`
+     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py`
 
 .. raw:: html
 
@@ -200,7 +215,7 @@ Contact count maps as a circular strip
 .. toctree::
    :hidden:
 
-   /auto_examples/technical_contact_map/plot_reflect_vs_distant_mode
+   /auto_examples/technical_contact_map/plot_circular_heatmap_size
 
 .. raw:: html
 
@@ -225,14 +240,14 @@ Contact count maps as a circular strip
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one...">
+    <div class="sphx-glr-thumbcontainer" tooltip="In this example, we showcase the difference between the reflect versus the distant mode.">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
-     :alt: Exploring the options of the circular heatmaps
+ .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_reflect_vs_distant_mode_thumb.png
+     :alt: Reflect versus distant mode
 
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py`
+     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py`
 
 .. raw:: html
 
@@ -242,7 +257,7 @@ Contact count maps as a circular strip
 .. toctree::
    :hidden:
 
-   /auto_examples/technical_contact_map/plot_circular_heatmap_size
+   /auto_examples/technical_contact_map/plot_reflect_vs_distant_mode
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
