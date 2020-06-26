@@ -263,7 +263,7 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
 
-from sphinx_gallery.sorting import ExplicitOrder, NumberOfCodeLinesSortKey
+from sphinx_gallery.sorting import ExplicitOrder, FileNameSortKey
 examples_dirs = ['../examples']
 gallery_dirs = ['gallery']
 
@@ -276,11 +276,13 @@ intersphinx_mapping = {
 
 
 sphinx_gallery_conf = {
+    'within_subsection_order': FileNameSortKey,
     'backreferences_dir': "generated/backreferences",
     'doc_module': ("circhic", ),
     "reference_url": {"circhic": None},
     'subsection_order': ExplicitOrder([
         '../examples/biological',
+        '../examples/biological_ccrescentus',
         '../examples/technical',
         '../examples/technical_simple_plots',
         '../examples/technical_contact_map',
