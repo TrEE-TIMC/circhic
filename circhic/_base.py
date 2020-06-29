@@ -258,7 +258,7 @@ class CircHiCFigure:
 
         nrows = int(np.round((1 - outer_radius) / 2 * 1000))
         side_spine = self.figure.add_subplot(
-            self._gridspec[50+nrows:-nrows-150, 0:550],
+            self._gridspec[50+nrows:550, 10:550],
             facecolor="none")
         side_spine.spines["right"].set_linewidth(0)
         side_spine.spines["top"].set_linewidth(0)
@@ -282,7 +282,7 @@ class CircHiCFigure:
             ticklabels = ["%d" % (inner_gdis * resolution),
                           "%d" % (outer_gdis * resolution)]
 
-        y_bottom_lim = rorigin*2 - outer_gdis
+        y_bottom_lim = rorigin
 
         side_spine.set_ylim((y_bottom_lim, outer_gdis))
         if mode == "reflect":
@@ -607,7 +607,7 @@ class CircHiCFigure:
         resolution = resolution if resolution is not None else 1
         nrows = int(np.round((1 - outer_radius) / 2 * 1000))
         ax_g = self.figure.add_subplot(
-            self._gridspec[50+nrows:-nrows-150, 50+nrows:-nrows-150],
+            self._gridspec[50+nrows:-nrows-100, 50+nrows:-nrows-100],
             facecolor="none",
             polar=polar,
             label=label, zorder=zorder)
