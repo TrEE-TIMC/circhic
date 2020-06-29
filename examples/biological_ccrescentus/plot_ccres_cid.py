@@ -2,6 +2,7 @@
 =================================================
 Zooming in chromosomal interaction domains (CIDs)
 =================================================
+
 """
 import numpy as np
 

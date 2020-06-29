@@ -31,7 +31,7 @@ fi
 pip install --upgrade pandas iced
 
 # For the documentation
-pip install --upgrade sphinx sphinx-gallery numpydoc
+pip install --upgrade sphinx sphinx-gallery==0.6 numpydoc
 pip install --upgrade pillow
 
 python setup.py develop
