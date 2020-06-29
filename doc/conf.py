@@ -286,6 +286,7 @@ sphinx_gallery_conf = {
         '../examples/technical',
         '../examples/technical_simple_plots',
         '../examples/technical_contact_map',
+        '../examples/schemas',
         ]),
     'binder': {
         # Required keys
