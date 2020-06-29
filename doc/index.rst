@@ -7,13 +7,13 @@
 circHiC: circular visualization of HiC data and integration of genomic data
 ###########################################################################
 
-.. image:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_1_001.png
+.. image:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_mappability_001.png
   :scale: 80
-  :align: left
+  :align: center
 
-.. image:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_2_001.png
+.. image:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_macrodomain_001.png
   :scale: 80
-  :align: right
+  :align: center
 
 
 Genome wide contact frequencies obtained using HiC-like experiments have
