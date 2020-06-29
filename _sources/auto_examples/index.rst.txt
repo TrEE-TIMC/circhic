@@ -363,6 +363,43 @@ Exploring options of the circular heatmaps
 
 
 
+.. _sphx_glr_auto_examples_schemas:
+
+.. _schemas_examples:
+
+Schemas & misc
+------------------
+
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Understanding HiC contact maps">
+
+.. only:: html
+
+ .. figure:: /auto_examples/schemas/images/thumb/sphx_glr_plot_schemas_normal_thumb.png
+     :alt: Understanding HiC contact maps
+
+     :ref:`sphx_glr_auto_examples_schemas_plot_schemas_normal.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/schemas/plot_schemas_normal
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. only :: html
 
  .. container:: sphx-glr-footer
