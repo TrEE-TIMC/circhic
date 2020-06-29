@@ -3,11 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+###########################################################################
 circHiC: circular visualization of HiC data and integration of genomic data
-===========================================================================
+###########################################################################
 
-.. image:: auto_examples/biological/images/sphx_glr_plot_circhic_001.png
-  :scale: 75
+.. image:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_mappability_001.png
+  :scale: 80
+  :align: center
+
+.. image:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_macrodomain_001.png
+  :scale: 80
   :align: center
 
 
