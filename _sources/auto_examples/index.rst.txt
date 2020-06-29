@@ -4,12 +4,6 @@
 
 .. _sphx_glr_auto_examples:
 
-================
-General examples
-================
-
-General-purpose and introductory examples for `circhic`.
-
 .. contents::
 
 
@@ -24,32 +18,11 @@ General-purpose and introductory examples for `circhic`.
 .. _biological_examples:
 
 Real-case gallery
------------------
+=================
 
 General-purpose real-case examples for `circhic`.
 
 
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="a circHiC figure showing biases and mappability">
-
-.. only:: html
-
- .. figure:: /auto_examples/biological/images/thumb/sphx_glr_plot_circhic_thumb.png
-     :alt: a circHiC figure showing biases and mappability
-
-     :ref:`sphx_glr_auto_examples_biological_plot_circhic.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological/plot_circhic
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -60,11 +33,137 @@ General-purpose real-case examples for `circhic`.
 
 .. _ccrescentus_example:
 
-*Caulobacter crescentus*, data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.1126/science.1242059>`_
-****************************************************************************************************************************
+*Caulobacter crescentus*
+------------------------
+
+Data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.1126/science.1242059>`_
 
 
 
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Zooming in chromosomal interaction domains (CIDs)">
+
+.. only:: html
+
+ .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_cid_thumb.png
+     :alt: Zooming in chromosomal interaction domains (CIDs)
+
+     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_cid.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_ccrescentus/plot_ccres_cid
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Circular HiC and genomic data">
+
+.. only:: html
+
+ .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_mappability_thumb.png
+     :alt: Circular HiC and genomic data
+
+     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_ccrescentus/plot_ccres_mappability
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Raw data">
+
+.. only:: html
+
+ .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_raw_data_thumb.png
+     :alt: Raw data
+
+     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_raw_data.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_ccrescentus/plot_ccres_raw_data
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The secondary diagonal using &#x27;distant&#x27; mode">
+
+.. only:: html
+
+ .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_second_diag_thumb.png
+     :alt: The secondary diagonal using 'distant' mode
+
+     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_ccrescentus/plot_ccres_second_diag
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_auto_examples_biological_ecoli:
+
+.. _ecoli_example:
+
+*Escherichia coli*
+------------------
+
+Data from `Lioy et al. (2018) Cell, 172(4), 771–783 <http://doi.org/10.1016/j.cell.2017.12.027>`_
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Macrodomain phenomenology">
+
+.. only:: html
+
+ .. figure:: /auto_examples/biological_ecoli/images/thumb/sphx_glr_plot_ecoli_macrodomain_thumb.png
+     :alt: Macrodomain phenomenology
+
+     :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_ecoli/plot_ecoli_macrodomain
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -76,32 +175,11 @@ General-purpose real-case examples for `circhic`.
 .. _technical_examples:
 
 Technical examples
-------------------
+==================
 
 Introductory examples for `circhic`.
 
 
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Changing the origin of the heatmap">
-
-.. only:: html
-
- .. figure:: /auto_examples/technical/images/thumb/sphx_glr_plot_changing_ori_thumb.png
-     :alt: Changing the origin of the heatmap
-
-     :ref:`sphx_glr_auto_examples_technical_plot_changing_ori.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical/plot_changing_ori
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -113,9 +191,9 @@ Introductory examples for `circhic`.
 .. _simple_plots_examples:
 
 Simple plots
-************
+------------
 
-The basic units of a `circhic` plot.
+The basic units of a `circhic` plot to display genomic data.
 
 
 
@@ -191,10 +269,52 @@ The basic units of a `circhic` plot.
 
 .. _contact_count_map_example:
 
-Contact count maps as a circular strip
-**************************************
+Exploring options of the circular heatmaps
+------------------------------------------
 
 
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Comparing square and circular representations">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_ccres_square_vs_circular_thumb.png
+     :alt: Comparing square and circular representations
+
+     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_contact_map/plot_ccres_square_vs_circular
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Using a different color map">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_changing_colormap_thumb.png
+     :alt: Using a different color map
+
+     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_contact_map/plot_changing_colormap
 
 .. raw:: html
 
@@ -203,7 +323,7 @@ Contact count maps as a circular strip
 .. only:: html
 
  .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
-     :alt: Exploring the options of the circular heatmaps
+     :alt: Radius
 
      :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py`
 
@@ -237,27 +357,6 @@ Contact count maps as a circular strip
    :hidden:
 
    /auto_examples/technical_contact_map/plot_colorbar
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="In this example, we showcase the difference between the reflect versus the distant mode.">
-
-.. only:: html
-
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_reflect_vs_distant_mode_thumb.png
-     :alt: Reflect versus distant mode
-
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_reflect_vs_distant_mode.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_contact_map/plot_reflect_vs_distant_mode
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

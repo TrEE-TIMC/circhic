@@ -1,7 +1,7 @@
 """
-==============================================
-Exploring the options of the circular heatmaps
-==============================================
+======
+Radius
+======
 
 There are several interesting options to explore for plotting heatmaps with
 `circhic`. First, one can adjust the data plotted by setting the maximum inner
@@ -10,7 +10,7 @@ distance corresponds to the "lower triangular" matrix of the contact count
 maps, an the outter distance to the upper triangular matrix. The data is thus
 symmetric to the midpoint, ie the "diagonal" of the contact count matrix.
 
-The second set of parameters that can be adjusted is the inner relates to the
+The second set of parameters that can be adjusted relates to the
 size of the disk: the inner and outer radius of the disk relative to the
 maximum outer radius possible (1). The outer radius will only affect how much
 of the total available space is used, while the inner radius will effectively
