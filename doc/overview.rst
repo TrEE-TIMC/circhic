@@ -13,5 +13,5 @@ https://github.com/tree-timc/circHiC
 
 Contact
 -------
-Ivan Junier <ivan dot junier @ univ-grenoble-alpes.fr>
+Ivan Junier <ivan dot junier @ univ-grenoble-alpes.fr>,
 Nelle Varoquaux <nelle dot varoquaux at gmail.com>

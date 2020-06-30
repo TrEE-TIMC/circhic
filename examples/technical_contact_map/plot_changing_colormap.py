@@ -79,3 +79,5 @@ ax.tick_params(colors="0.3")
 
 fig.legend((bar, lines[0]), ("Mappability", "Bias"), fontsize="small",
            bbox_to_anchor=(0.8, 0.1, 0.15, 0.15), frameon=False)
+
+print("")
