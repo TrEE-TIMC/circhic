@@ -13,14 +13,13 @@ together with the possibility to overlay genomic data (plots and heat maps).
 Tools are light and fast, aiming to facilitate the exploration
 and understanding of bacterial chromosome structuring data.
 
-.. image:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_mappability_001.png
-  :scale: 80
-  :align: left
+.. list-table:: 
 
-.. image:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_macrodomain_001.png
-  :scale: 80
-  :align: right
-
+    - - .. figure:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_mappability_001.png
+	
+      - .. figure:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_macrodomain_001.png
+	  
+   	 
 Genome wide contact frequencies obtained using HiC-like experiments have
 raised novel challenges in terms of visualization and rationalization of
 chromosome structuring phenomena. In bacteria, one difficulty consists in
