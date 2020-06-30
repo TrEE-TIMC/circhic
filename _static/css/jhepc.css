@@ -267,3 +267,12 @@ table.docutils td {
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+div.topic {
+    padding: 0.5rem;
+    background-color: #eee;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #CCC;
+    max-width: 75%;
+}
