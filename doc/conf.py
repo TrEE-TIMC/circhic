@@ -22,6 +22,7 @@ import sphinx_gallery
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.autosummary',
               'numpydoc', "sphinx.ext.imgmath",
               "sphinx.ext.doctest",
+              'matplotlib.sphinxext.plot_directive',
               "sphinx_gallery.gen_gallery"]
 
 autosummary_generate = True
