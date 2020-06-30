@@ -18,7 +18,7 @@ matrix:
         - name: "Python 3.7"
           python: 3.7
           env: MATPLOTLIB_VERSION=3.1 NUMPY_VERSION=1.17 SCIPY_VERSION=1.2 DEPLOY=true
-    allow_failure:
+    allow_failures:
         - name: "Python 3.8"
           python: 3.8
           env: MATPLOTLIB_VERSION=* NUMPY_VERSION=* SCIPY_VERSION=* DEPLOY=false
