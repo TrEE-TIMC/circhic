@@ -67,7 +67,7 @@ ax = circhicfig.set_genomic_ticklabels(
     outer_radius=0.96,fontdict={'fontsize':"small"})
 ax.tick_params(colors="0.3")
 
-inner_radius, outer_radius = 0.51, 0.54
+inner_radius, outer_radius = 0.485, 0.515
 band, _ = circhicfig.plot_bands(np.array([int(0.26*chrom_lengths[0])]), np.array([int(0.41*chrom_lengths[0])]), colors=('cyan',),
                       inner_radius=inner_radius, outer_radius=outer_radius)
 
