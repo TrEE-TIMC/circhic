@@ -16,7 +16,7 @@ CircHiC tutorial
 Introduction
 ============
 
-CircHiC is a plotting library developped for bacterial HiC data. It is built
+CircHiC is a plotting library developped for bacterial Hi-C data. It is built
 upon Matplotlib, the single most used Python package for 2D-graphics.
 
 This tutorial is heavily inspired by the excellent `Matplotlib tutorial
@@ -30,7 +30,7 @@ In this section, we are going to plot data from *E. coli* from `Lioy et al.
 (2018) Cell, 172(4), 771–783 <http://doi.org/10.1016/j.cell.2017.12.027>`_.
 The data is provided as a sample dataset of :mod:`circhic`. We will start with the
 default setting and enrich the figure step by step to make it nicer and
-supplement the HiC contact map with genomic information.
+supplement the Hi-C contact map with genomic information.
 
 The first step is to load the data and the modules we will be using:
 
@@ -68,7 +68,7 @@ cases.
 
 :mod:`circhic` also requires to know more about the data plotted than
 Matplotlib. In particular, the library requires to know the number of bins of
-the HiC contact map. Let us instantiate a :mod:`circhic` figure by providing
+the Hi-C contact map. Let us instantiate a :mod:`circhic` figure by providing
 the number of bins per chromosomes to the figure. You can also provide the
 exact length in base pair.
 

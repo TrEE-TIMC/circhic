@@ -1,7 +1,7 @@
 """
-=============================
-Circular HiC and genomic data
-=============================
+==============================
+Circular Hi-C and genomic data
+==============================
 """
 
 import numpy as np

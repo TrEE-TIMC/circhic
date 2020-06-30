@@ -2,7 +2,7 @@
 circHiC
 =======
 
-`circHiC` builds upon Matplotlib to provide support for visualizing HiC data
+`circHiC` builds upon Matplotlib to provide support for visualizing Hi-C data
 for bacterial chromosomes. It is written in the `Python
 <https://www.python.org>`_ language.
 
