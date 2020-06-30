@@ -14,14 +14,14 @@ matrix:
     include:
         - name: "Python 3.6"
           python: 3.6
-          env: MATPLOTLIB_VERSION=3.0 NUMPY_VERSION=1.16 SCIPY_VERSION=0.19.1 DEPLOY=false
+          env: MATPLOTLIB_VERSION=3.0 NUMPY_VERSION=1.16 SCIPY_VERSION=0.19.1 SPHINX_VERSION=2.4 DEPLOY=false
         - name: "Python 3.7"
           python: 3.7
-          env: MATPLOTLIB_VERSION=3.1 NUMPY_VERSION=1.17 SCIPY_VERSION=1.2 DEPLOY=true
+          env: MATPLOTLIB_VERSION=3.1 NUMPY_VERSION=1.17 SCIPY_VERSION=1.2 SPHINX_VERSION=*  DEPLOY=true
     allow_failures:
         - name: "Python 3.8"
           python: 3.8
-          env: MATPLOTLIB_VERSION=* NUMPY_VERSION=* SCIPY_VERSION=* DEPLOY=false
+          env: MATPLOTLIB_VERSION=* NUMPY_VERSION=* SCIPY_VERSION=* SPHINX_VERSION=*  DEPLOY=false
 
 install:
     - source .build_tools/travis/install.sh

@@ -16,6 +16,15 @@ else
     pip install numpy --upgrade
 fi
 
+if [[ $SPHINX_VERSION != "*" ]]; then
+    pip install --upgrade \
+        sphinx==$SPHINX_VERSION
+else
+    pip install sphinx --upgrade
+fi
+
+
+
 if [[ $MATPLOTLIB_VERSION != "*" ]]; then
     pip install matplotlib==$MATPLOTLIB_VERSION
 else
@@ -31,7 +40,7 @@ fi
 pip install --upgrade pandas iced
 
 # For the documentation
-pip install --upgrade sphinx sphinx-gallery numpydoc
+pip install --upgrade sphinx-gallery numpydoc
 pip install --upgrade pillow
 
 python setup.py develop
