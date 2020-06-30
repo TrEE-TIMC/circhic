@@ -1,0 +1,14 @@
+:orphan:
+
+circhic.utils.generate_borders
+==============================
+
+.. currentmodule:: circhic.utils
+
+.. autofunction:: generate_borders
+
+.. include:: ../../generated/backreferences/circhic.utils.generate_borders.examples
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
