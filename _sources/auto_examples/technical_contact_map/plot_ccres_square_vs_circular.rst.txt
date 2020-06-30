@@ -20,20 +20,8 @@ Comparing square and circular representations
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
 
 
-    Text(0.5, 1.0, '\\textrm{circular}\n\\textrm{inner\\_gdis = 200 kb, outer\\_gdis = 60 kb}')
-
-
-
-
-
-|
 
 
 .. code-block:: default
@@ -94,10 +82,11 @@ Comparing square and circular representations
     plt.axis('off');
     plt.title(r'\textrm{circular}'+'\n'+r'\textrm{inner\_gdis = 200 kb, outer\_gdis = 60 kb}',pad=10, fontsize=20);
 
+    print("")
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.619 seconds)
+   **Total running time of the script:** ( 0 minutes  1.584 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py:

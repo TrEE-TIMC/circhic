@@ -76,3 +76,5 @@ cab.set_label("Normalized contact counts", fontsize="small")
 
 fig.legend((lines[0],band), ("Log-mappability","Ter"), fontsize="small",
            bbox_to_anchor=(0.8, 0.1, 0.15, 0.15), frameon=False)
+
+print("")

@@ -20,20 +20,8 @@ Using a different color map
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
 
 
-    <matplotlib.legend.Legend object at 0x7f37fef7c2e8>
-
-
-
-
-
-|
 
 
 .. code-block:: default
@@ -115,10 +103,11 @@ Using a different color map
     fig.legend((bar, lines[0]), ("Mappability", "Bias"), fontsize="small",
                bbox_to_anchor=(0.8, 0.1, 0.15, 0.15), frameon=False)
 
+    print("")
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.663 seconds)
+   **Total running time of the script:** ( 0 minutes  1.629 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_changing_colormap.py:
