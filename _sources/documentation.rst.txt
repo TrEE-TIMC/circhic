@@ -5,7 +5,7 @@ circHiC
 =======
 
 
-circHiC is a visualization tool to plot HiC data from circular chromosomes.
+circHiC is a visualization tool to plot Hi-C data from circular chromosomes.
 
 Sections
 ========

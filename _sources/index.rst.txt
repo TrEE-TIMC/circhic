@@ -3,28 +3,27 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-###########################################################################
-circHiC: circular visualization of HiC data and integration of genomic data
-###########################################################################
+############################################################################
+circHiC: circular visualization of Hi-C data and integration of genomic data
+############################################################################
 
 circHiC is a `Python <https://www.python.org>`_ library, built upon the widely
-used `Matplotlib <https://matplotlib.org/>`_ library, to display HiC-like data in circular strips
+used `Matplotlib <https://matplotlib.org/>`_ library, to display Hi-C-like data in circular strips
 together with the possibility to overlay genomic data (plots and heat maps).
 Tools are light and fast, aiming to facilitate the exploration
 and understanding of bacterial chromosome structuring data.
 
-.. list-table:: 
-
-    - - .. figure:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_mappability_001.png
+.. image:: auto_examples/biological_ccrescentus/images/sphx_glr_plot_ccres_mappability_001.png
+	:width: 49.5%
 	
-      - .. figure:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_macrodomain_001.png
-	  
+.. image:: auto_examples/biological_ecoli/images/sphx_glr_plot_ecoli_macrodomain_001.png
+	:width: 49.5%	
    	 
-Genome wide contact frequencies obtained using HiC-like experiments have
+Genome wide contact frequencies obtained using Hi-C-like experiments have
 raised novel challenges in terms of visualization and rationalization of
 chromosome structuring phenomena. In bacteria, one difficulty consists in
 displaying data in a way that is congruent with the circularity of
-chromosomes. Standard representations of HiC data under the form of square
+chromosomes. Standard representations of Hi-C data under the form of square
 matrices or horizontal bands are indeed not adapted to periodic conditions as
 those imposed by (most) bacterial chromosomes. circHiC fills this gap.
 

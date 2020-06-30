@@ -78,7 +78,7 @@
 </div>
 <div class="section" id="introduction">
 <h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>CircHiC is a plotting library developped for bacterial HiC data. It is built
+<p>CircHiC is a plotting library developped for bacterial Hi-C data. It is built
 upon Matplotlib, the single most used Python package for 2D-graphics.</p>
 <p>This tutorial is heavily inspired by the excellent <a class="reference external" href="https://github.com/rougier/matplotlib-tutorial">Matplotlib tutorial</a> written by Nicolas Rougier.</p>
 </div>
@@ -88,7 +88,7 @@ upon Matplotlib, the single most used Python package for 2D-graphics.</p>
 (2018) Cell, 172(4), 771–783</a>.
 The data is provided as a sample dataset of <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a>. We will start with the
 default setting and enrich the figure step by step to make it nicer and
-supplement the HiC contact map with genomic information.</p>
+supplement the Hi-C contact map with genomic information.</p>
 <p>The first step is to load the data and the modules we will be using:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">circhic</span>
@@ -117,7 +117,7 @@ rather good in most cases, you may want to modify some properties for specific
 cases.</p>
 <p><a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> also requires to know more about the data plotted than
 Matplotlib. In particular, the library requires to know the number of bins of
-the HiC contact map. Let us instantiate a <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> figure by providing
+the Hi-C contact map. Let us instantiate a <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> figure by providing
 the number of bins per chromosomes to the figure. You can also provide the
 exact length in base pair.</p>
 <p>(<a class="reference external" href="./scripts/simple_plot.py">Source code</a>, <a class="reference external" href="./scripts/simple_plot.png">png</a>, <a class="reference external" href="./scripts/simple_plot.hires.png">hires.png</a>, <a class="reference external" href="./scripts/simple_plot.pdf">pdf</a>)</p>

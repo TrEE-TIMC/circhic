@@ -45,12 +45,12 @@ Data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.112
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Circular HiC and genomic data">
+    <div class="sphx-glr-thumbcontainer" tooltip="Circular Hi-C and genomic data">
 
 .. only:: html
 
  .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_mappability_thumb.png
-     :alt: Circular HiC and genomic data
+     :alt: Circular Hi-C and genomic data
 
      :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py`
 
@@ -368,7 +368,7 @@ Exploring options of the circular heatmaps
 .. _schemas_examples:
 
 Schemas & misc
-------------------
+--------------
 
 
 
@@ -376,12 +376,12 @@ Schemas & misc
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Understanding HiC contact maps">
+    <div class="sphx-glr-thumbcontainer" tooltip="Understanding Hi-C contact maps">
 
 .. only:: html
 
  .. figure:: /auto_examples/schemas/images/thumb/sphx_glr_plot_schemas_normal_thumb.png
-     :alt: Understanding HiC contact maps
+     :alt: Understanding Hi-C contact maps
 
      :ref:`sphx_glr_auto_examples_schemas_plot_schemas_normal.py`
 
