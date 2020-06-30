@@ -90,7 +90,7 @@ Macrodomain phenomenology
         outer_radius=0.96,fontdict={'fontsize':"small"})
     ax.tick_params(colors="0.3")
 
-    inner_radius, outer_radius = 0.51, 0.54
+    inner_radius, outer_radius = 0.485, 0.515
     band, _ = circhicfig.plot_bands(np.array([int(0.26*chrom_lengths[0])]), np.array([int(0.41*chrom_lengths[0])]), colors=('cyan',),
                           inner_radius=inner_radius, outer_radius=outer_radius)
 
@@ -104,7 +104,7 @@ Macrodomain phenomenology
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.004 seconds)
+   **Total running time of the script:** ( 0 minutes  2.056 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py:
