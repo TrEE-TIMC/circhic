@@ -11,7 +11,7 @@ CircHiC tutorial
 
 .. contents:: Table of Contents
    :local:
-   :depth: 1
+   :depth: 2
 
 Introduction
 ============
@@ -142,9 +142,9 @@ radius to a non-zero value, in order to create a "donut" shape.
 
 ::
 
-  inner_gdis = 2000000
-  outer_gdis = 600000
-  inner_radius = 0.005
+  inner_gdis = 200
+  outer_gdis = 60
+  inner_radius = 0.01
 
   im, ax = circhicfig.plot_hic(counts, cmap="bone_r", border_thickness=0.01,
                                vmin=vmin, vmax=vmax, inner_radius=inner_radius,
@@ -158,3 +158,9 @@ Now that the contact map displays the two features we are interested in, it is
 time to add ticks and tick labels to the plot.
 
 .. plot:: scripts/simple_plot_ticks.py
+
+
+And here is the entire code to reproduce this plot!
+
+.. include:: scripts/simple_plot_ticks.py
+  :code: python
