@@ -18,7 +18,8 @@ lengths = np.array([50])
 
 fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(polar=True)
-ax.set_rlim(0, 50)
+
+ax.set_ylim(0, 50)
 ax.set_rorigin(-20)
 
 resolution = 1000
