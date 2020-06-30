@@ -58,3 +58,5 @@ plt.imshow(vmax*Bord,norm=norm,vmin=vmin,vmax=vmax,cmap='Greys',interpolation='N
 plt.xticks([]); plt.yticks([]);
 plt.axis('off');
 plt.title(r'\textrm{circular}'+'\n'+r'\textrm{inner\_gdis = 200 kb, outer\_gdis = 60 kb}',pad=10, fontsize=20);
+
+print("")

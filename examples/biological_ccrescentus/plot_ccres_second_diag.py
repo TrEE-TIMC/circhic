@@ -1,7 +1,7 @@
 """
-===========================================
-The secondary diagonal using 'distant' mode
-===========================================
+======================================
+Secondary diagonal from 'distant' mode
+======================================
 """
 import numpy as np
 
