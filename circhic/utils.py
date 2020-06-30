@@ -346,12 +346,6 @@ def convert_xy_to_thetar(coordinates, lengths, resolution=None):
     if x.shape[0] != y.shape[0]:
         raise ValueError("coordinates should be of the same length")
 
-    if np.any(x > (lengths.sum() / resolution)):
-        raise ValueError("value in x larger than expected")
-
-    if np.any(y > (lengths.sum() / resolution)):
-        raise ValueError("value in x larger than expected")
-
     s = y - x
     theta = (x + s / 2) * 2 * np.pi / lengths.sum() * resolution
     return (theta, s)
