@@ -10,11 +10,8 @@ Understanding circular HiC contact maps
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-from matplotlib.patches import Circle
 import numpy as np
 import circhic
-from circhic import datasets
-from utils import circle, text
 
 
 lengths = np.array([50])
@@ -101,6 +98,19 @@ for i in np.arange(0, 50, 10):
     ax.plot(theta, r, linestyle="--", color="0.25", linewidth=0.5)
 
 
+def circle(ax, x, y, radius=2):
+    from matplotlib.patches import Circle
+    from matplotlib.patheffects import withStroke
+    circle = Circle((x, y), radius, clip_on=False, zorder=12, linewidth=1,
+                    edgecolor='black', facecolor=(0, 0, 0, .0125),
+                    path_effects=[withStroke(linewidth=5, foreground='w')])
+    ax.add_artist(circle)
+
+
+def text(ax, x, y, text, zorder=10):
+    ax.text(x, y, text, backgroundcolor="white",
+            ha='center', va='top', weight='bold', color='blue', zorder=zorder)
+
 ax.grid(linestyle="--", linewidth=0, color=".25")
 
 ax.set_title("Circular contact map",
@@ -122,7 +132,6 @@ text(main_ax, 0.495, 0.28, "Loci j")
 
 circle(main_ax, 0.37, 0.43, radius=0.04)
 text(main_ax, 0.37, 0.38, "Loci i")
-
 
 
 main_ax.spines["left"].set_visible(False)
