@@ -5,9 +5,6 @@ Zooming in chromosomal interaction domains
 """
 import numpy as np
 
-from matplotlib import rc
-rc('text', usetex=True)
-
 import matplotlib.pyplot as plt
 
 from circhic import datasets
@@ -52,9 +49,9 @@ rax.tick_params(colors="0.3")
 cab = circhicfig.set_colorbar(m, orientation="horizontal")
 cab.set_label("Normalized contact counts", fontsize="small")
 
-ticklabels = ["%d~kb" % (i * 500) for i in range(7)]    
-tickpositions=[int(i*500000) for i in range(7)]
-ticklabels[0]=r"$\textit{oriC}$"
+ticklabels = ["%d kb" % (i * 500) for i in range(7)]    
+tickpositions= [int(i*500000) for i in range(7)]
+ticklabels[0] = "oriC"
 ax = circhicfig.set_genomic_ticklabels(
     tickpositions=tickpositions,
     ticklabels=ticklabels,
