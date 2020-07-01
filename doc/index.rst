@@ -27,9 +27,7 @@ chromosomes. Standard representations of Hi-C data under the form of square
 matrices or horizontal bands are indeed not adapted to periodic conditions as
 those imposed by (most) bacterial chromosomes. circHiC fills this gap.
 
-
-
-
+    
 Citing circHiC
 --------------
 
@@ -41,3 +39,12 @@ to the following paper:
 Bibtex entry::
 
   FIXME
+
+
+Licence Information
+--------------------
+
+Conditions on the use and redistribution of this package.
+
+.. literalinclude:: ../LICENSE.txt
+
