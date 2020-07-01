@@ -27,6 +27,12 @@ chromosomes. Standard representations of Hi-C data under the form of square
 matrices or horizontal bands are indeed not adapted to periodic conditions as
 those imposed by (most) bacterial chromosomes. circHiC fills this gap.
 
+From square display to circular display
+---------------------------------------
+
+.. figure:: images/explicative_figure.png
+	
+
     
 Citing circHiC
 --------------
