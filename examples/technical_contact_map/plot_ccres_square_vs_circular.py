@@ -6,8 +6,6 @@ Comparing square and circular representations
 import numpy as np
 
 import matplotlib  # Need this to check the version
-from matplotlib import rc
-rc('text', usetex=True)
 
 import matplotlib.pyplot as plt
 
@@ -57,6 +55,6 @@ plt.imshow(Circ,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r',interpolation='None'
 plt.imshow(vmax*Bord,norm=norm,vmin=vmin,vmax=vmax,cmap='Greys',interpolation='None')
 plt.xticks([]); plt.yticks([]);
 plt.axis('off');
-plt.title(r'\textrm{circular}'+'\n'+r'\textrm{inner\_gdis = 200 kb, outer\_gdis = 60 kb}',pad=10, fontsize=20);
+plt.title('circular\n inner gdis = 200 kb, outer gdis = 60 kb',pad=10, fontsize=20);
 
 print("")

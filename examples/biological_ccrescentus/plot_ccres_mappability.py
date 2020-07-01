@@ -13,8 +13,6 @@ from circhic import CircHiCFigure
 
 from iced.normalization import ICE_normalization
 
-matplotlib.rcParams["text.usetex"] = True
-
 # Load the data, compute the cumulative raw counts.
 data = datasets.load_ccrescentus()
 counts_raw = data["counts"]
@@ -68,9 +66,9 @@ lines, _ = circhicfig.plot_lines(
 cab = circhicfig.set_colorbar(m, orientation="horizontal")
 cab.set_label("Normalized contact counts", fontsize="small")
 
-ticklabels = ["%d~kb" % (i * 500) for i in range(6)]
+ticklabels = ["%d kb" % (i * 500) for i in range(6)]
 tickpositions = [int(i*500000) for i in range(6)]
-ticklabels[0] = r"$\textit{oriC}$"
+ticklabels[0] = "oriC"
 ax = circhicfig.set_genomic_ticklabels(
     tickpositions=tickpositions,
     ticklabels=ticklabels,

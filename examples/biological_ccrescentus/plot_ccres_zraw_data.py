@@ -5,9 +5,6 @@ Raw data
 """
 import numpy as np
 
-from matplotlib import rc
-rc('text', usetex=True)
-
 import matplotlib.pyplot as plt
 
 from circhic import datasets
@@ -58,7 +55,7 @@ cab.set_label("Normalized contact counts", fontsize="small")
 
 ticklabels = ["%d~kb" % (i * 500) for i in range(6)]    
 tickpositions=[int(i*500000) for i in range(6)]
-ticklabels[0]=r"$\textit{oriC}$"
+ticklabels[0] = "oriC"
 ax = circhicfig.set_genomic_ticklabels(
     tickpositions=tickpositions,
     ticklabels=ticklabels,
