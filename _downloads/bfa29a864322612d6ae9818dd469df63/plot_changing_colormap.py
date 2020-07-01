@@ -2,6 +2,7 @@
 ===========================
 Using a different color map
 ===========================
+
 """
 import numpy as np
 
@@ -14,8 +15,6 @@ from circhic import CircHiCFigure
 
 from iced.normalization import ICE_normalization
 
-
-rc('text', usetex=True)
 
 # Load the data, compute the cumulative raw counts.
 data = datasets.load_ccrescentus()
@@ -70,7 +69,7 @@ cab.set_label("Normalized contact counts", fontsize="small")
 
 ticklabels = ["%d~kb" % (i * 500) for i in range(6)]
 tickpositions = [int(i*500000) for i in range(6)]
-ticklabels[0] = r"$\textit{oriC}$"
+ticklabels[0] = "oriC"
 ax = circhicfig.set_genomic_ticklabels(
     tickpositions=tickpositions,
     ticklabels=ticklabels,
@@ -79,5 +78,3 @@ ax.tick_params(colors="0.3")
 
 fig.legend((bar, lines[0]), ("Mappability", "Bias"), fontsize="small",
            bbox_to_anchor=(0.8, 0.1, 0.15, 0.15), frameon=False)
-
-print("")
