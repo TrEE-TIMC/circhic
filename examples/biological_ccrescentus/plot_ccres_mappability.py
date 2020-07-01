@@ -5,7 +5,6 @@ Circular Hi-C and genomic data
 """
 
 import numpy as np
-import matplotlib
 import matplotlib.pyplot as plt
 
 from circhic import datasets
