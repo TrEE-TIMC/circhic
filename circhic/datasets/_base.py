@@ -45,14 +45,14 @@ def load_bsubtilis():
             - nbins: (l, ) ndarray containing the number of bins of all
               chromosomes.
 
-    Example
-    -------
+    Examples
+    --------
 
     loading the data
 
-    >> from circhic import datasets
-    >> data = datasets.load_bsubtilis()
-    >> print(data)
+    >>> from circhic import datasets
+    >>> data = datasets.load_bsubtilis()
+    >>> print(data)
         {'counts': array([[  62.,  469.,  457., ...,  382.,  701., 2311.],
             [ 469., 4908., 1245., ...,  362.,  642., 1227.],
             [ 457., 1245., 5940., ...,  487.,  753., 1180.],
@@ -61,6 +61,7 @@ def load_bsubtilis():
             [ 701.,  642.,  753., ..., 1496., 3778., 2406.],
             [2311., 1227., 1180., ..., 1210., 2406., 5244.]]),
         'nbins': array([412])}
+
     """
     module_path = os.path.dirname(__file__)
     nbins = _load_nbins(
