@@ -276,12 +276,12 @@ Exploring options of the circular heatmaps
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Comparing square and circular representations">
+    <div class="sphx-glr-thumbcontainer" tooltip="Square versus circular displays">
 
 .. only:: html
 
  .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_ccres_square_vs_circular_thumb.png
-     :alt: Comparing square and circular representations
+     :alt: Square versus circular displays
 
      :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py`
 

@@ -9,14 +9,14 @@
     .. _sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py:
 
 
-=============================================
-Comparing square and circular representations
-=============================================
+===============================
+Square versus circular displays
+===============================
 
 
 
 .. image:: /auto_examples/technical_contact_map/images/sphx_glr_plot_ccres_square_vs_circular_001.png
-    :alt: \textrm{square}, circular  inner gdis = 200 kb, outer gdis = 60 kb
+    :alt: square, circular  inner gdis = 200 kb, outer gdis = 60 kb
     :class: sphx-glr-single-img
 
 
@@ -71,7 +71,7 @@ Comparing square and circular representations
 
     plt.imshow(counts,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r')
     plt.xticks([]); plt.yticks([]);
-    plt.title(r'\textrm{square}',pad=10, fontsize=20);
+    plt.title('square',pad=10, fontsize=20);
 
     plt.subplot(1,2,2)
     plt.imshow(Circ,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r',interpolation='None')
@@ -85,7 +85,7 @@ Comparing square and circular representations
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.398 seconds)
+   **Total running time of the script:** ( 0 minutes  1.365 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py:
