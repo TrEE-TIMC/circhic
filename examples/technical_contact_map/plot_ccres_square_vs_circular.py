@@ -1,7 +1,7 @@
 """
-=============================================
-Comparing square and circular representations
-=============================================
+===============================
+Square versus circular displays
+===============================
 """
 import numpy as np
 
@@ -48,7 +48,7 @@ else: norm = colors.SymLogNorm(min_non_zero, base=np.e)
 
 plt.imshow(counts,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r')
 plt.xticks([]); plt.yticks([]);
-plt.title(r'\textrm{square}',pad=10, fontsize=20);
+plt.title('square',pad=10, fontsize=20);
 
 plt.subplot(1,2,2)
 plt.imshow(Circ,norm=norm,vmin=vmin,vmax=vmax,cmap='bone_r',interpolation='None')
