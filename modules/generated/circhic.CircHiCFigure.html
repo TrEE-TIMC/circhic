@@ -82,38 +82,38 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bands" title="circhic.CircHiCFigure.plot_bands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bands</span></code></a>(self, begin, end[, colors, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bands" title="circhic.CircHiCFigure.plot_bands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bands</span></code></a>(begin, end[, colors, …])</p></td>
 <td><p>Plot bands</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bars" title="circhic.CircHiCFigure.plot_bars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bars</span></code></a>(self, data[, color, inner_radius, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_bars" title="circhic.CircHiCFigure.plot_bars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bars</span></code></a>(data[, color, inner_radius, …])</p></td>
 <td><p>Plot a bar chart</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hic</span></code></a>(self, counts[, inner_gdis, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hic</span></code></a>(counts[, inner_gdis, outer_gdis, …])</p></td>
 <td><p>Plot a heatmap of the HiC contact count matrix on a circular strip.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_lines" title="circhic.CircHiCFigure.plot_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_lines</span></code></a>(self, data[, color, linestyle, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_lines" title="circhic.CircHiCFigure.plot_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_lines</span></code></a>(data[, color, linestyle, …])</p></td>
 <td><p>Plot a line chart</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_raxis" title="circhic.CircHiCFigure.plot_raxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_raxis</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.plot_raxis" title="circhic.CircHiCFigure.plot_raxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_raxis</span></code></a>()</p></td>
 <td><p>Plot the r-axis, corresponding to the genomic distance</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colorbar</span></code></a>(self, mappable[, orientation])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colorbar</span></code></a>(mappable[, orientation])</p></td>
 <td><p>Set a colorbar on the plot</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_genomic_ticklabels</span></code></a>(self[, outer_radius, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_genomic_ticklabels</span></code></a>([outer_radius, …])</p></td>
 <td><p>Set the circular tick labels</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.plot_bands">
-<code class="sig-name descname">plot_bands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">begin</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bands" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_bands</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">begin</span></em>, <em class="sig-param"><span class="n">end</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bands" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot bands</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -136,7 +136,7 @@
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.plot_bars">
-<code class="sig-name descname">plot_bars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">zorder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bars" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_bars</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">zorder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_bars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a bar chart</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -169,7 +169,7 @@ possible is 1. Should be larger than <cite>inner_radius</cite>.</p>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.plot_hic">
-<code class="sig-name descname">plot_hic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">counts</span></em>, <em class="sig-param"><span class="n">inner_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outer_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'viridis'</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'reflect'</span></em>, <em class="sig-param"><span class="n">vmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">border_thickness</span><span class="o">=</span><span class="default_value">0.02</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">granularity</span><span class="o">=</span><span class="default_value">0.5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_hic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_hic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">counts</span></em>, <em class="sig-param"><span class="n">inner_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outer_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">'viridis'</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'reflect'</span></em>, <em class="sig-param"><span class="n">vmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">border_thickness</span><span class="o">=</span><span class="default_value">0.02</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">granularity</span><span class="o">=</span><span class="default_value">0.5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_hic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a heatmap of the HiC contact count matrix on a circular strip.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -225,7 +225,7 @@ outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.plot_lines">
-<code class="sig-name descname">plot_lines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linestyle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">zorder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_lines" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_lines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linestyle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">zorder</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_lines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a line chart</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -258,13 +258,13 @@ possible is 1. Should be larger than <cite>inner_radius</cite>.</p>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.plot_raxis">
-<code class="sig-name descname">plot_raxis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_raxis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_raxis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.plot_raxis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the r-axis, corresponding to the genomic distance</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.set_colorbar">
-<code class="sig-name descname">set_colorbar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">mappable</span></em>, <em class="sig-param"><span class="n">orientation</span><span class="o">=</span><span class="default_value">'vertical'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_colorbar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_colorbar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mappable</span></em>, <em class="sig-param"><span class="n">orientation</span><span class="o">=</span><span class="default_value">'vertical'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_colorbar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set a colorbar on the plot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -281,7 +281,7 @@ described by this colorbar.</p>
 
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.set_genomic_ticklabels">
-<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fontdict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fontdict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the circular tick labels</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
