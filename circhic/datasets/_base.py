@@ -126,11 +126,11 @@ def load_kbm7():
     module_path = os.path.dirname(__file__)
     nbins = _load_nbins(
         os.path.join(module_path,
-                     "data/KBM7/HIC_076_50000_chr14.bed"))
+                     "data/KBM7/HIC_076_50000_chr11.bed"))
     counts = _load_counts(
         os.path.join(module_path,
-                     "data/KBM7/HIC_076_50000_chr14.matrix"),
-        nbins=nbins)
+                     "data/KBM7/HIC_076_50000_chr11.matrix"),
+        nbins=nbins, base=0)
     counts = counts.toarray()
     counts = counts.T + counts
 
@@ -139,7 +139,7 @@ def load_kbm7():
     return results
 
 
-def _load_counts(filename, nbins=None):
+def _load_counts(filename, nbins=None, base=1):
     """
     Fast loading of a raw interaction counts file
 
@@ -156,7 +156,6 @@ def _load_counts(filename, nbins=None):
     --------
     X : the interaction counts file
     """
-    base = 1
     n = None
     if nbins is not None:
         n = nbins.sum()
@@ -181,7 +180,7 @@ def _load_counts(filename, nbins=None):
     row -= base
 
     if shape is None:
-        n = max(col.max(), row.max()) + 1
+        n = max(col.max(), row.max()) + base
         shape = (int(n), int(n))
 
     data = data.astype(float)
