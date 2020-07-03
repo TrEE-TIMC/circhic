@@ -1,20 +1,42 @@
-import sys
 import numpy as np
 
 
-def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
-                     inner_gdis=800000, outer_gdis=800000, origin=1,
-                     chromosome_type='circular', frac_lin=0.7, rotate_lin=0,
+def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=None,
+                     inner_gdis=None, outer_gdis=None, origin=1,
+                     chromosome_type='circular', mode="reflect",
+                     frac_lin=0.7, rotate_lin=0,
                      thick_r=0.005, thick_extreme=0.002):
 
-    if not resolution:
-        raise ValueError("Data resolution must be set")
+    resolution = resolution if resolution is not None else 1
+    nbins = data.shape[0]
+
     if inner_radius >= 1:
-        sys.exit('inner_radius is normalized wrt 1, i.e. it must be <= 1')
+        raise ValueError("Inner radius should be <= 1")
+
+    if mode not in ["reflect", "distant"]:
+        raise ValueError(
+            "mode %s is unknown. Possible values for mode are "
+            "'reflect', and 'distant'.")
 
     Lg = resolution*len(data)  # genome length given the input resolution
+
     if origin > Lg:
-        sys.exit('origin must be <= Lg')
+        raise ValueError('origin must be <= Lg')
+
+    if inner_gdis is None:
+        if mode == "reflect":
+            if chromosome_type == "linear":
+                inner_gdis = nbins
+            else:
+                inner_gdis = int(np.ceil(nbins / 2))
+        else:
+            inner_gdis = 0
+
+    if outer_gdis is None:
+        if chromosome_type == "linear":
+            outer_gdis = nbins
+        else:
+            outer_gdis = int(np.ceil(nbins / 2))
 
     N, Nc = int(len(data)), int(len(data)/granularity)
 
@@ -79,14 +101,14 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
         Half_s = np.zeros((Nc,  Nc),  dtype=int)
         # Half_s[iR] = ((outer_gdis*N/Lg - (R[iR] - 1)/(inner_radius -
         # 1)*(-inner_gdis+outer_gdis)*N/Lg)/2).astype(int)
-        if inner_gdis <= 0:
+        if mode == "reflect":
             r_mid = (
-                (outer_gdis*inner_radius+np.abs(inner_gdis)*1) /
-                (outer_gdis+np.abs(inner_gdis)))
+                (outer_gdis*inner_radius + inner_gdis) /
+                (outer_gdis + inner_gdis))
             iS = (R <= r_mid)
             Half_s[iR & iS] = (
-                ((inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
-                    (inner_radius - r_mid)*(1+inner_gdis*N/Lg))
+                ((-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
+                    (inner_radius - r_mid)*(1-inner_gdis*N/Lg))
                     / 2).astype(int))
             iS = (R >= r_mid)
             Half_s[iR & iS] = (
@@ -94,12 +116,12 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
                  (outer_gdis*N/Lg-2))/2).astype(int))
         else:
             Half_s[iR] = (
-                (outer_gdis * N / Lg -
-                 (R[iR] - 1) / (inner_radius - 1) *
-                 (-inner_gdis+outer_gdis) * N / Lg) / 2).astype(int)
+                ((outer_gdis*N/Lg - (R[iR] - 1) /
+                 (inner_radius - 1) *
+                 (-inner_gdis+outer_gdis)*N/Lg)/2).astype(int))
 
         # building bins x-s/2 and x+s/2
-        Ih,  Jh = np.zeros((Nc, Nc), dtype=int),  np.zeros((Nc, Nc), dtype=int)
+        Ih, Jh = np.zeros((Nc, Nc), dtype=int), np.zeros((Nc, Nc), dtype=int)
         Ih[iR] = (Bref[iR] - Half_s[iR] + N) % N
         Jh[iR] = (Bref[iR] + Half_s[iR] + N) % N
 
@@ -131,13 +153,10 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=0,
 
         return C
 
-    else:
-        sys.exit('Unknown chromosome_type for generating circular data')
-
 
 def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
-                          resolution=None, inner_gdis=800000,
-                          outer_gdis=800000,
+                          resolution=None, inner_gdis=None,
+                          outer_gdis=None,
                           mode="reflect",
                           origin=1, chromosome_type='circular', frac_lin=0.7,
                           rotate_lin=0):
@@ -157,14 +176,25 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
         Inner radius of the strip, supposing that the outer radius is equal to
         1
 
-    resolution : integer
+    resolution : integer, optional, default: None
         resolution of data (in bp)
 
-    inner_gdis : integer
-        Genomic distance corresponding to the inner circle
+    inner_gdis : integer, optional, default: None
+        Genomic distance corresponding to the inner circle. By default, will
+        be the maximum genomic distance when mode is "reflect", and 0 if the
+        mode is "distant".
 
     outer_gdis: integer
-        Genomic distance corresponding to the outer circle
+        Genomic distance corresponding to the outer circle. By default, will
+        be the maximum genomic distance.
+
+    mode : {"reflect", "distant"}, optional, default: "reflect"
+        - if mode is "reflect", the data will be 'reflected' around a genomic
+          distance of 0, thus ranging from inner_gdis to 0 to outer_gdis. This
+          equivalent to plotting both upper and lower triangular matrices of
+          the original Hi-C contact count matrix.
+        - if mode is "distant", the data will be plotted from `inner_gdis` to
+          `outer_gdis`.
 
     origin: integer
         Genomic position at the vertical top
@@ -184,9 +214,6 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
     -------
     (Nc, Nc) ndarray containing the count data projected on a circular strip.
     """
-    if resolution is None:
-        raise ValueError("Data resolution must be set")
-
     if inner_radius >= 1:
         raise ValueError("Inner radius should be <= 1")
 
@@ -194,6 +221,24 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
         raise ValueError(
             "mode %s is unknown. Possible values for mode are "
             "'reflect', and 'distant'.")
+
+    nbins = data.shape[0]
+    resolution = resolution if resolution is not None else 1
+
+    if inner_gdis is None:
+        if mode == "reflect":
+            if chromosome_type == "linear":
+                inner_gdis = nbins
+            else:
+                inner_gdis = int(np.ceil(nbins / 2))
+        else:
+            inner_gdis = 0
+
+    if outer_gdis is None:
+        if chromosome_type == "linear":
+            outer_gdis = nbins
+        else:
+            outer_gdis = int(np.ceil(nbins / 2))
 
     Lg = resolution*len(data)  # genome length given the input resolution
     if origin > Lg:

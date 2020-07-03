@@ -23,6 +23,9 @@ class CircHiCFigure:
     origin : integer, optional, default: 1
         position of the origin. The origin is set to the North of the plot
 
+    chromosome_type : {"circular", "linear"}, optional, default: "circular"
+        whether to plot a circular or a linear chromosome.
+
     figure : matplotlib.figure.Figure, optional, default: None
         A Matplotlib figure. If not provided, will create it.
 
@@ -33,7 +36,8 @@ class CircHiCFigure:
 
     name = "circhic"
 
-    def __init__(self, lengths, origin=1, figure=None):
+    def __init__(self, lengths, origin=1, chromosome_type="circular",
+                 figure=None):
         # If figure is not provided, create a square figure.
         self.figure = (
             figure if figure is not None else plt.figure(figsize=(8, 8)))
@@ -45,6 +49,11 @@ class CircHiCFigure:
         self.lengths = lengths
         self.origin = origin
         self._polar_axes = []
+        if chromosome_type not in ["circular", "linear"]:
+            raise ValueError(
+                "Mode %s unknown. Expected 'circular' or 'linear'" %
+                chromosome_type)
+        self.chromosome_type = chromosome_type
 
     def plot_hic(self, counts, inner_gdis=None, outer_gdis=None,
                  inner_radius=0, outer_radius=1,
@@ -173,6 +182,7 @@ class CircHiCFigure:
             granularity=granularity,
             origin=self.origin, inner_radius=cir_inner_radius,
             mode=mode,
+            chromosome_type=self.chromosome_type,
             inner_gdis=inner_gdis,
             outer_gdis=outer_gdis)
         if vmin is None:
@@ -204,11 +214,14 @@ class CircHiCFigure:
         if border_thickness != 0:
             border_im = generate_borders(
                 counts, granularity=granularity,
+                chromosome_type=self.chromosome_type,
+                mode=mode,
                 resolution=resolution,
                 origin=self.origin, inner_radius=cir_inner_radius,
                 inner_gdis=inner_gdis,
                 outer_gdis=outer_gdis,
-                thick_r=border_thickness)
+                thick_r=border_thickness,
+                thick_extreme=border_thickness)
             ax.imshow(
                 border_im, interpolation="none",
                 extent=extent,
@@ -363,6 +376,10 @@ class CircHiCFigure:
         -------
         (lines, ax)
         """
+        if self.chromosome_type == "linear":
+            raise NotImplementedError(
+                "Linear mode is not implemented yet for plot_lines")
+
         ax_g = self._create_subplot(
             outer_radius=outer_radius,
             label=("lines_%d" % (len(self._polar_axes)+1)))
@@ -420,6 +437,9 @@ class CircHiCFigure:
         -------
         (artists, ax)
         """
+        if self.chromosome_type == "linear":
+            raise NotImplementedError(
+                "Linear mode is not implemented yet for plot_lines")
         ax = self._create_subplot(
             outer_radius=outer_radius,
             label=("bars_%d" % (len(self._polar_axes)+1)))
@@ -458,6 +478,9 @@ class CircHiCFigure:
         -------
         (artists, ax)
         """
+        if self.chromosome_type == "linear":
+            raise NotImplementedError(
+                "Linear mode is not implemented yet for plot_lines")
         ax = self._create_subplot(
             outer_radius=outer_radius,
             label=("bands_%d" % (len(self._polar_axes)+1)))
@@ -522,6 +545,9 @@ class CircHiCFigure:
                                tickpositions=None,
                                fontdict=None,
                                ax=None):
+        if self.chromosome_type == "linear":
+            raise NotImplementedError(
+                "Linear mode is not implemented yet for plot_lines")
         """
         Set the circular tick labels
 
