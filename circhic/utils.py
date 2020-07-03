@@ -101,14 +101,14 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=None,
         Half_s = np.zeros((Nc,  Nc),  dtype=int)
         # Half_s[iR] = ((outer_gdis*N/Lg - (R[iR] - 1)/(inner_radius -
         # 1)*(-inner_gdis+outer_gdis)*N/Lg)/2).astype(int)
-        if inner_gdis <= 0:
+        if mode == "reflect":
             r_mid = (
-                (outer_gdis*inner_radius+np.abs(inner_gdis)*1) /
-                (outer_gdis+np.abs(inner_gdis)))
+                (outer_gdis*inner_radius + inner_gdis) /
+                (outer_gdis + inner_gdis))
             iS = (R <= r_mid)
             Half_s[iR & iS] = (
-                ((inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
-                    (inner_radius - r_mid)*(1+inner_gdis*N/Lg))
+                ((-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
+                    (inner_radius - r_mid)*(1-inner_gdis*N/Lg))
                     / 2).astype(int))
             iS = (R >= r_mid)
             Half_s[iR & iS] = (
@@ -116,12 +116,12 @@ def generate_borders(data, granularity=0.5, inner_radius=0.5, resolution=None,
                  (outer_gdis*N/Lg-2))/2).astype(int))
         else:
             Half_s[iR] = (
-                (outer_gdis * N / Lg -
-                 (R[iR] - 1) / (inner_radius - 1) *
-                 (-inner_gdis+outer_gdis) * N / Lg) / 2).astype(int)
+                ((outer_gdis*N/Lg - (R[iR] - 1) /
+                 (inner_radius - 1) *
+                 (-inner_gdis+outer_gdis)*N/Lg)/2).astype(int))
 
         # building bins x-s/2 and x+s/2
-        Ih,  Jh = np.zeros((Nc, Nc), dtype=int),  np.zeros((Nc, Nc), dtype=int)
+        Ih, Jh = np.zeros((Nc, Nc), dtype=int), np.zeros((Nc, Nc), dtype=int)
         Ih[iR] = (Bref[iR] - Half_s[iR] + N) % N
         Jh[iR] = (Bref[iR] + Half_s[iR] + N) % N
 

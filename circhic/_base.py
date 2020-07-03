@@ -220,7 +220,8 @@ class CircHiCFigure:
                 origin=self.origin, inner_radius=cir_inner_radius,
                 inner_gdis=inner_gdis,
                 outer_gdis=outer_gdis,
-                thick_r=border_thickness)
+                thick_r=border_thickness,
+                thick_extreme=border_thickness)
             ax.imshow(
                 border_im, interpolation="none",
                 extent=extent,
