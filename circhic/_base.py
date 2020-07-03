@@ -215,6 +215,7 @@ class CircHiCFigure:
             border_im = generate_borders(
                 counts, granularity=granularity,
                 chromosome_type=self.chromosome_type,
+                mode=mode,
                 resolution=resolution,
                 origin=self.origin, inner_radius=cir_inner_radius,
                 inner_gdis=inner_gdis,

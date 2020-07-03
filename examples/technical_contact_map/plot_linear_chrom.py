@@ -13,3 +13,4 @@ nbins = data["nbins"]
 
 circfig = CircHiCFigure(lengths=nbins, chromosome_type="linear")
 circfig.plot_hic(counts)
+circfig.plot_raxis()
