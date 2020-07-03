@@ -59,7 +59,7 @@
 <h1>circhic.utils.generate_circular_map<a class="headerlink" href="#circhic-utils-generate-circular-map" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="circhic.utils.generate_circular_map">
-<code class="sig-prename descclassname">circhic.utils.</code><code class="sig-name descname">generate_circular_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">granularity</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_gdis</span><span class="o">=</span><span class="default_value">800000</span></em>, <em class="sig-param"><span class="n">outer_gdis</span><span class="o">=</span><span class="default_value">800000</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'reflect'</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">chromosome_type</span><span class="o">=</span><span class="default_value">'circular'</span></em>, <em class="sig-param"><span class="n">frac_lin</span><span class="o">=</span><span class="default_value">0.7</span></em>, <em class="sig-param"><span class="n">rotate_lin</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.utils.generate_circular_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">circhic.utils.</code><code class="sig-name descname">generate_circular_map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">granularity</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">inner_radius</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">resolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">inner_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">outer_gdis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'reflect'</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">chromosome_type</span><span class="o">=</span><span class="default_value">'circular'</span></em>, <em class="sig-param"><span class="n">frac_lin</span><span class="o">=</span><span class="default_value">0.7</span></em>, <em class="sig-param"><span class="n">rotate_lin</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.utils.generate_circular_map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate circular Strip Data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -72,11 +72,23 @@ where Nc=N/granularity; the smaller, the neater but also the longer</p>
 <dt><strong>inner_radius</strong><span class="classifier">float &lt;= 1</span></dt><dd><p>Inner radius of the strip, supposing that the outer radius is equal to
 1</p>
 </dd>
-<dt><strong>resolution</strong><span class="classifier">integer</span></dt><dd><p>resolution of data (in bp)</p>
+<dt><strong>resolution</strong><span class="classifier">integer, optional, default: None</span></dt><dd><p>resolution of data (in bp)</p>
 </dd>
-<dt><strong>inner_gdis</strong><span class="classifier">integer</span></dt><dd><p>Genomic distance corresponding to the inner circle</p>
+<dt><strong>inner_gdis</strong><span class="classifier">integer, optional, default: None</span></dt><dd><p>Genomic distance corresponding to the inner circle. By default, will
+be the maximum genomic distance when mode is “reflect”, and 0 if the
+mode is “distant”.</p>
 </dd>
-<dt><strong>outer_gdis: integer</strong></dt><dd><p>Genomic distance corresponding to the outer circle</p>
+<dt><strong>outer_gdis: integer</strong></dt><dd><p>Genomic distance corresponding to the outer circle. By default, will
+be the maximum genomic distance.</p>
+</dd>
+<dt><strong>mode</strong><span class="classifier">{“reflect”, “distant”}, optional, default: “reflect”</span></dt><dd><ul class="simple">
+<li><p>if mode is “reflect”, the data will be ‘reflected’ around a genomic
+distance of 0, thus ranging from inner_gdis to 0 to outer_gdis. This
+equivalent to plotting both upper and lower triangular matrices of
+the original Hi-C contact count matrix.</p></li>
+<li><p>if mode is “distant”, the data will be plotted from <cite>inner_gdis</cite> to
+<cite>outer_gdis</cite>.</p></li>
+</ul>
 </dd>
 <dt><strong>origin: integer</strong></dt><dd><p>Genomic position at the vertical top</p>
 </dd>

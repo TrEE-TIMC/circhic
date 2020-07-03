@@ -59,7 +59,7 @@
 <h1><a class="reference internal" href="../classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a>.CircHiCFigure<a class="headerlink" href="#circhic-circhicfigure" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="circhic.CircHiCFigure">
-<em class="property">class </em><code class="sig-prename descclassname">circhic.</code><code class="sig-name descname">CircHiCFigure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">circhic.</code><code class="sig-name descname">CircHiCFigure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">chromosome_type</span><span class="o">=</span><span class="default_value">'circular'</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure" title="Permalink to this definition">¶</a></dt>
 <dd><p>A circular HiC figure</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -67,6 +67,8 @@
 <dt><strong>lengths : ndarray</strong></dt><dd><p>array of chromosome length.</p>
 </dd>
 <dt><strong>origin</strong><span class="classifier">integer, optional, default: 1</span></dt><dd><p>position of the origin. The origin is set to the North of the plot</p>
+</dd>
+<dt><strong>chromosome_type</strong><span class="classifier">{“circular”, “linear”}, optional, default: “circular”</span></dt><dd><p>whether to plot a circular or a linear chromosome.</p>
 </dd>
 <dt><strong>figure : matplotlib.figure.Figure, optional, default: None</strong></dt><dd><p>A Matplotlib figure. If not provided, will create it.</p>
 </dd>
@@ -100,14 +102,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colorbar</span></code></a>(mappable[, orientation])</p></td>
 <td><p>Set a colorbar on the plot</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_genomic_ticklabels</span></code></a>([outer_radius, …])</p></td>
-<td><p>Set the circular tick labels</p></td>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 72%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>set_genomic_ticklabels</strong></p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt id="circhic.CircHiCFigure.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lengths</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">chromosome_type</span><span class="o">=</span><span class="default_value">'circular'</span></em>, <em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
@@ -279,40 +289,6 @@ described by this colorbar.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="circhic.CircHiCFigure.set_genomic_ticklabels">
-<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fontdict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the circular tick labels</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>ticklabels</strong><span class="classifier">array-like of strings</span></dt><dd><p>the list of strings to plot. Should be the same length as the
-number of ticks.</p>
-</dd>
-<dt><strong>tickpositions</strong><span class="classifier">array of floats</span></dt><dd><p>the positions of the ticks. Should be the same length as the tick
-labels.</p>
-</dd>
-<dt><strong>fontdict : dict, optional</strong></dt><dd><p>A dictionary controlling the appearance of the ticklabels.
-The default <cite>fontdict</cite> is:</p>
-<blockquote>
-<div><dl class="simple">
-<dt>{‘fontsize’: rcParams[‘axes.titlesize’],</dt><dd><p>‘fontweight’: rcParams[‘axes.titleweight’],
-‘verticalalignment’: ‘baseline’,
-‘horizontalalignment’: loc}</p>
-</dd>
-</dl>
-</div></blockquote>
-<p>See the Maplotlib documentation for more information on the
-fontdict.</p>
-</dd>
-<dt><strong>ax</strong><span class="classifier">matplotlib.axes.Axes object, optional, default: None</span></dt><dd><p>Matplotlib Axes object. By default, will create one. Note that
-outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 <div class="section" id="examples-using-circhic-circhicfigure">
@@ -360,6 +336,10 @@ outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p
 </div><div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar."><div class="figure align-default" id="id11">
 <img alt="Colorbars" src="../../_images/sphx_glr_plot_colorbar_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_colorbar.html#sphx-glr-auto-examples-technical-contact-map-plot-colorbar-py"><span class="std std-ref">Colorbars</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Plotting linear chromosomes"><div class="figure align-default" id="id12">
+<img alt="Plotting linear chromosomes" src="../../_images/sphx_glr_plot_linear_chrom_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_linear_chrom.html#sphx-glr-auto-examples-technical-contact-map-plot-linear-chrom-py"><span class="std std-ref">Plotting linear chromosomes</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="clearer"></div></div>
 </div>

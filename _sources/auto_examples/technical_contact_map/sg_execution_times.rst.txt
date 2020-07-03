@@ -5,14 +5,16 @@
 
 Computation times
 =================
-**00:15.915** total execution time for **auto_examples_technical_contact_map** files:
+**00:22.317** total execution time for **auto_examples_technical_contact_map** files:
 
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)       | 00:09.512 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)       | 00:09.273 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)                                 | 00:03.391 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_linear_chrom.py` (``plot_linear_chrom.py``)                         | 00:06.715 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py` (``plot_changing_colormap.py``)               | 00:01.631 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)                                 | 00:03.365 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py` (``plot_ccres_square_vs_circular.py``) | 00:01.381 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py` (``plot_changing_colormap.py``)               | 00:01.620 | 0.0 MB |
++-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py` (``plot_ccres_square_vs_circular.py``) | 00:01.344 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
