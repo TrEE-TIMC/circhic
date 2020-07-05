@@ -27,7 +27,7 @@ Plotting linear chromosomes
  .. code-block:: none
 
 
-    <matplotlib.axes._subplots.AxesSubplot object at 0x7f258f865518>
+    <matplotlib.axes._subplots.AxesSubplot object at 0x7f980f7202b0>
 
 
 
@@ -54,7 +54,7 @@ Plotting linear chromosomes
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.715 seconds)
+   **Total running time of the script:** ( 0 minutes  6.755 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_linear_chrom.py:
