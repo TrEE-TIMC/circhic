@@ -284,9 +284,10 @@ sphinx_gallery_conf = {
         '../examples/biological',
         '../examples/biological_ccrescentus',
         '../examples/biological_ecoli',
-        '../examples/technical',
+        '../examples/technical',        
         '../examples/technical_simple_plots',
         '../examples/technical_contact_map',
+        '../examples/technical_linear_chrom',        
         '../examples/schemas',
         ]),
     'binder': {
