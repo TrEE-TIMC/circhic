@@ -1,0 +1,12 @@
+
+:orphan:
+
+.. _sphx_glr_auto_examples_technical_linear_chrom_sg_execution_times:
+
+Computation times
+=================
+**00:05.942** total execution time for **auto_examples_technical_linear_chrom** files:
+
++------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py` (``plot_linear_chrom.py``) | 00:05.942 | 0.0 MB |
++------------------------------------------------------------------------------------------------------+-----------+--------+

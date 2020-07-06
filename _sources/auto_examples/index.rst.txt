@@ -363,6 +363,41 @@ Exploring options of the circular heatmaps
 
 
 
+.. _sphx_glr_auto_examples_technical_linear_chrom:
+
+.. _linear_chrom_example:
+
+Plotting linear chromosomes
+---------------------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680">
+
+.. only:: html
+
+ .. figure:: /auto_examples/technical_linear_chrom/images/thumb/sphx_glr_plot_linear_chrom_thumb.png
+     :alt: KBM-7 cell line, chromosome XI
+
+     :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_linear_chrom/plot_linear_chrom
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_auto_examples_schemas:
 
 .. _schemas_examples:
