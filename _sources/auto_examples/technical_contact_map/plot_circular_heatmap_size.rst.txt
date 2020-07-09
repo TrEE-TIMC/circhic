@@ -42,7 +42,7 @@ add white space to the disk.
     /home/travis/build/TrEE-TIMC/circhic/circhic/utils.py:309: RuntimeWarning: invalid value encountered in true_divide
       (inner_radius - r_mid) *
 
-    (<matplotlib.image.AxesImage object at 0x7f85f678e5c0>, <matplotlib.axes._axes.Axes object at 0x7f85f46744a8>)
+    (<matplotlib.image.AxesImage object at 0x7f91b3cb4710>, <matplotlib.axes._axes.Axes object at 0x7f91b1b39940>)
 
 
 
@@ -120,7 +120,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.567 seconds)
+   **Total running time of the script:** ( 0 minutes  9.365 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
