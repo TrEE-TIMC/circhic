@@ -170,6 +170,44 @@ Data from `Lioy et al. (2018) Cell, 172(4), 771–783 <http://doi.org/10.1016/j.
 
 
 
+.. _sphx_glr_auto_examples_biological_kbm7:
+
+.. _kbm7_example:
+
+*Human - KBM7*
+--------------
+
+Data from `Rao et al. (2014) Cell, 162(3), 687-688 <https://www.sciencedirect.com/science/article/pii/S0092867414014974>`_
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Here, we plot the raw contact counts of KBM7&#x27;s chromosome 11, and the cumulative raw contact co...">
+
+.. only:: html
+
+ .. figure:: /auto_examples/biological_kbm7/images/thumb/sphx_glr_plot_kmb7_thumb.png
+     :alt: A human chromosome: KBM7's chr11
+
+     :ref:`sphx_glr_auto_examples_biological_kbm7_plot_kmb7.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_kbm7/plot_kmb7
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_auto_examples_technical:
 
 .. _technical_examples:
@@ -241,7 +279,7 @@ The basic units of a `circhic` plot to display genomic data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip. The first example show...">
 
 .. only:: html
 

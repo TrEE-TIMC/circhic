@@ -13,7 +13,9 @@
 Plotting lines
 ==============
 
-Here's a small example showcasing how to plot lines on a circular strip.
+Here's a small example showcasing how to plot lines on a circular strip. The
+first example showcases line plots on circular chromosome, while the second
+showcases plots on a linear chromosome.
 
 
 .. code-block:: default
@@ -58,7 +60,38 @@ Then, create the `circhic` figure and plot the lines.
 
 
 
+
 .. image:: /auto_examples/technical_simple_plots/images/sphx_glr_plot_lines_001.png
+    :alt: Plotting lines
+    :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+
+    Text(0.5, 1.05, 'Plotting lines')
+
+
+
+Now create a circhic figure for linear chromosomes
+
+
+.. code-block:: default
+
+    circhicfig = CircHiCFigure(lengths, chromosome_type="linear")
+    _, ax = circhicfig.plot_lines(
+        data,
+        inner_radius=0.5,
+        color="0")
+    ax.set_title("Plotting lines", fontweight="bold")
+
+
+
+.. image:: /auto_examples/technical_simple_plots/images/sphx_glr_plot_lines_002.png
     :alt: Plotting lines
     :class: sphx-glr-single-img
 
@@ -77,7 +110,7 @@ Then, create the `circhic` figure and plot the lines.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.103 seconds)
+   **Total running time of the script:** ( 0 minutes  0.205 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_simple_plots_plot_lines.py:

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>circHiC &#8212; circHiC 0.3.0.dev0 documentation</title>
+  <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="../../_static/css/bootstrap.min.css"
+	media="screen" />
+    <script src="../../_static/js/jquery.js"
+          type="text/javascript"></script>
+  <script src="../../_static/js/bootstrap.min.js"
+          type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet"
+        href="../../_static/css/jhepc.css"
+         media="screen" />
+
+
+
+  </head><body><div class="navbar">
+      <a href="../../index.html">
+	
+      </a>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../principle.html">Principle</a></li>
+      <li><a href="../../install.html">Installation</a></li>
+      <li><a href="../../user_guide.html">User Guide</a></li>
+      <li><a href="../../modules/classes.html">API Reference</a></li>
+      <li><a href="../index.html">Gallery</a></li>
+    </ul>
+  </div>
+    <div class="container">
+  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-biological-kbm7-plot-kmb7-py"><span class="std std-ref">here</span></a>     to download the full example code or to run this example in your browser via Binder</p>
+</div>
+<div class="sphx-glr-example-title section" id="a-human-chromosome-kbm7-s-chr11">
+<span id="sphx-glr-auto-examples-biological-kbm7-plot-kmb7-py"></span><h1>A human chromosome: KBM7’s chr11<a class="headerlink" href="#a-human-chromosome-kbm7-s-chr11" title="Permalink to this headline">¶</a></h1>
+<p>Here, we plot the raw contact counts of KBM7’s chromosome 11, and the
+cumulative raw contact counts.</p>
+<img alt="plot kmb7" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_kmb7_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0, 1.03, &#39;Genomic distance (Mb)&#39;)
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">,</span> <span class="n">datasets</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_kbm7</span><span class="p">()</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
+<span class="n">lengths</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;nbins&quot;</span><span class="p">]</span>
+
+<span class="n">cum_raw_counts</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">chromosome_type</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+<a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.89</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone_r&quot;</span><span class="p">,</span>
+                 <span class="n">inner_gdis</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">outer_gdis</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_bars" title="circhic.CircHiCFigure.plot_bars" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circfig</span><span class="o">.</span><span class="n">plot_bars</span></a><span class="p">(</span>
+    <span class="n">cum_raw_counts</span><span class="p">,</span>
+    <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+    <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circfig</span><span class="o">.</span><span class="n">set_genomic_ticklabels</span></a><span class="p">(</span>
+    <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;fontsize&quot;</span><span class="p">:</span> <span class="s2">&quot;small&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;0.3&quot;</span><span class="p">})</span>
+
+<span class="n">rax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_raxis" title="circhic.CircHiCFigure.plot_raxis" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circfig</span><span class="o">.</span><span class="n">plot_raxis</span></a><span class="p">()</span>
+<span class="n">rax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;small&quot;</span><span class="p">)</span>
+
+<span class="n">rax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Genomic distance (Mb)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;small&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">,</span>
+               <span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.03</span><span class="p">))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.287 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-biological-kbm7-plot-kmb7-py">
+<div class="binder-badge docutils container">
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/biological_kbm7/plot_kmb7.ipynb"><img alt="https://mybinder.org/badge_logo.svg" src="https://mybinder.org/badge_logo.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/5444d24e1ae91a44fbd3151fe933aaeb/plot_kmb7.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_kmb7.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2a651d8143181d0c362985d5761ac00f/plot_kmb7.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_kmb7.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+<footer class="footer">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, circHiC contributors.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.<br/>
+    </p>
+</footer>
+  </body>
+</html>

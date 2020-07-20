@@ -104,16 +104,8 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colorbar</span></code></a>(mappable[, orientation])</p></td>
 <td><p>Set a colorbar on the plot</p></td>
 </tr>
-</tbody>
-</table>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 72%" />
-<col style="width: 28%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>set_genomic_ticklabels</strong></p></td>
-<td></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="circhic.CircHiCFigure.set_genomic_ticklabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_genomic_ticklabels</span></code></a>([outer_radius, …])</p></td>
+<td><p>Set the circular tick labels</p></td>
 </tr>
 </tbody>
 </table>
@@ -291,6 +283,40 @@ described by this colorbar.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt id="circhic.CircHiCFigure.set_genomic_ticklabels">
+<code class="sig-name descname">set_genomic_ticklabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">outer_radius</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">ticklabels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tickpositions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fontdict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circhic.CircHiCFigure.set_genomic_ticklabels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the circular tick labels</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>ticklabels</strong><span class="classifier">array-like of strings</span></dt><dd><p>the list of strings to plot. Should be the same length as the
+number of ticks.</p>
+</dd>
+<dt><strong>tickpositions</strong><span class="classifier">array of floats</span></dt><dd><p>the positions of the ticks. Should be the same length as the tick
+labels.</p>
+</dd>
+<dt><strong>fontdict : dict, optional</strong></dt><dd><p>A dictionary controlling the appearance of the ticklabels.
+The default <cite>fontdict</cite> is:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{‘fontsize’: rcParams[‘axes.titlesize’],</dt><dd><p>‘fontweight’: rcParams[‘axes.titleweight’],
+‘verticalalignment’: ‘baseline’,
+‘horizontalalignment’: loc}</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>See the Maplotlib documentation for more information on the
+fontdict.</p>
+</dd>
+<dt><strong>ax</strong><span class="classifier">matplotlib.axes.Axes object, optional, default: None</span></dt><dd><p>Matplotlib Axes object. By default, will create one. Note that
+outer_radius and inner_radius will be ignored if <cite>ax</cite> is provided.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <div class="section" id="examples-using-circhic-circhicfigure">
@@ -315,33 +341,37 @@ described by this colorbar.</p>
 <img alt="Macrodomain phenomenology" src="../../_images/sphx_glr_plot_ecoli_macrodomain_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/biological_ecoli/plot_ecoli_macrodomain.html#sphx-glr-auto-examples-biological-ecoli-plot-ecoli-macrodomain-py"><span class="std std-ref">Macrodomain phenomenology</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data."><div class="figure align-default" id="id6">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here, we plot the raw contact counts of KBM7&#x27;s chromosome 11, and the cumulative raw contact co..."><div class="figure align-default" id="id6">
+<img alt="A human chromosome: KBM7's chr11" src="../../_images/sphx_glr_plot_kmb7_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/biological_kbm7/plot_kmb7.html#sphx-glr-auto-examples-biological-kbm7-plot-kmb7-py"><span class="std std-ref">A human chromosome: KBM7’s chr11</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data."><div class="figure align-default" id="id7">
 <img alt="Plotting bands" src="../../_images/sphx_glr_plot_bands_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_simple_plots/plot_bands.html#sphx-glr-auto-examples-technical-simple-plots-plot-bands-py"><span class="std std-ref">Plotting bands</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_simple_plots/plot_bands.html#sphx-glr-auto-examples-technical-simple-plots-plot-bands-py"><span class="std std-ref">Plotting bands</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip."><div class="figure align-default" id="id7">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip."><div class="figure align-default" id="id8">
 <img alt="Plotting bars" src="../../_images/sphx_glr_plot_bars_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_simple_plots/plot_bars.html#sphx-glr-auto-examples-technical-simple-plots-plot-bars-py"><span class="std std-ref">Plotting bars</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_simple_plots/plot_bars.html#sphx-glr-auto-examples-technical-simple-plots-plot-bars-py"><span class="std std-ref">Plotting bars</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip."><div class="figure align-default" id="id8">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip. The first example show..."><div class="figure align-default" id="id9">
 <img alt="Plotting lines" src="../../_images/sphx_glr_plot_lines_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_simple_plots/plot_lines.html#sphx-glr-auto-examples-technical-simple-plots-plot-lines-py"><span class="std std-ref">Plotting lines</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_simple_plots/plot_lines.html#sphx-glr-auto-examples-technical-simple-plots-plot-lines-py"><span class="std std-ref">Plotting lines</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Using a different color map"><div class="figure align-default" id="id9">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Using a different color map"><div class="figure align-default" id="id10">
 <img alt="Using a different color map" src="../../_images/sphx_glr_plot_changing_colormap_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_changing_colormap.html#sphx-glr-auto-examples-technical-contact-map-plot-changing-colormap-py"><span class="std std-ref">Using a different color map</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_changing_colormap.html#sphx-glr-auto-examples-technical-contact-map-plot-changing-colormap-py"><span class="std std-ref">Using a different color map</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one..."><div class="figure align-default" id="id10">
+</div><div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one..."><div class="figure align-default" id="id11">
 <img alt="Radius" src="../../_images/sphx_glr_plot_circular_heatmap_size_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_circular_heatmap_size.html#sphx-glr-auto-examples-technical-contact-map-plot-circular-heatmap-size-py"><span class="std std-ref">Radius</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_circular_heatmap_size.html#sphx-glr-auto-examples-technical-contact-map-plot-circular-heatmap-size-py"><span class="std std-ref">Radius</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar."><div class="figure align-default" id="id11">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar."><div class="figure align-default" id="id12">
 <img alt="Colorbars" src="../../_images/sphx_glr_plot_colorbar_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_colorbar.html#sphx-glr-auto-examples-technical-contact-map-plot-colorbar-py"><span class="std std-ref">Colorbars</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_contact_map/plot_colorbar.html#sphx-glr-auto-examples-technical-contact-map-plot-colorbar-py"><span class="std std-ref">Colorbars</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680"><div class="figure align-default" id="id12">
+</div><div class="sphx-glr-thumbcontainer" tooltip="Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680"><div class="figure align-default" id="id13">
 <img alt="KBM-7 cell line, chromosome XI" src="../../_images/sphx_glr_plot_linear_chrom_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_linear_chrom/plot_linear_chrom.html#sphx-glr-auto-examples-technical-linear-chrom-plot-linear-chrom-py"><span class="std std-ref">KBM-7 cell line, chromosome XI</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../../auto_examples/technical_linear_chrom/plot_linear_chrom.html#sphx-glr-auto-examples-technical-linear-chrom-plot-linear-chrom-py"><span class="std std-ref">KBM-7 cell line, chromosome XI</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div><div class="clearer"></div></div>
 </div>
