@@ -71,7 +71,6 @@ class CircHiCFigure:
 
         Parameters
         ----------
-
         counts : ndarray (n, n)
             The contact count matrix of shape (n, n) where
             `n = lengths.sum() / resolution`
@@ -376,23 +375,27 @@ class CircHiCFigure:
         -------
         (lines, ax)
         """
-        if self.chromosome_type == "linear":
-            raise NotImplementedError(
-                "Linear mode is not implemented yet for plot_lines")
-
         ax_g = self._create_subplot(
             outer_radius=outer_radius,
             label=("lines_%d" % (len(self._polar_axes)+1)))
 
         # Need to include the theta shift here.
-        theta = np.array(
-            [i*2*np.pi/len(data) for i in range(len(data))])
-
-        lines = ax_g.plot(
-            np.concatenate((theta, [theta[0]])),
-            np.concatenate((data, [data[0]])),
-            color=color, linestyle=linestyle,
-            zorder=zorder)
+        if self.chromosome_type == "circular":
+            theta = np.array(
+                [i*2*np.pi/len(data) for i in range(len(data))])
+            lines = ax_g.plot(
+                np.concatenate((theta, [theta[0]])),
+                np.concatenate((data, [data[0]])),
+                color=color, linestyle=linestyle,
+                zorder=zorder)
+        else:
+            theta = np.array(
+                [(len(data)/2-i)*(2*np.pi*0.7)/len(data)
+                 for i in range(len(data))])
+            lines = ax_g.plot(
+                theta, data,
+                color=color, linestyle=linestyle,
+                zorder=zorder)
 
         # Now compute the new origin
         rorigin = (
@@ -437,14 +440,17 @@ class CircHiCFigure:
         -------
         (artists, ax)
         """
-        if self.chromosome_type == "linear":
-            raise NotImplementedError(
-                "Linear mode is not implemented yet for plot_lines")
         ax = self._create_subplot(
             outer_radius=outer_radius,
             label=("bars_%d" % (len(self._polar_axes)+1)))
-        theta = np.array(
-            [i*2*np.pi/len(data) for i in range(len(data))])
+        if self.chromosome_type == "circular":
+            theta = np.array(
+                [i*2*np.pi/len(data) for i in range(len(data))])
+        else:
+            theta = np.array(
+                [(len(data)/2-i)*2*np.pi*0.7/(len(data))
+                 for i in range(len(data))])
+
         width = theta[1] - theta[0]
         bars = ax.bar(theta, data, color=color, width=width, zorder=zorder)
 
@@ -545,9 +551,6 @@ class CircHiCFigure:
                                tickpositions=None,
                                fontdict=None,
                                ax=None):
-        if self.chromosome_type == "linear":
-            raise NotImplementedError(
-                "Linear mode is not implemented yet for plot_lines")
         """
         Set the circular tick labels
 
@@ -588,13 +591,30 @@ class CircHiCFigure:
 
         ax.set_rgrids([])
         if tickpositions is not None:
-            tickpositions = (
-                tickpositions / self.lengths.sum() *
-                2 * np.pi)
+            if self.chromosome_type == "circular":
+                tickpositions = (
+                    tickpositions / self.lengths.sum() *
+                    2 * np.pi)
+            else:
+                tickpositions = (
+                    (tickpositions - self.lengths.sum()/2) /
+                    self.lengths.sum() *
+                    2 * np.pi * 0.7)
+
             ax.set_xticks(tickpositions)
 
         if ticklabels is None:
-            theta_ticks = (ax.get_xticks() / (2*np.pi) * self.lengths.sum())
+            if self.chromosome_type == "circular":
+                theta_ticks = (
+                    ax.get_xticks() / (2*np.pi) * self.lengths.sum())
+            else:
+                xticks = np.array(
+                    [(self.lengths.sum()/2-i) * (2*np.pi*0.7) /
+                     self.lengths.sum()
+                     for i in np.linspace(0, self.lengths.sum(), 6)])
+                ax.set_xticks(xticks)
+                ax.set_thetalim(-np.pi, np.pi)
+                theta_ticks = np.linspace(0, self.lengths.sum(), 6)
             ticklabels = [
                 "%d" % np.round(s)
                 for s
@@ -639,11 +659,14 @@ class CircHiCFigure:
             label=label, zorder=zorder)
 
         if polar:
-            theta_offset = (
-                (self.origin - 1) / (self.lengths.sum() * resolution) *
-                360)
+            if self.chromosome_type == "circular":
+                theta_offset = (
+                    (self.origin - 1) / (self.lengths.sum() * resolution) *
+                    360)
+                ax_g.set_theta_direction(-1)
+            else:
+                theta_offset = 0
             ax_g.set_theta_zero_location("N", offset=theta_offset)
-            ax_g.set_theta_direction(-1)
 
         return ax_g
 

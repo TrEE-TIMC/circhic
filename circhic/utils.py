@@ -197,11 +197,12 @@ def generate_circular_map(data, granularity=0.5, inner_radius=0.5,
           `outer_gdis`.
 
     origin: integer
-        Genomic position at the vertical top
+        Genomic position at the vertical top. Only used if chromosome_type is
+        "circular".
 
     chromosome_type : string
         'circular': circular chromosome, default
-        'lin': linear chromosome
+        'linear': linear chromosome
 
     frac_lin : float <= 1
         fraction of strip filled by linear chromosome
