@@ -99,6 +99,8 @@ this, we create a vector of colors representing the labels
 
 
 
+
+
 .. image:: /auto_examples/technical_simple_plots/images/sphx_glr_plot_bands_002.png
     :alt: Plotting 3 categorical bands
     :class: sphx-glr-single-img
@@ -115,10 +117,33 @@ this, we create a vector of colors representing the labels
 
 
 
+Here, we do the same but for a linear chromosome
+
+
+.. code-block:: default
+
+    circhicfig = CircHiCFigure(lengths, chromosome_type="linear")
+    _, ax = circhicfig.plot_bands(
+        simulated_bands[:, 0],
+        simulated_bands[:, 1],
+        colors=colors,
+        inner_radius=0.7, outer_radius=0.8)
+
+
+
+
+.. image:: /auto_examples/technical_simple_plots/images/sphx_glr_plot_bands_003.png
+    :alt: plot bands
+    :class: sphx-glr-single-img
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.283 seconds)
+   **Total running time of the script:** ( 0 minutes  0.439 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_simple_plots_plot_bands.py:

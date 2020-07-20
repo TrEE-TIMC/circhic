@@ -112,7 +112,17 @@ this, we create a vector of colors representing the labels</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.05, &#39;Plotting 3 categorical bands&#39;)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.283 seconds)</p>
+<p>Here, we do the same but for a linear chromosome</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">chromosome_type</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_bands" title="circhic.CircHiCFigure.plot_bands" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_bands</span></a><span class="p">(</span>
+    <span class="n">simulated_bands</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="n">simulated_bands</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span>
+    <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="plot bands" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_bands_003.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.439 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-simple-plots-plot-bands-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_bands.ipynb"><img alt="https://mybinder.org/badge_logo.svg" src="https://mybinder.org/badge_logo.svg" width="150px" /></a>
