@@ -41,3 +41,14 @@ _, ax = circhicfig.plot_bands(
     colors=colors,
     inner_radius=0.7, outer_radius=0.8)
 ax.set_title("Plotting 3 categorical bands", fontweight="bold")
+
+
+###############################################################################
+# Here, we do the same but for a linear chromosome
+circhicfig = CircHiCFigure(lengths, chromosome_type="linear")
+_, ax = circhicfig.plot_bands(
+    simulated_bands[:, 0],
+    simulated_bands[:, 1],
+    colors=colors,
+    inner_radius=0.7, outer_radius=0.8)
+
