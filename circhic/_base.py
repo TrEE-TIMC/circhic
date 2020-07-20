@@ -484,24 +484,30 @@ class CircHiCFigure:
         -------
         (artists, ax)
         """
-        if self.chromosome_type == "linear":
-            raise NotImplementedError(
-                "Linear mode is not implemented yet for plot_lines")
         ax = self._create_subplot(
             outer_radius=outer_radius,
             label=("bands_%d" % (len(self._polar_axes)+1)))
         ax.set_axis_off()
 
         n_bins = self.lengths.sum()
-        # Convert the left hand side of the rectangle to the correct angular
-        # form.
         left = begin
-        left = np.array(
-                [i*2*np.pi/n_bins for i in left])
-        # Do the same with the end of the band
         right = end
-        right = np.array(
+        if self.chromosome_type == "circular":
+            # Convert the left hand side of the rectangle to the correct
+            # angular form.
+            left = np.array(
+                [i*2*np.pi/n_bins for i in left])
+            # Do the same with the end of the band
+            right = np.array(
                 [i*2*np.pi/n_bins for i in end])
+        else:
+            # here, we tackle the case of the linear chromosome
+            left = np.array(
+                [(n_bins/2 - i)*2*np.pi*0.7/n_bins for i in left])
+            # Do the same with the end of the band
+            right = np.array(
+                [(n_bins/2 - i)*2*np.pi*0.7/n_bins for i in end])
+
         width = right - left
         height = 1
         bottom = 0
