@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:01.794** total execution time for **auto_examples_biological_ecoli** files:
+**00:01.766** total execution time for **auto_examples_biological_ecoli** files:
 
 +----------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py` (``plot_ecoli_macrodomain.py``) | 00:01.794 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py` (``plot_ecoli_macrodomain.py``) | 00:01.766 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------------+-----------+--------+
