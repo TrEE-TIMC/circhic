@@ -34,11 +34,20 @@ Citing circHiC
 If you use circHiC in a scientific publication, we would appreciate citations
 to the following paper:
 
-  FIXME
+  Junier, I., & Varoquaux, N. circHiC: circular visualization of Hi-C data and integration of genomic data. `bioRxiv <http://doi.org/10.1101/2020.08.13.249110>`_
 
 Bibtex entry::
 
-  FIXME
+       @article {Junier2020.08.13.249110,
+       		author = {Junier, Ivan and Varoquaux, Nelle},
+       		title = {circHiC: circular visualization of Hi-C data and integration of genomic data},
+       		elocation-id = {2020.08.13.249110},
+       		year = {2020},
+       		doi = {10.1101/2020.08.13.249110},
+       		publisher = {Cold Spring Harbor Laboratory},
+       		URL = {https://www.biorxiv.org/content/early/2020/08/14/2020.08.13.249110},
+       		eprint = {https://www.biorxiv.org/content/early/2020/08/14/2020.08.13.249110.full.pdf},
+       		journal = {bioRxiv}}
 
 
 Licence Information
