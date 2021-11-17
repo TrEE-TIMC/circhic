@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
   <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
@@ -17,18 +18,19 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
 <meta charset='utf-8'>
@@ -57,9 +59,9 @@
   </div>
     <div class="container">
   
-  <div class="section" id="understanding-circhic-and-hi-c-data">
+  <section id="understanding-circhic-and-hi-c-data">
 <h1>Understanding circHiC (and Hi-C data)<a class="headerlink" href="#understanding-circhic-and-hi-c-data" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="principle-of-a-circular-representation">
+<section id="principle-of-a-circular-representation">
 <h2>Principle of a circular representation<a class="headerlink" href="#principle-of-a-circular-representation" title="Permalink to this headline">¶</a></h2>
 <p>To understand how data are represented in <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a>, we discuss the case of <em>C. crescentus</em> (<a class="reference external" href="http://doi.org/10.1126/science.1242059">Le et al. (2013) Science, 342(6159), 731–734</a>). We first remind that a square matrix representation provides a redundant, yet convenient representation of the data because the lower part of the matrix is identical to the upper part. This symmetry/redundancy property is conserved by default in <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> (<cite>reflect</cite> mode). Just as with the square matrix, this is particularly useful to highlight chromosome interaction domains (Fig. 1).</p>
 <p>Next, in <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> a “circle” corresponds to all contacts between pairs of loci separated by the same genomic distance (<span class="math notranslate nohighlight">\(s\)</span>). As a consequence, it is impossible to “remove” the inner circle. At most, its radius can be set to a very small value, with the consequence that contact frequencies at the corresponding genomic distance are represented in a very compact way. More generally, a circular representation naturally implies some distortion such that, for instance, although data are symmetric with respect to <span class="math notranslate nohighlight">\(s=0\)</span>, the display does not appear totally symmetric (see for instance the dotted lines indicating contacts in Fig. 1).</p>
@@ -67,15 +69,15 @@
 <a class="reference internal image-reference" href="_images/explicative_figure1.001_left.png"><img alt="_images/explicative_figure1.001_left.png" src="_images/explicative_figure1.001_left.png" style="width: 49.5%;" /></a>
 <a class="reference internal image-reference" href="_images/explicative_figure1.001_right.png"><img alt="_images/explicative_figure1.001_right.png" src="_images/explicative_figure1.001_right.png" style="width: 49.5%;" /></a>
 <p>Fig. 1: <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> naturally copes with the circularity of bacterial Hi-C data as it properly displays contact frequencies between loci that are located at the edges of the square matrix (loci <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span>). <a class="reference internal" href="modules/classes.html#module-circhic" title="circhic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic</span></code></a> also provides an intuitive genomic location of contacts. Left panel: the gray lines indicate the genomic distance (<span class="math notranslate nohighlight">\(s\)</span>) used in the circular representation of the right panel.</p>
-</div>
-<div class="section" id="displaying-a-wide-range-of-genomic-distances">
+</section>
+<section id="displaying-a-wide-range-of-genomic-distances">
 <h2>Displaying a wide range of genomic distances<a class="headerlink" href="#displaying-a-wide-range-of-genomic-distances" title="Permalink to this headline">¶</a></h2>
 <p>To display contact frequencies that occur at large distances, as in the case of the secondary diagonal of <em>C. crescentus</em> (Fig. 2), one must associate, in principle, the inner and outer radius with larger genomic distances. A natural consequence of this will nevertheless be the squashing of the local patterns, such as the chromosome interaction domains. As shown in Fig. 2, a convenient work around is to use different genomic distances for the inner and outer circles and to set the inner radius as small as possible.</p>
 <a class="reference internal image-reference" href="_images/explicative_figure2.001_left.png"><img alt="_images/explicative_figure2.001_left.png" src="_images/explicative_figure2.001_left.png" style="width: 49.5%;" /></a>
 <a class="reference internal image-reference" href="_images/explicative_figure2.001_right.png"><img alt="_images/explicative_figure2.001_right.png" src="_images/explicative_figure2.001_right.png" style="width: 49.5%;" /></a>
 <p>Fig. 2: Same as Fig. 1 but with a more distant pair of loci <span class="math notranslate nohighlight">\((c,d)\)</span> and using different genomic distances (200 kb and 60 kb, respectively) for the inner and outer circles. Note that <span class="math notranslate nohighlight">\(H[c,d]\)</span> does not display in the circular representation because the genomic distance between <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span> is larger than the genomic distance of the outer circle.</p>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
@@ -86,7 +88,7 @@
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.3.0.<br/>
     </p>
 </footer>
   </body>

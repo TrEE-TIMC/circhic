@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
   <!-- htmltitle is before nature.css - we use this hack to load bootstrap first -->
@@ -17,18 +18,18 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="_static/gallery-dataframe.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
 <meta charset='utf-8'>
@@ -57,7 +58,7 @@
   </div>
     <div class="container">
   
-  <div class="section" id="circhic-circular-visualization-of-hi-c-data-and-integration-of-genomic-data">
+  <section id="circhic-circular-visualization-of-hi-c-data-and-integration-of-genomic-data">
 <h1>circHiC: circular visualization of Hi-C data and integration of genomic data<a class="headerlink" href="#circhic-circular-visualization-of-hi-c-data-and-integration-of-genomic-data" title="Permalink to this headline">¶</a></h1>
 <p>circHiC is a <a class="reference external" href="https://www.python.org">Python</a> library, built upon the widely
 used <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> library, to display Hi-C-like data in circular strips
@@ -73,19 +74,28 @@ displaying data in a way that is congruent with the circularity of
 chromosomes. Standard representations of Hi-C data under the form of square
 matrices or horizontal bands are indeed not adapted to periodic conditions as
 those imposed by (most) bacterial chromosomes. circHiC fills this gap.</p>
-<div class="section" id="citing-circhic">
+<section id="citing-circhic">
 <h2>Citing circHiC<a class="headerlink" href="#citing-circhic" title="Permalink to this headline">¶</a></h2>
 <p>If you use circHiC in a scientific publication, we would appreciate citations
 to the following paper:</p>
 <blockquote>
-<div><p>FIXME</p>
+<div><p>Junier, I., &amp; Varoquaux, N. circHiC: circular visualization of Hi-C data and integration of genomic data. <a class="reference external" href="http://doi.org/10.1101/2020.08.13.249110">bioRxiv</a></p>
 </div></blockquote>
 <p>Bibtex entry:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FIXME</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@article</span> <span class="p">{</span><span class="n">Junier2020</span><span class="mf">.08.13.249110</span><span class="p">,</span>
+         <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Junier</span><span class="p">,</span> <span class="n">Ivan</span> <span class="ow">and</span> <span class="n">Varoquaux</span><span class="p">,</span> <span class="n">Nelle</span><span class="p">},</span>
+         <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">circHiC</span><span class="p">:</span> <span class="n">circular</span> <span class="n">visualization</span> <span class="n">of</span> <span class="n">Hi</span><span class="o">-</span><span class="n">C</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">integration</span> <span class="n">of</span> <span class="n">genomic</span> <span class="n">data</span><span class="p">},</span>
+         <span class="n">elocation</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="p">{</span><span class="mf">2020.08.13.249110</span><span class="p">},</span>
+         <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2020</span><span class="p">},</span>
+         <span class="n">doi</span> <span class="o">=</span> <span class="p">{</span><span class="mf">10.1101</span><span class="o">/</span><span class="mf">2020.08.13.249110</span><span class="p">},</span>
+         <span class="n">publisher</span> <span class="o">=</span> <span class="p">{</span><span class="n">Cold</span> <span class="n">Spring</span> <span class="n">Harbor</span> <span class="n">Laboratory</span><span class="p">},</span>
+         <span class="n">URL</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">biorxiv</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">early</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">14</span><span class="o">/</span><span class="mf">2020.08.13.249110</span><span class="p">},</span>
+         <span class="n">eprint</span> <span class="o">=</span> <span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">biorxiv</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">early</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">14</span><span class="o">/</span><span class="mf">2020.08.13.249110</span><span class="o">.</span><span class="n">full</span><span class="o">.</span><span class="n">pdf</span><span class="p">},</span>
+         <span class="n">journal</span> <span class="o">=</span> <span class="p">{</span><span class="n">bioRxiv</span><span class="p">}}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="licence-information">
+</section>
+<section id="licence-information">
 <h2>Licence Information<a class="headerlink" href="#licence-information" title="Permalink to this headline">¶</a></h2>
 <p>Conditions on the use and redistribution of this package.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">New</span> <span class="n">BSD</span> <span class="n">License</span>
@@ -120,8 +130,8 @@ to the following paper:</p>
 <span class="n">OUT</span> <span class="n">OF</span> <span class="n">THE</span> <span class="n">USE</span> <span class="n">OF</span> <span class="n">THIS</span> <span class="n">SOFTWARE</span><span class="p">,</span> <span class="n">EVEN</span> <span class="n">IF</span> <span class="n">ADVISED</span> <span class="n">OF</span> <span class="n">THE</span> <span class="n">POSSIBILITY</span> <span class="n">OF</span> <span class="n">SUCH</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
@@ -132,7 +142,7 @@ to the following paper:</p>
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.3.0.<br/>
     </p>
 </footer>
   </body>
