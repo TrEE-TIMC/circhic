@@ -8,6 +8,9 @@ all: clean inplace test
 inplace:
 	$(PYTHON) setup.py build_ext -i
 
+install:
+	$(PYTHON) setup.py install
+
 test: test-code
 
 test-code: inplace

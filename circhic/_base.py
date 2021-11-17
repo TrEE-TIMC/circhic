@@ -186,14 +186,14 @@ class CircHiCFigure:
             outer_gdis=outer_gdis)
         if vmin is None:
             if matplotlib.__version__ < "3.2.0":
-                norm = colors.SymLogNorm(1)
+                norm = colors.SymLogNorm(1, vmax=vmax)
             else:
-                norm = colors.SymLogNorm(1, base=np.e)
+                norm = colors.SymLogNorm(1, base=np.e, vmax=vmax)
         else:
             if matplotlib.__version__ < "3.2.0":
-                norm = colors.SymLogNorm(vmin)
+                norm = colors.SymLogNorm(vmin, vmax=vmax)
             else:
-                norm = colors.SymLogNorm(vmin, base=np.e)
+                norm = colors.SymLogNorm(vmin, base=np.e, vmax=vmax)
 
         if outer_gdis != 0:
             extent = (-outer_gdis, outer_gdis, -outer_gdis, outer_gdis)
@@ -205,8 +205,6 @@ class CircHiCFigure:
             circular_data,
             interpolation="none",
             alpha=alpha,
-            vmin=vmin,
-            vmax=vmax,
             norm=norm, cmap=cmap,
             extent=extent,
             )
