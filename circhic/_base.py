@@ -7,6 +7,7 @@ from matplotlib.gridspec import GridSpec
 from matplotlib import patches
 from matplotlib.container import BarContainer
 from matplotlib import rcParams
+from matplotlib import ticker
 from .utils import generate_circular_map
 from .utils import generate_borders
 
@@ -629,7 +630,8 @@ class CircHiCFigure:
         ax.xaxis.grid(False)
         return ax
 
-    def set_colorbar(self, mappable, orientation="vertical"):
+    def set_colorbar(self, mappable, orientation="vertical",
+                     tick_formatter=None):
         """
         Set a colorbar on the plot
 
@@ -649,7 +651,10 @@ class CircHiCFigure:
             ax = self.figure.add_subplot(
                 self._gridspec[1130:1150, 50:1050])
         ax.tick_params(axis='both', which='major', labelsize="x-small")
-        cab = self.figure.colorbar(mappable, cax=ax, orientation=orientation)
+        if tick_formatter is None:
+            tick_formatter = ticker.ScalarFormatter()
+        cab = self.figure.colorbar(mappable, cax=ax, orientation=orientation,
+                                   format=tick_formatter)
         return cab
 
     def _create_subplot(self, outer_radius=1, polar=True, label=None,
