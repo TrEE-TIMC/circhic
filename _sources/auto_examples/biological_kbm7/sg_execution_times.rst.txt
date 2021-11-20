@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:08.254** total execution time for **auto_examples_biological_kbm7** files:
+**00:08.949** total execution time for **auto_examples_biological_kbm7** files:
 
 +-------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_kbm7_plot_kmb7.py` (``plot_kmb7.py``) | 00:08.254 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_kbm7_plot_kmb7.py` (``plot_kmb7.py``) | 00:08.949 | 0.0 MB |
 +-------------------------------------------------------------------------------+-----------+--------+
