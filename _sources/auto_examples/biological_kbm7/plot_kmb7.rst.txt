@@ -42,7 +42,7 @@ cumulative raw contact counts.
  .. code-block:: none
 
 
-    Text(0, 1.03, 'Genomic distance (Mb)')
+    Text(0, 0.5, 'Genomic distance (Mb)')
 
 
 
@@ -81,7 +81,7 @@ cumulative raw contact counts.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.018 seconds)
+   **Total running time of the script:** ( 0 minutes  8.634 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_kbm7_plot_kmb7.py:

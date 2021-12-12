@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**00:16.719** total execution time for **auto_examples_technical_contact_map** files:
+**00:18.346** total execution time for **auto_examples_technical_contact_map** files:
 
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)       | 00:09.680 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)       | 00:10.304 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)                                 | 00:03.377 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)                                 | 00:03.945 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py` (``plot_changing_colormap.py``)               | 00:02.170 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py` (``plot_changing_colormap.py``)               | 00:02.308 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py` (``plot_ccres_square_vs_circular.py``) | 00:01.492 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py` (``plot_ccres_square_vs_circular.py``) | 00:01.789 | 0.0 MB |
 +-----------------------------------------------------------------------------------------------------------------------------+-----------+--------+
