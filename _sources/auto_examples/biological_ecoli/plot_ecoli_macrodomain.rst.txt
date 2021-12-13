@@ -39,7 +39,7 @@ Macrodomain phenomenology
  .. code-block:: none
 
 
-    <matplotlib.legend.Legend object at 0x7f6f52392c40>
+    <matplotlib.legend.Legend object at 0x7f8005aa3d60>
 
 
 
@@ -124,7 +124,7 @@ Macrodomain phenomenology
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.304 seconds)
+   **Total running time of the script:** ( 0 minutes  2.110 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py:
