@@ -5,12 +5,12 @@
 
 Computation times
 =================
-**00:01.211** total execution time for **auto_examples_technical_simple_plots** files:
+**00:01.092** total execution time for **auto_examples_technical_simple_plots** files:
 
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py` (``plot_bands.py``) | 00:00.610 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py` (``plot_bands.py``) | 00:00.570 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py` (``plot_bars.py``)   | 00:00.312 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py` (``plot_lines.py``) | 00:00.267 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py` (``plot_lines.py``) | 00:00.289 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py` (``plot_bars.py``)   | 00:00.255 | 0.0 MB |
 +----------------------------------------------------------------------------------------+-----------+--------+
