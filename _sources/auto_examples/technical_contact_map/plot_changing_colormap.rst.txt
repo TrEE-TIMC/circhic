@@ -39,7 +39,7 @@ Using a different color map
  .. code-block:: none
 
 
-    <matplotlib.legend.Legend object at 0x7f08020b5130>
+    <matplotlib.legend.Legend object at 0x7fb3f9cf6820>
 
 
 
@@ -127,7 +127,7 @@ Using a different color map
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.500 seconds)
+   **Total running time of the script:** ( 0 minutes  2.271 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_changing_colormap.py:
