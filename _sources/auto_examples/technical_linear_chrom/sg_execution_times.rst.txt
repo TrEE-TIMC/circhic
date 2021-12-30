@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:06.221** total execution time for **auto_examples_technical_linear_chrom** files:
+**00:06.646** total execution time for **auto_examples_technical_linear_chrom** files:
 
 +------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py` (``plot_linear_chrom.py``) | 00:06.221 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py` (``plot_linear_chrom.py``) | 00:06.646 | 0.0 MB |
 +------------------------------------------------------------------------------------------------------+-----------+--------+
