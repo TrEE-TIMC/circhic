@@ -54,7 +54,7 @@ add white space to the disk.
     /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic/utils.py:309: RuntimeWarning: invalid value encountered in true_divide
       (-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
 
-    (<matplotlib.image.AxesImage object at 0x7feb686dbf70>, <Axes:>)
+    (<matplotlib.image.AxesImage object at 0x7fc887bb9d00>, <Axes:>)
 
 
 
@@ -131,7 +131,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.371 seconds)
+   **Total running time of the script:** ( 0 minutes  11.412 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
