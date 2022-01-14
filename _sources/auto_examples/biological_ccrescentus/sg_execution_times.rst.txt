@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**00:07.361** total execution time for **auto_examples_biological_ccrescentus** files:
+**00:06.724** total execution time for **auto_examples_biological_ccrescentus** files:
 
 +----------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py` (``plot_ccres_mappability.py``) | 00:02.465 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py` (``plot_ccres_mappability.py``) | 00:02.122 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py` (``plot_ccres_zraw_data.py``)     | 00:02.188 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py` (``plot_ccres_zraw_data.py``)     | 00:01.962 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py` (``plot_ccres_second_diag.py``) | 00:01.419 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py` (``plot_ccres_second_diag.py``) | 00:01.401 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py` (``plot_ccres_mcid.py``)               | 00:01.289 | 0.0 MB |
+| :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py` (``plot_ccres_mcid.py``)               | 00:01.239 | 0.0 MB |
 +----------------------------------------------------------------------------------------------------------------+-----------+--------+
