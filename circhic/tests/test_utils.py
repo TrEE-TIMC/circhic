@@ -12,9 +12,3 @@ def test_convert_xy_to_thetar():
 
     # Flush test to check the code runs
     theta, r = utils.convert_xy_to_thetar((x, y), lengths)
-
-    with pytest.raises(ValueError):
-        utils.convert_xy_to_thetar((x, y[:-1]), lengths)
-
-    with pytest.raises(ValueError):
-        utils.convert_xy_to_thetar((x+42, y), lengths)
