@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_contact_map_plot_colorbar.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_technical_contact_map_plot_colorbar.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -26,7 +26,7 @@ Small example showcasing how to plot a vertical or horizontal colorbar.
 
 .. GENERATED FROM PYTHON SOURCE LINES 8-22
 
-.. code-block:: default
+.. code-block:: Python
 
     from iced.normalization import ICE_normalization
 
@@ -55,7 +55,7 @@ A simple vertical colorbar
 
 .. GENERATED FROM PYTHON SOURCE LINES 24-29
 
-.. code-block:: default
+.. code-block:: Python
 
     circhicfig = CircHiCFigure(lengths)
     im, ax = circhicfig.plot_hic(counts)
@@ -80,7 +80,7 @@ A simple horizontal colorbar
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-35
 
-.. code-block:: default
+.. code-block:: Python
 
     circhicfig = CircHiCFigure(lengths)
     im, ax = circhicfig.plot_hic(counts, cmap="bone_r")
@@ -101,35 +101,33 @@ A simple horizontal colorbar
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.887 seconds)
+   **Total running time of the script:** (0 minutes 2.507 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_colorbar.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_contact_map/plot_colorbar.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_contact_map/plot_colorbar.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_colorbar.ipynb <plot_colorbar.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_colorbar.py <plot_colorbar.py>`
 
-     :download:`Download Python source code: plot_colorbar.py <plot_colorbar.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_colorbar.ipynb <plot_colorbar.ipynb>`
+      :download:`Download zipped: plot_colorbar.zip <plot_colorbar.zip>`
 
 
 .. only:: html

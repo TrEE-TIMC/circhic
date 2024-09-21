@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_simple_plots_plot_bars.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_technical_simple_plots_plot_bars.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -26,7 +26,7 @@ Here's a small example showcasing how to plot bars on a circular strip.
 
 .. GENERATED FROM PYTHON SOURCE LINES 8-11
 
-.. code-block:: default
+.. code-block:: Python
 
     import numpy as np
     from circhic._base import CircHiCFigure
@@ -44,7 +44,7 @@ First, simulate some data
 
 .. GENERATED FROM PYTHON SOURCE LINES 13-17
 
-.. code-block:: default
+.. code-block:: Python
 
     lengths = np.array([3500])
     random_state = np.random.RandomState(42)
@@ -63,7 +63,7 @@ Then, create the `circhic` figure and plot the bars
 
 .. GENERATED FROM PYTHON SOURCE LINES 19-25
 
-.. code-block:: default
+.. code-block:: Python
 
     circhicfig = CircHiCFigure(lengths)
     _, ax = circhicfig.plot_bars(
@@ -82,8 +82,6 @@ Then, create the `circhic` figure and plot the bars
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -94,35 +92,33 @@ Then, create the `circhic` figure and plot the bars
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.215 seconds)
+   **Total running time of the script:** (0 minutes 0.210 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_simple_plots_plot_bars.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_bars.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_bars.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_bars.ipynb <plot_bars.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_bars.py <plot_bars.py>`
 
-     :download:`Download Python source code: plot_bars.py <plot_bars.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_bars.ipynb <plot_bars.ipynb>`
+      :download:`Download zipped: plot_bars.zip <plot_bars.zip>`
 
 
 .. only:: html

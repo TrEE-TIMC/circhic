@@ -1,21 +1,21 @@
 :orphan:
 
-
-
-.. _sphx_glr_auto_examples:
-
 .. contents::
+
 
 
 .. raw:: html
 
-    <div class="sphx-glr-clear"></div>
+    <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
+.. thumbnail-parent-div-close
 
-.. _sphx_glr_auto_examples_biological:
+.. raw:: html
 
-.. _biological_examples:
+    </div>
+
 
 Real-case gallery
 =================
@@ -23,15 +23,19 @@ Real-case gallery
 General-purpose real-case examples for `circhic`.
 
 
+
 .. raw:: html
 
-    <div class="sphx-glr-clear"></div>
+    <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
+.. thumbnail-parent-div-close
 
-.. _sphx_glr_auto_examples_biological_ccrescentus:
+.. raw:: html
 
-.. _ccrescentus_example:
+    </div>
+
 
 *Caulobacter crescentus*
 ------------------------
@@ -45,24 +49,26 @@ Data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.112
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Circular Hi-C and genomic data">
 
 .. only:: html
 
- .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_mappability_thumb.png
-     :alt: Circular Hi-C and genomic data
+  .. image:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_mappability_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py`
+  :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Circular Hi-C and genomic data</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological_ccrescentus/plot_ccres_mappability
 
 .. raw:: html
 
@@ -70,20 +76,16 @@ Data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.112
 
 .. only:: html
 
- .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_mcid_thumb.png
-     :alt: Zooming in chromosomal interaction domains
+  .. image:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_mcid_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py`
+  :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Zooming in chromosomal interaction domains</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological_ccrescentus/plot_ccres_mcid
 
 .. raw:: html
 
@@ -91,20 +93,16 @@ Data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.112
 
 .. only:: html
 
- .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_second_diag_thumb.png
-     :alt: Secondary diagonal from 'distant' mode
+  .. image:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_second_diag_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py`
+  :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Secondary diagonal from 'distant' mode</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological_ccrescentus/plot_ccres_second_diag
 
 .. raw:: html
 
@@ -112,29 +110,23 @@ Data from `Le et al. (2013) Science, 342(6159), 731–734 <http://doi.org/10.112
 
 .. only:: html
 
- .. figure:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_zraw_data_thumb.png
-     :alt: Raw data
+  .. image:: /auto_examples/biological_ccrescentus/images/thumb/sphx_glr_plot_ccres_zraw_data_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py`
+  :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Raw data</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological_ccrescentus/plot_ccres_zraw_data
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_biological_ecoli:
-
-.. _ecoli_example:
 
 *Escherichia coli*
 ------------------
@@ -146,33 +138,33 @@ Data from `Lioy et al. (2018) Cell, 172(4), 771–783 <http://doi.org/10.1016/j.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Macrodomain phenomenology">
 
 .. only:: html
 
- .. figure:: /auto_examples/biological_ecoli/images/thumb/sphx_glr_plot_ecoli_macrodomain_thumb.png
-     :alt: Macrodomain phenomenology
+  .. image:: /auto_examples/biological_ecoli/images/thumb/sphx_glr_plot_ecoli_macrodomain_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py`
+  :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Macrodomain phenomenology</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological_ecoli/plot_ecoli_macrodomain
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_biological_kbm7:
-
-.. _kbm7_example:
 
 *Human - KBM7*
 --------------
@@ -184,33 +176,33 @@ Data from `Rao et al. (2014) Cell, 162(3), 687-688 <https://www.sciencedirect.co
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Here, we plot the raw contact counts of KBM7&#x27;s chromosome 11, and the cumulative raw contact co...">
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Here, we plot the raw contact counts of KBM7&#x27;s chromosome 11, and the cumulative raw contact counts.">
 
 .. only:: html
 
- .. figure:: /auto_examples/biological_kbm7/images/thumb/sphx_glr_plot_kmb7_thumb.png
-     :alt: A human chromosome: KBM7's chr11
+  .. image:: /auto_examples/biological_kbm7/images/thumb/sphx_glr_plot_kmb7_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_biological_kbm7_plot_kmb7.py`
+  :ref:`sphx_glr_auto_examples_biological_kbm7_plot_kmb7.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">A human chromosome: KBM7's chr11</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/biological_kbm7/plot_kmb7
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_technical:
-
-.. _technical_examples:
 
 Technical examples
 ==================
@@ -218,15 +210,19 @@ Technical examples
 Introductory examples for `circhic`.
 
 
+
 .. raw:: html
 
-    <div class="sphx-glr-clear"></div>
+    <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
+.. thumbnail-parent-div-close
 
-.. _sphx_glr_auto_examples_technical_simple_plots:
+.. raw:: html
 
-.. _simple_plots_examples:
+    </div>
+
 
 Simple plots
 ------------
@@ -237,24 +233,26 @@ The basic units of a `circhic` plot to display genomic data.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data.">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bands_thumb.png
-     :alt: Plotting bands
+  .. image:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bands_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py`
+  :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Plotting bands</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_simple_plots/plot_bands
 
 .. raw:: html
 
@@ -262,50 +260,40 @@ The basic units of a `circhic` plot to display genomic data.
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bars_thumb.png
-     :alt: Plotting bars
+  .. image:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bars_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py`
+  :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Plotting bars</div>
     </div>
 
 
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_simple_plots/plot_bars
-
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip. The first example show...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip. The first example showcases line plots on circular chromosome, while the second showcases plots on a linear chromosome.">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_lines_thumb.png
-     :alt: Plotting lines
+  .. image:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_lines_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py`
+  :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting lines</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_simple_plots/plot_lines
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_technical_contact_map:
-
-.. _contact_count_map_example:
 
 Exploring options of the circular heatmaps
 ------------------------------------------
@@ -314,24 +302,26 @@ Exploring options of the circular heatmaps
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Square versus circular displays">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_ccres_square_vs_circular_thumb.png
-     :alt: Square versus circular displays
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_ccres_square_vs_circular_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py`
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Square versus circular displays</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_contact_map/plot_ccres_square_vs_circular
 
 .. raw:: html
 
@@ -339,41 +329,33 @@ Exploring options of the circular heatmaps
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_changing_colormap_thumb.png
-     :alt: Using a different color map
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_changing_colormap_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py`
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Using a different color map</div>
     </div>
 
 
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_contact_map/plot_changing_colormap
-
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one...">
+    <div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one can adjust the data plotted by setting the maximum inner and outer genomic distance of the contact count being plotted. The inner distance corresponds to the &quot;lower triangular&quot; matrix of the contact count maps, an the outter distance to the upper triangular matrix. The data is thus symmetric to the midpoint, ie the &quot;diagonal&quot; of the contact count matrix.">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
-     :alt: Radius
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py`
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py`
 
 .. raw:: html
 
+      <div class="sphx-glr-thumbnail-title">Radius</div>
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_contact_map/plot_circular_heatmap_size
 
 .. raw:: html
 
@@ -381,29 +363,23 @@ Exploring options of the circular heatmaps
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_colorbar_thumb.png
-     :alt: Colorbars
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_colorbar_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py`
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Colorbars</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_contact_map/plot_colorbar
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_technical_linear_chrom:
-
-.. _linear_chrom_example:
 
 Plotting linear chromosomes
 ---------------------------
@@ -412,33 +388,33 @@ Plotting linear chromosomes
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680">
 
 .. only:: html
 
- .. figure:: /auto_examples/technical_linear_chrom/images/thumb/sphx_glr_plot_linear_chrom_thumb.png
-     :alt: KBM-7 cell line, chromosome XI
+  .. image:: /auto_examples/technical_linear_chrom/images/thumb/sphx_glr_plot_linear_chrom_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py`
+  :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">KBM-7 cell line, chromosome XI</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /auto_examples/technical_linear_chrom/plot_linear_chrom
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
-.. _sphx_glr_auto_examples_schemas:
-
-.. _schemas_examples:
 
 Schemas & misc
 --------------
@@ -449,14 +425,28 @@ Schemas & misc
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Understanding Hi-C contact maps">
 
 .. only:: html
 
- .. figure:: /auto_examples/schemas/images/thumb/sphx_glr_plot_schemas_normal_thumb.png
-     :alt: Understanding Hi-C contact maps
+  .. image:: /auto_examples/schemas/images/thumb/sphx_glr_plot_schemas_normal_thumb.png
+    :alt:
 
-     :ref:`sphx_glr_auto_examples_schemas_plot_schemas_normal.py`
+  :ref:`sphx_glr_auto_examples_schemas_plot_schemas_normal.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Understanding Hi-C contact maps</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -465,29 +455,31 @@ Schemas & misc
 
 .. toctree::
    :hidden:
-
-   /auto_examples/schemas/plot_schemas_normal
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
+   :includehidden:
 
 
-
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-gallery
-
-
-  .. container:: sphx-glr-download sphx-glr-download-python
-
-    :download:`Download all examples in Python source code: auto_examples_python.zip </auto_examples/auto_examples_python.zip>`
-
+   /auto_examples/biological/index.rst
+   /auto_examples/biological_ccrescentus/index.rst
+   /auto_examples/biological_ecoli/index.rst
+   /auto_examples/biological_kbm7/index.rst
+   /auto_examples/technical/index.rst
+   /auto_examples/technical_simple_plots/index.rst
+   /auto_examples/technical_contact_map/index.rst
+   /auto_examples/technical_linear_chrom/index.rst
+   /auto_examples/schemas/index.rst
 
 
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
+.. only:: html
 
-    :download:`Download all examples in Jupyter notebooks: auto_examples_jupyter.zip </auto_examples/auto_examples_jupyter.zip>`
+  .. container:: sphx-glr-footer sphx-glr-footer-gallery
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download all examples in Python source code: auto_examples_python.zip </auto_examples/auto_examples_python.zip>`
+
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download all examples in Jupyter notebooks: auto_examples_jupyter.zip </auto_examples/auto_examples_jupyter.zip>`
 
 
 .. only:: html

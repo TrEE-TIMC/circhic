@@ -1,0 +1,48 @@
+
+
+.. _sphx_glr_auto_examples_schemas:
+
+.. _schemas_examples:
+
+Schemas & misc
+--------------
+
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Understanding Hi-C contact maps">
+
+.. only:: html
+
+  .. image:: /auto_examples/schemas/images/thumb/sphx_glr_plot_schemas_normal_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_schemas_plot_schemas_normal.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Understanding Hi-C contact maps</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/schemas/plot_schemas_normal
+

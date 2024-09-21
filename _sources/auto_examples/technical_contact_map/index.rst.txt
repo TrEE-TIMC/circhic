@@ -1,0 +1,100 @@
+
+
+.. _sphx_glr_auto_examples_technical_contact_map:
+
+.. _contact_count_map_example:
+
+Exploring options of the circular heatmaps
+------------------------------------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Square versus circular displays">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_ccres_square_vs_circular_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Square versus circular displays</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Using a different color map">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_changing_colormap_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Using a different color map</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="There are several interesting options to explore for plotting heatmaps with circhic. First, one can adjust the data plotted by setting the maximum inner and outer genomic distance of the contact count being plotted. The inner distance corresponds to the &quot;lower triangular&quot; matrix of the contact count maps, an the outter distance to the upper triangular matrix. The data is thus symmetric to the midpoint, ie the &quot;diagonal&quot; of the contact count matrix.">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_circular_heatmap_size_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Radius</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Small example showcasing how to plot a vertical or horizontal colorbar.">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_contact_map/images/thumb/sphx_glr_plot_colorbar_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Colorbars</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_contact_map/plot_ccres_square_vs_circular
+   /auto_examples/technical_contact_map/plot_changing_colormap
+   /auto_examples/technical_contact_map/plot_circular_heatmap_size
+   /auto_examples/technical_contact_map/plot_colorbar
+

@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -47,14 +47,14 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic/utils.py:309: RuntimeWarning: invalid value encountered in true_divide
+    /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic-0.5.0.dev0-py3.8.egg/circhic/utils.py:309: RuntimeWarning: invalid value encountered in divide
       (-inner_gdis*N/Lg+(R[iR & iS] - inner_radius) /
+    /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic-0.5.0.dev0-py3.8.egg/circhic/utils.py:308: RuntimeWarning: invalid value encountered in cast
+      Half_s[iR & iS] = (
 
-    (<matplotlib.image.AxesImage object at 0x7f547f8c2ee0>, <Axes:>)
+    (<matplotlib.image.AxesImage object at 0x7fbffd1694f0>, <Axes: >)
 
 
 
@@ -62,7 +62,7 @@ add white space to the disk.
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
     from iced.normalization import ICE_normalization
@@ -131,35 +131,33 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.938 seconds)
+   **Total running time of the script:** (0 minutes 7.265 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_contact_map/plot_circular_heatmap_size.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_contact_map/plot_circular_heatmap_size.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_circular_heatmap_size.ipynb <plot_circular_heatmap_size.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_circular_heatmap_size.py <plot_circular_heatmap_size.py>`
 
-     :download:`Download Python source code: plot_circular_heatmap_size.py <plot_circular_heatmap_size.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_circular_heatmap_size.ipynb <plot_circular_heatmap_size.ipynb>`
+      :download:`Download zipped: plot_circular_heatmap_size.zip <plot_circular_heatmap_size.zip>`
 
 
 .. only:: html

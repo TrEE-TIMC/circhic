@@ -1,0 +1,49 @@
+
+
+.. _sphx_glr_auto_examples_biological_ecoli:
+
+.. _ecoli_example:
+
+*Escherichia coli*
+------------------
+
+Data from `Lioy et al. (2018) Cell, 172(4), 771–783 <http://doi.org/10.1016/j.cell.2017.12.027>`_
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Macrodomain phenomenology">
+
+.. only:: html
+
+  .. image:: /auto_examples/biological_ecoli/images/thumb/sphx_glr_plot_ecoli_macrodomain_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Macrodomain phenomenology</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/biological_ecoli/plot_ecoli_macrodomain
+

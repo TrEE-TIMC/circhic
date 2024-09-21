@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
@@ -18,17 +18,16 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=57b8f4a9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -60,13 +59,13 @@
   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-technical-contact-map-plot-colorbar-py"><span class="std std-ref">here</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-technical-contact-map-plot-colorbar-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code. or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="colorbars">
-<span id="sphx-glr-auto-examples-technical-contact-map-plot-colorbar-py"></span><h1>Colorbars<a class="headerlink" href="#colorbars" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-technical-contact-map-plot-colorbar-py"></span><h1>Colorbars<a class="headerlink" href="#colorbars" title="Permalink to this heading">¶</a></h1>
 <p>Small example showcasing how to plot a vertical or horizontal colorbar.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iced.normalization</span> <span class="kn">import</span> <span class="n">ICE_normalization</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iced.normalization</span> <span class="kn">import</span> <span class="n">ICE_normalization</span>
 
 <span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <span class="n">datasets</span>
 <span class="kn">from</span> <span class="nn">circhic._base</span> <span class="kn">import</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a>
@@ -82,29 +81,32 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 <p>A simple vertical colorbar</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
 <span class="n">im</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
 <span class="n">cab</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">set_colorbar</span></a><span class="p">(</span><span class="n">im</span><span class="p">)</span>
 <span class="n">cab</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Normalized contact counts&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_plot_colorbar_001.png" srcset="../../_images/sphx_glr_plot_colorbar_001.png" alt="plot colorbar" class = "sphx-glr-single-img"/><p>A simple horizontal colorbar</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
 <span class="n">im</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone_r&quot;</span><span class="p">)</span>
 <span class="n">cab</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.set_colorbar" title="circhic.CircHiCFigure.set_colorbar" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">set_colorbar</span></a><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;horizontal&quot;</span><span class="p">)</span>
 <span class="n">cab</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Normalized contact counts&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_colorbar_002.png" srcset="../../_images/sphx_glr_plot_colorbar_002.png" alt="plot colorbar" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.887 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-colorbar-py">
+<img src="../../_images/sphx_glr_plot_colorbar_002.png" srcset="../../_images/sphx_glr_plot_colorbar_002.png" alt="plot colorbar" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.507 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-colorbar-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_contact_map/plot_colorbar.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/bde826815c109f8901fedfdcfd3d92ef/plot_colorbar.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_colorbar.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c89d597199d6b4c4e38e785d56bf89ca/plot_colorbar.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_colorbar.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/bde826815c109f8901fedfdcfd3d92ef/plot_colorbar.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_colorbar.ipynb</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/c6befd3f50e9a2de606623a6b6f934d1/plot_colorbar.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_colorbar.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -119,7 +121,7 @@ to download the full example code or to run this example in your browser via Bin
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.4.0.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2.<br/>
     </p>
 </footer>
   </body>

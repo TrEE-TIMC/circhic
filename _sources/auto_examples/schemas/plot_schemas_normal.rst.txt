@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_schemas_plot_schemas_normal.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_schemas_plot_schemas_normal.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -35,7 +35,7 @@ Understanding Hi-C contact maps
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib
@@ -117,35 +117,33 @@ Understanding Hi-C contact maps
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.391 seconds)
+   **Total running time of the script:** (0 minutes 0.308 seconds)
 
 
 .. _sphx_glr_download_auto_examples_schemas_plot_schemas_normal.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/schemas/plot_schemas_normal.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/schemas/plot_schemas_normal.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_schemas_normal.ipynb <plot_schemas_normal.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_schemas_normal.py <plot_schemas_normal.py>`
 
-     :download:`Download Python source code: plot_schemas_normal.py <plot_schemas_normal.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_schemas_normal.ipynb <plot_schemas_normal.ipynb>`
+      :download:`Download zipped: plot_schemas_normal.zip <plot_schemas_normal.zip>`
 
 
 .. only:: html

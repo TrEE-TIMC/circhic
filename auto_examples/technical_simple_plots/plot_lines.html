@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
@@ -18,17 +18,16 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=57b8f4a9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -60,26 +59,26 @@
   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-technical-simple-plots-plot-lines-py"><span class="std std-ref">here</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-technical-simple-plots-plot-lines-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code. or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="plotting-lines">
-<span id="sphx-glr-auto-examples-technical-simple-plots-plot-lines-py"></span><h1>Plotting lines<a class="headerlink" href="#plotting-lines" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-technical-simple-plots-plot-lines-py"></span><h1>Plotting lines<a class="headerlink" href="#plotting-lines" title="Permalink to this heading">¶</a></h1>
 <p>Here’s a small example showcasing how to plot lines on a circular strip. The
 first example showcases line plots on circular chromosome, while the second
 showcases plots on a linear chromosome.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">circhic._base</span> <span class="kn">import</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a>
 </pre></div>
 </div>
 <p>First, simulate some data</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3500</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">lengths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3500</span><span class="p">])</span>
 <span class="n">random_state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">random_state</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Then, create the <cite>circhic</cite> figure and plot the lines.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">)</span>
 <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_lines" title="circhic.CircHiCFigure.plot_lines" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_lines</span></a><span class="p">(</span>
     <span class="n">data</span><span class="p">,</span>
     <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
@@ -87,12 +86,11 @@ showcases plots on a linear chromosome.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Plotting lines&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_lines_001.png" srcset="../../_images/sphx_glr_plot_lines_001.png" alt="Plotting lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0493697602799101, &#39;Plotting lines&#39;)
+<img src="../../_images/sphx_glr_plot_lines_001.png" srcset="../../_images/sphx_glr_plot_lines_001.png" alt="Plotting lines" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0493697602799101, &#39;Plotting lines&#39;)
 </pre></div>
 </div>
 <p>Now create a circhic figure for linear chromosomes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">chromosome_type</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">circhicfig</span></a> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">(</span><span class="n">lengths</span><span class="p">,</span> <span class="n">chromosome_type</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
 <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_lines" title="circhic.CircHiCFigure.plot_lines" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_lines</span></a><span class="p">(</span>
     <span class="n">data</span><span class="p">,</span>
     <span class="n">inner_radius</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
@@ -100,20 +98,22 @@ showcases plots on a linear chromosome.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Plotting lines&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_lines_002.png" srcset="../../_images/sphx_glr_plot_lines_002.png" alt="Plotting lines" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0493697602799101, &#39;Plotting lines&#39;)
+<img src="../../_images/sphx_glr_plot_lines_002.png" srcset="../../_images/sphx_glr_plot_lines_002.png" alt="Plotting lines" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0493697602799101, &#39;Plotting lines&#39;)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.219 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-simple-plots-plot-lines-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.218 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-simple-plots-plot-lines-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_lines.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo6.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/eb271234bce7fff3512d4ae4e83b75c2/plot_lines.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_lines.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/25b0be75fbff734288f0d881f212909c/plot_lines.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_lines.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/eb271234bce7fff3512d4ae4e83b75c2/plot_lines.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_lines.ipynb</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/173a507170003adcc66d4b1d48d79b6c/plot_lines.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_lines.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -128,7 +128,7 @@ showcases plots on a linear chromosome.</p>
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.4.0.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2.<br/>
     </p>
 </footer>
   </body>

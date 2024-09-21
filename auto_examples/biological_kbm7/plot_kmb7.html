@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
@@ -18,17 +18,16 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=57b8f4a9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -60,21 +59,20 @@
   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-biological-kbm7-plot-kmb7-py"><span class="std std-ref">here</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-biological-kbm7-plot-kmb7-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code. or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="a-human-chromosome-kbm7-s-chr11">
-<span id="sphx-glr-auto-examples-biological-kbm7-plot-kmb7-py"></span><h1>A human chromosome: KBM7’s chr11<a class="headerlink" href="#a-human-chromosome-kbm7-s-chr11" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-biological-kbm7-plot-kmb7-py"></span><h1>A human chromosome: KBM7’s chr11<a class="headerlink" href="#a-human-chromosome-kbm7-s-chr11" title="Permalink to this heading">¶</a></h1>
 <p>Here, we plot the raw contact counts of KBM7’s chromosome 11, and the
 cumulative raw contact counts.</p>
-<img src="../../_images/sphx_glr_plot_kmb7_001.png" srcset="../../_images/sphx_glr_plot_kmb7_001.png" alt="plot kmb7" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Genomic distance (Mb)&#39;)
+<img src="../../_images/sphx_glr_plot_kmb7_001.png" srcset="../../_images/sphx_glr_plot_kmb7_001.png" alt="plot kmb7" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Genomic distance (Mb)&#39;)
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">,</span> <span class="n">datasets</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a><span class="p">,</span> <span class="n">datasets</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_kbm7</span><span class="p">()</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
@@ -100,16 +98,19 @@ cumulative raw contact counts.</p>
                <span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.03</span><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.493 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-biological-kbm7-plot-kmb7-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.409 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-biological-kbm7-plot-kmb7-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/biological_kbm7/plot_kmb7.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2a651d8143181d0c362985d5761ac00f/plot_kmb7.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_kmb7.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/5444d24e1ae91a44fbd3151fe933aaeb/plot_kmb7.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_kmb7.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/2a651d8143181d0c362985d5761ac00f/plot_kmb7.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_kmb7.ipynb</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/e3e077dc0a6f9c31636f9fd07beb53a6/plot_kmb7.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_kmb7.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -124,7 +125,7 @@ cumulative raw contact counts.</p>
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.4.0.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2.<br/>
     </p>
 </footer>
   </body>

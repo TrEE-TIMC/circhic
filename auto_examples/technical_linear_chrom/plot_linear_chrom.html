@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
@@ -18,17 +18,16 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=57b8f4a9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -60,13 +59,13 @@
   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-technical-linear-chrom-plot-linear-chrom-py"><span class="std std-ref">here</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-technical-linear-chrom-plot-linear-chrom-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code. or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="kbm-7-cell-line-chromosome-xi">
-<span id="sphx-glr-auto-examples-technical-linear-chrom-plot-linear-chrom-py"></span><h1>KBM-7 cell line, chromosome XI<a class="headerlink" href="#kbm-7-cell-line-chromosome-xi" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-technical-linear-chrom-plot-linear-chrom-py"></span><h1>KBM-7 cell line, chromosome XI<a class="headerlink" href="#kbm-7-cell-line-chromosome-xi" title="Permalink to this heading">¶</a></h1>
 <p>Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680</p>
-<img src="../../_images/sphx_glr_plot_linear_chrom_001.png" srcset="../../_images/sphx_glr_plot_linear_chrom_001.png" alt="plot linear chrom" class = "sphx-glr-single-img"/><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a>
+<img src="../../_images/sphx_glr_plot_linear_chrom_001.png" srcset="../../_images/sphx_glr_plot_linear_chrom_001.png" alt="plot linear chrom" class = "sphx-glr-single-img"/><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure" title="circhic.CircHiCFigure" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-class"><span class="n">CircHiCFigure</span></a>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_kbm7</span><span class="p">()</span>
@@ -86,16 +85,19 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">rax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.644 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-linear-chrom-plot-linear-chrom-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.863 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-linear-chrom-plot-linear-chrom-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_linear_chrom/plot_linear_chrom.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo5.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/71550900c7133a15fba05d930bc79603/plot_linear_chrom.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_linear_chrom.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2d9dc60d3fe8c474a2af7d8fd6ca5412/plot_linear_chrom.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_linear_chrom.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/71550900c7133a15fba05d930bc79603/plot_linear_chrom.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_linear_chrom.ipynb</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/9d38a71265b039ab416313b5f8d9386a/plot_linear_chrom.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_linear_chrom.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -110,7 +112,7 @@ to download the full example code or to run this example in your browser via Bin
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.4.0.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2.<br/>
     </p>
 </footer>
   </body>

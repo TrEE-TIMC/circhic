@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_simple_plots_plot_lines.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_technical_simple_plots_plot_lines.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -28,7 +28,7 @@ showcases plots on a linear chromosome.
 
 .. GENERATED FROM PYTHON SOURCE LINES 10-13
 
-.. code-block:: default
+.. code-block:: Python
 
     import numpy as np
     from circhic._base import CircHiCFigure
@@ -46,7 +46,7 @@ First, simulate some data
 
 .. GENERATED FROM PYTHON SOURCE LINES 15-19
 
-.. code-block:: default
+.. code-block:: Python
 
     lengths = np.array([3500])
     random_state = np.random.RandomState(42)
@@ -65,7 +65,7 @@ Then, create the `circhic` figure and plot the lines.
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-28
 
-.. code-block:: default
+.. code-block:: Python
 
     circhicfig = CircHiCFigure(lengths)
     _, ax = circhicfig.plot_lines(
@@ -85,8 +85,6 @@ Then, create the `circhic` figure and plot the lines.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -100,7 +98,7 @@ Now create a circhic figure for linear chromosomes
 
 .. GENERATED FROM PYTHON SOURCE LINES 30-36
 
-.. code-block:: default
+.. code-block:: Python
 
     circhicfig = CircHiCFigure(lengths, chromosome_type="linear")
     _, ax = circhicfig.plot_lines(
@@ -119,8 +117,6 @@ Now create a circhic figure for linear chromosomes
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -131,35 +127,33 @@ Now create a circhic figure for linear chromosomes
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.219 seconds)
+   **Total running time of the script:** (0 minutes 0.218 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_simple_plots_plot_lines.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_lines.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_simple_plots/plot_lines.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_lines.ipynb <plot_lines.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_lines.py <plot_lines.py>`
 
-     :download:`Download Python source code: plot_lines.py <plot_lines.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_lines.ipynb <plot_lines.ipynb>`
+      :download:`Download zipped: plot_lines.zip <plot_lines.zip>`
 
 
 .. only:: html

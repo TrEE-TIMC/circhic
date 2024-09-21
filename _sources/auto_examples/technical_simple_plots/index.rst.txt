@@ -1,0 +1,84 @@
+
+
+.. _sphx_glr_auto_examples_technical_simple_plots:
+
+.. _simple_plots_examples:
+
+Simple plots
+------------
+
+The basic units of a `circhic` plot to display genomic data.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot circular bands indicating categorical data.">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bands_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting bands</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot bars on a circular strip.">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_bars_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting bars</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Here&#x27;s a small example showcasing how to plot lines on a circular strip. The first example showcases line plots on circular chromosome, while the second showcases plots on a linear chromosome.">
+
+.. only:: html
+
+  .. image:: /auto_examples/technical_simple_plots/images/thumb/sphx_glr_plot_lines_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Plotting lines</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/technical_simple_plots/plot_bands
+   /auto_examples/technical_simple_plots/plot_bars
+   /auto_examples/technical_simple_plots/plot_lines
+

@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_technical_linear_chrom_plot_linear_chrom.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_technical_linear_chrom_plot_linear_chrom.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -37,7 +37,7 @@ Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from circhic import datasets, CircHiCFigure
@@ -62,35 +62,33 @@ Data: Rao SSP, et al. (2014) Cell 159(7):1665–1680
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.644 seconds)
+   **Total running time of the script:** (0 minutes 3.863 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_linear_chrom_plot_linear_chrom.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_linear_chrom/plot_linear_chrom.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_linear_chrom/plot_linear_chrom.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_linear_chrom.ipynb <plot_linear_chrom.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_linear_chrom.py <plot_linear_chrom.py>`
 
-     :download:`Download Python source code: plot_linear_chrom.py <plot_linear_chrom.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_linear_chrom.ipynb <plot_linear_chrom.ipynb>`
+      :download:`Download zipped: plot_linear_chrom.zip <plot_linear_chrom.zip>`
 
 
 .. only:: html

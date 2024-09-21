@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   
     <title>circHiC &#8212; circHiC 0.4.0.dev0 documentation</title>
@@ -18,17 +18,16 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=2a422f08" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=57b8f4a9"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/copybutton.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -60,11 +59,11 @@
   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-technical-contact-map-plot-circular-heatmap-size-py"><span class="std std-ref">here</span></a>
-to download the full example code or to run this example in your browser via Binder</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-technical-contact-map-plot-circular-heatmap-size-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code. or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="radius">
-<span id="sphx-glr-auto-examples-technical-contact-map-plot-circular-heatmap-size-py"></span><h1>Radius<a class="headerlink" href="#radius" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-technical-contact-map-plot-circular-heatmap-size-py"></span><h1>Radius<a class="headerlink" href="#radius" title="Permalink to this heading">¶</a></h1>
 <p>There are several interesting options to explore for plotting heatmaps with
 <cite>circhic</cite>. First, one can adjust the data plotted by setting the maximum inner
 and outer genomic distance of the contact count being plotted. The inner
@@ -76,17 +75,18 @@ size of the disk: the inner and outer radius of the disk relative to the
 maximum outer radius possible (1). The outer radius will only affect how much
 of the total available space is used, while the inner radius will effectively
 add white space to the disk.</p>
-<img src="../../_images/sphx_glr_plot_circular_heatmap_size_001.png" srcset="../../_images/sphx_glr_plot_circular_heatmap_size_001.png" alt="Default, Varying data plotted on the inner genomic distance, Varying data plotted on the outer genomic distance" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic/utils.py:309: RuntimeWarning: invalid value encountered in true_divide
+<img src="../../_images/sphx_glr_plot_circular_heatmap_size_001.png" srcset="../../_images/sphx_glr_plot_circular_heatmap_size_001.png" alt="Default, Varying data plotted on the inner genomic distance, Varying data plotted on the outer genomic distance" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic-0.5.0.dev0-py3.8.egg/circhic/utils.py:309: RuntimeWarning: invalid value encountered in divide
   (-inner_gdis*N/Lg+(R[iR &amp; iS] - inner_radius) /
+/usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic-0.5.0.dev0-py3.8.egg/circhic/utils.py:308: RuntimeWarning: invalid value encountered in cast
+  Half_s[iR &amp; iS] = (
 
-(&lt;matplotlib.image.AxesImage object at 0x7f547f8c2ee0&gt;, &lt;Axes:&gt;)
+(&lt;matplotlib.image.AxesImage object at 0x7fbffd1694f0&gt;, &lt;Axes: &gt;)
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">iced.normalization</span> <span class="kn">import</span> <span class="n">ICE_normalization</span>
 
 <span class="kn">from</span> <span class="nn">circhic</span> <span class="kn">import</span> <span class="n">datasets</span>
@@ -151,16 +151,19 @@ add white space to the disk.</p>
 <a href="../../modules/generated/circhic.CircHiCFigure.html#circhic.CircHiCFigure.plot_hic" title="circhic.CircHiCFigure.plot_hic" class="sphx-glr-backref-module-circhic sphx-glr-backref-type-py-method"><span class="n">circhicfig</span><span class="o">.</span><span class="n">plot_hic</span></a><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">outer_gdis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">outer_radius</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.938 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-circular-heatmap-size-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 7.265 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-technical-contact-map-plot-circular-heatmap-size-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/technical_contact_map/plot_circular_heatmap_size.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/05503f7f0fc45542870d7318c22927ec/plot_circular_heatmap_size.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_circular_heatmap_size.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b03b5bfe77c32add56ccb46bcb05225c/plot_circular_heatmap_size.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_circular_heatmap_size.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/05503f7f0fc45542870d7318c22927ec/plot_circular_heatmap_size.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_circular_heatmap_size.ipynb</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/971d6bca1640d820336d8de8dabe9c5a/plot_circular_heatmap_size.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_circular_heatmap_size.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -175,7 +178,7 @@ add white space to the disk.</p>
     </p>
     <p>
         &copy; Copyright 2020, circHiC contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 4.4.0.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.1.2.<br/>
     </p>
 </footer>
   </body>

@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_auto_examples_biological_ccrescentus_plot_ccres_mappability.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_auto_examples_biological_ccrescentus_plot_ccres_mappability.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -34,8 +34,6 @@ Circular Hi-C and genomic data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
@@ -49,7 +47,7 @@ Circular Hi-C and genomic data
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -130,35 +128,33 @@ Circular Hi-C and genomic data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.651 seconds)
+   **Total running time of the script:** (0 minutes 1.560 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_ccrescentus_plot_ccres_mappability.py:
 
+.. only:: html
 
-.. only :: html
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+    .. container:: binder-badge
 
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/biological_ccrescentus/plot_ccres_mappability.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
-  .. container:: binder-badge
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/TrEE-TIMC/circhic/gh-pages?urlpath=lab/tree/notebooks/auto_examples/biological_ccrescentus/plot_ccres_mappability.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      :download:`Download Jupyter notebook: plot_ccres_mappability.ipynb <plot_ccres_mappability.ipynb>`
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: plot_ccres_mappability.py <plot_ccres_mappability.py>`
 
-     :download:`Download Python source code: plot_ccres_mappability.py <plot_ccres_mappability.py>`
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: plot_ccres_mappability.ipynb <plot_ccres_mappability.ipynb>`
+      :download:`Download zipped: plot_ccres_mappability.zip <plot_ccres_mappability.zip>`
 
 
 .. only:: html
