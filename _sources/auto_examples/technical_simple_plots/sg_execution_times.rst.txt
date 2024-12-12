@@ -33,10 +33,10 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py` (``plot_bands.py``)
-     - 00:00.370
+     - 00:00.373
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py` (``plot_bars.py``)
-     - 00:00.180
+     - 00:00.177
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py` (``plot_lines.py``)
      - 00:00.165
