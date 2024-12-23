@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:29.246** total execution time for 15 files **from all galleries**:
+**00:29.096** total execution time for 15 files **from all galleries**:
 
 .. container::
 
@@ -33,47 +33,47 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``../examples/technical_contact_map/plot_circular_heatmap_size.py``)
-     - 00:07.267
+     - 00:07.249
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_kbm7_plot_kmb7.py` (``../examples/biological_kbm7/plot_kmb7.py``)
-     - 00:05.450
+     - 00:05.451
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_linear_chrom_plot_linear_chrom.py` (``../examples/technical_linear_chrom/plot_linear_chrom.py``)
-     - 00:03.861
+     - 00:03.857
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``../examples/technical_contact_map/plot_colorbar.py``)
-     - 00:02.510
+     - 00:02.495
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py` (``../examples/biological_ccrescentus/plot_ccres_mappability.py``)
-     - 00:01.548
+     - 00:01.577
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py` (``../examples/technical_contact_map/plot_changing_colormap.py``)
-     - 00:01.507
+     - 00:01.558
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ecoli_plot_ecoli_macrodomain.py` (``../examples/biological_ecoli/plot_ecoli_macrodomain.py``)
-     - 00:01.454
+     - 00:01.455
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py` (``../examples/biological_ccrescentus/plot_ccres_zraw_data.py``)
-     - 00:01.429
+     - 00:01.428
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py` (``../examples/technical_contact_map/plot_ccres_square_vs_circular.py``)
-     - 00:01.106
+     - 00:01.076
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py` (``../examples/biological_ccrescentus/plot_ccres_second_diag.py``)
-     - 00:00.1000
+     - 00:01.007
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py` (``../examples/biological_ccrescentus/plot_ccres_mcid.py``)
-     - 00:00.890
+     - 00:00.897
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bands.py` (``../examples/technical_simple_plots/plot_bands.py``)
-     - 00:00.457
+     - 00:00.368
      - 0.0
    * - :ref:`sphx_glr_auto_examples_schemas_plot_schemas_normal.py` (``../examples/schemas/plot_schemas_normal.py``)
-     - 00:00.344
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py` (``../examples/technical_simple_plots/plot_lines.py``)
-     - 00:00.214
+     - 00:00.337
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py` (``../examples/technical_simple_plots/plot_bars.py``)
-     - 00:00.208
+     - 00:00.176
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_lines.py` (``../examples/technical_simple_plots/plot_lines.py``)
+     - 00:00.166
      - 0.0
