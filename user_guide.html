@@ -18,7 +18,7 @@
           type="text/javascript"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/basic.css?v=2a422f08" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
@@ -92,8 +92,8 @@ The data is provided as a sample dataset of <a class="reference internal" href="
 default setting and enrich the figure step by step to make it nicer and
 supplement the Hi-C contact map with genomic information.</p>
 <p>The first step is to load the data and the modules we will be using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">circhic</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">circhic</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">circhic</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_ecoli</span><span class="p">()</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
@@ -105,7 +105,7 @@ coli</em>, <em>B. subtilis</em>, a chromosome from the Human cell line KBM7, etc
 those datasets are accessible from the module <a class="reference internal" href="modules/classes.html#module-circhic.datasets" title="circhic.datasets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">circhic.datasets</span></code></a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">counts</span></code> is a NumPy ndarray of shape <code class="docutils literal notranslate"><span class="pre">(469,</span> <span class="pre">469)</span></code>.</p>
 <p>Before attempting any visualization, we will normalize the data using <code class="xref py py-mod docutils literal notranslate"><span class="pre">iced</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iced.normalization</span> <span class="kn">import</span> <span class="n">ICE_normalization</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iced.normalization</span><span class="w"> </span><span class="kn">import</span> <span class="n">ICE_normalization</span>
 <span class="n">counts</span> <span class="o">=</span> <span class="n">ICE_normalization</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -245,10 +245,10 @@ time to add ticks and tick labels to the plot.</p>
 <img alt="_images/simple_plot_ticks.png" class="plot-directive" src="_images/simple_plot_ticks.png" />
 </figure>
 <p>And here is the entire code to reproduce this plot!</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">circhic</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">circhic</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">iced.normalization</span> <span class="kn">import</span> <span class="n">ICE_normalization</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iced.normalization</span><span class="w"> </span><span class="kn">import</span> <span class="n">ICE_normalization</span>
 
 
 <span class="c1"># Start by loading the data</span>
