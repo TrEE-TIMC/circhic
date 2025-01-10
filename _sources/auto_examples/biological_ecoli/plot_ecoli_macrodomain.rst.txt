@@ -37,7 +37,7 @@ Macrodomain phenomenology
  .. code-block:: none
 
 
-    <matplotlib.legend.Legend object at 0x7f1373b506a0>
+    <matplotlib.legend.Legend object at 0x7f19571d0fd0>
 
 
 
