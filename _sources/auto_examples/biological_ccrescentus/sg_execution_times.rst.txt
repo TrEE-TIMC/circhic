@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:04.720** total execution time for 4 files **from auto_examples/biological_ccrescentus**:
+**00:04.739** total execution time for 4 files **from auto_examples/biological_ccrescentus**:
 
 .. container::
 
@@ -33,14 +33,14 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py` (``plot_ccres_mappability.py``)
-     - 00:01.510
+     - 00:01.519
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py` (``plot_ccres_zraw_data.py``)
-     - 00:01.388
+     - 00:01.392
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py` (``plot_ccres_second_diag.py``)
-     - 00:00.973
+     - 00:00.969
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py` (``plot_ccres_mcid.py``)
-     - 00:00.849
+     - 00:00.859
      - 0.0
