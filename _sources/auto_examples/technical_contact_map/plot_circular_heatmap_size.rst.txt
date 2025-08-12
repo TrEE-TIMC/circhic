@@ -54,7 +54,7 @@ add white space to the disk.
     /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/circhic-0.5.0.dev0-py3.8.egg/circhic/utils.py:308: RuntimeWarning: invalid value encountered in cast
       Half_s[iR & iS] = (
 
-    (<matplotlib.image.AxesImage object at 0x7f317cff3be0>, <Axes: >)
+    (<matplotlib.image.AxesImage object at 0x7effb6b33c40>, <Axes: >)
 
 
 
@@ -131,7 +131,7 @@ add white space to the disk.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.796 seconds)
+   **Total running time of the script:** (0 minutes 6.871 seconds)
 
 
 .. _sphx_glr_download_auto_examples_technical_contact_map_plot_circular_heatmap_size.py:
