@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.862** total execution time for 3 files **from auto_examples/technical_simple_plots**:
+**00:00.863** total execution time for 3 files **from auto_examples/technical_simple_plots**:
 
 .. container::
 
@@ -39,5 +39,5 @@ Computation times
      - 00:00.209
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_simple_plots_plot_bars.py` (``plot_bars.py``)
-     - 00:00.207
+     - 00:00.208
      - 0.0
