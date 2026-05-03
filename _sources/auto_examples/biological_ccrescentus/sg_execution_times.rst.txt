@@ -33,13 +33,13 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mappability.py` (``plot_ccres_mappability.py``)
-     - 00:01.365
+     - 00:01.348
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_zraw_data.py` (``plot_ccres_zraw_data.py``)
-     - 00:01.245
+     - 00:01.265
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_second_diag.py` (``plot_ccres_second_diag.py``)
-     - 00:00.902
+     - 00:00.899
      - 0.0
    * - :ref:`sphx_glr_auto_examples_biological_ccrescentus_plot_ccres_mcid.py` (``plot_ccres_mcid.py``)
      - 00:00.805
