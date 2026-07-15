@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:10.998** total execution time for 4 files **from auto_examples/technical_contact_map**:
+**00:11.789** total execution time for 4 files **from auto_examples/technical_contact_map**:
 
 .. container::
 
@@ -33,14 +33,14 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_circular_heatmap_size.py` (``plot_circular_heatmap_size.py``)
-     - 00:06.409
+     - 00:06.870
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_colorbar.py` (``plot_colorbar.py``)
-     - 00:02.272
+     - 00:02.401
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_changing_colormap.py` (``plot_changing_colormap.py``)
-     - 00:01.312
+     - 00:01.470
      - 0.0
    * - :ref:`sphx_glr_auto_examples_technical_contact_map_plot_ccres_square_vs_circular.py` (``plot_ccres_square_vs_circular.py``)
-     - 00:01.006
+     - 00:01.048
      - 0.0
