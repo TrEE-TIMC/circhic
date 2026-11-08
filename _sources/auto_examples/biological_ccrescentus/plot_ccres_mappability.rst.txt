@@ -36,7 +36,7 @@ Circular Hi-C and genomic data
 
  .. code-block:: none
 
-    /usr/share/miniconda3/envs/circhic/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
+    /home/runner/work/circhic/circhic/3/envs/circhic/lib/python3.8/site-packages/iced/normalization/_ca_utils.py:8: UserWarning: The API of this module is likely to change. Use only for testing purposes
       warnings.warn(
 
 
@@ -128,7 +128,7 @@ Circular Hi-C and genomic data
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.064 seconds)
+   **Total running time of the script:** (0 minutes 0.771 seconds)
 
 
 .. _sphx_glr_download_auto_examples_biological_ccrescentus_plot_ccres_mappability.py:
